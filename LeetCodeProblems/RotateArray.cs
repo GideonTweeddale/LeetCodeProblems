@@ -30,6 +30,7 @@ public static class RotateArray
             nums[ni] = nums2[i];
         }
     }
+
     public static void Rotate2(int[] nums, int k)
     {
         if (nums.Length == 1) return;
