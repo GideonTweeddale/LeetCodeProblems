@@ -1,5 +1,5 @@
 ﻿namespace LeetCodeProblems;
-public class Solution
+public class ProductOfArrayExceptSelf
 {
     public int[] ProductExceptSelf(int[] nums)
     {
