@@ -6,7 +6,7 @@ public class LinkedListCycle
         // with hashset - each time we visit a node we add it to the hashset
         // if a node is every already in the hashset we've visited it already
         // this should be O(n) time and space
-        HashSet<ListNode> visitedNodes = new HashSet<ListNode>();
+        HashSet<ListNode> visitedNodes = new ();
         ListNode currentNode = head;
 
         while (currentNode != null)
@@ -40,15 +40,15 @@ public class LinkedListCycle
         }
         return false;
     }
-}
-
-public class ListNode
-{
-    public int val;
-    public ListNode next;
-    public ListNode(int x)
+    
+    public class ListNode
     {
-        val = x;
-        next = null;
+        public int val;
+        public ListNode next;
+        public ListNode(int x)
+        {
+            val = x;
+            next = null;
+        }
     }
 }
