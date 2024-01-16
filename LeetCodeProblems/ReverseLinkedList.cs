@@ -1,4 +1,6 @@
-﻿namespace LeetCodeProblems;
+﻿using System.Xml.Linq;
+
+namespace LeetCodeProblems;
 public class ReverseLinkedList
 {
     public ListNode? ReverseList(ListNode head)
@@ -36,6 +38,33 @@ public class ReverseLinkedList
         currentNode.next = previousNode;
 
         return currentNode;
+    }
+
+
+    // the recursive apporach heavily inspired 
+    private ListNode _reversedNode;
+
+    public ListNode? ReverseListRecursive(ListNode head)
+    {
+        if (head == null) return head;
+
+        ListNode last = ReverseNode(head);
+        last.next = null;
+
+        return _reversedNode;
+    }
+
+    public ListNode ReverseNode(ListNode node)
+    {
+        if (node.next == null)
+        {
+            _reversedNode = node;
+            return node;
+        }
+
+        ListNode next = ReverseNode(node.next);
+        next.next = node;
+        return node;
     }
 
     public class ListNode
