@@ -19,7 +19,7 @@ public class SameTree
     {
         // bfs (or level order traversal) iterate through booth trees at the same time, comparing the nodes
         // if we find any that don't match - exit with false
-        // this should be O(N) time complexity and O(n) space complexity in the worst case where the two lists have only one level
+        // this should be O(N) time complexity and O(N) space complexity in the worst case where the two lists have only one level
 
         if (p == null && q == null)
             return true;

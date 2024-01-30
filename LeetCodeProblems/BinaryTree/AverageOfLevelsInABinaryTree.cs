@@ -17,7 +17,7 @@ public class AverageOfLevelsInABinaryTree
     }
     public IList<double> AverageOfLevels(TreeNode root)
     {
-        // bfs is required here - which should be O(n) time complexity and space complexity of roughly O(n) 
+        // bfs is required here - which should be O(N) time complexity and space complexity of roughly O(N) 
 
         // handle null or childless root
         if (root == null)
