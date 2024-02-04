@@ -4,7 +4,7 @@ public static class HIndex11
     public static int HIndex(int[] citations)
     {
         int h = 0;
-        Array.Sort(citations);
+        System.Array.Sort(citations);
 
         for (int i = citations.Length - 1; i >= 0; i--)
         {
@@ -29,7 +29,7 @@ public static class HIndex11
         int start = 0;
         int end = citations.Length - 1;
 
-        Array.Sort(citations);
+        System.Array.Sort(citations);
 
         while (start <= end)
         {
