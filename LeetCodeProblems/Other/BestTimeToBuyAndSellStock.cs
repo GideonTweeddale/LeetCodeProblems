@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.Other;
 public static class BestTimeToBuyAndSellStock
 {
     public static int MaxProfitB(int[] prices)

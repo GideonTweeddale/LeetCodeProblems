@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.Other;
 public class FindAllNumbersDissapearedInAnArray
 {
     // this should run in O(n) time and O(1) space

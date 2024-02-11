@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.Other;
 public static class HIndex11
 {
     public static int HIndex(int[] citations)

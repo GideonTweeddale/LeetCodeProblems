@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.Other;
 public class GasStation
 {
     public int CanCompleteCircuit(int[] gas, int[] cost)

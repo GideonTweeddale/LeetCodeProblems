@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.BinaryTree;
 public class BinarySearch
 {
     public int Search(int[] nums, int target)

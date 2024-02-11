@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace LeetCodeProblems.Array;
+namespace LeetCodeProblems.Other;
 public class FindSmallestLetterGreaterThanTarget
 {
 

@@ -42,7 +42,7 @@ public class BackspaceStringCompare
     
     public bool BackspaceCompareB(string s, string t)
     {
-        string leftSub, rightSub = string.Empty;
+        string leftSub = string.Empty, rightSub = string.Empty;
 
         for (int i = 0; i <= Math.Max(s.Length, t.Length) - 1; i++)
         {

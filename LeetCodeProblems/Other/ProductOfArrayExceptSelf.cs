@@ -1,11 +1,12 @@
-﻿namespace LeetCodeProblems.Array;
+﻿
+namespace LeetCodeProblems.Other;
 public class ProductOfArrayExceptSelf
 {
     public int[] ProductExceptSelf(int[] nums)
     {
         int[] answer = new int[nums.Length];
         int curr = 1;
-
+        
         Array.Fill(answer, 1);
 
         for (int i = 0; i < nums.Length; i++)

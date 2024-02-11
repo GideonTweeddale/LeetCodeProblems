@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems;
+﻿namespace LeetCodeProblems.Other;
 public class ClimbingStairs70
 {
     public int ClimbStairs(int n)

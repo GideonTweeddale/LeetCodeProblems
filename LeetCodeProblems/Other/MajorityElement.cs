@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.Other;
 public static class MajorityElement5
 {
     public static int MajorityElement(int[] nums)

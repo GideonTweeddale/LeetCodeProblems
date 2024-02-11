@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Array;
+﻿namespace LeetCodeProblems.Bitwise;
 public class SingleNumber136
 {
     public int SingleNumber(int[] nums)

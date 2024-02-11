@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems;
+﻿namespace LeetCodeProblems.Other;
 public class CountingBits
 {
     public int[] CountBits(int n)
