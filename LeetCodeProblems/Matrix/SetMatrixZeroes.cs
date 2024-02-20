@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.Matrix;
 public class SetMatrixZeroes
 {
     public void SetZeroes(int[][] matrix)
@@ -15,9 +15,9 @@ public class SetMatrixZeroes
         bool zeroFirstRow = false;
         bool zeroFirstColumn = false;
 
-        for (int row  = 0; row < matrix.Length; row++)
+        for (int row = 0; row < matrix.Length; row++)
         {
-            for (int column = 0; column < matrix[0].Length; column++) 
+            for (int column = 0; column < matrix[0].Length; column++)
             {
                 int value = matrix[row][column];
 
@@ -40,7 +40,7 @@ public class SetMatrixZeroes
                 // this if is super complicated
                 // we only care about the start of the row or column being zero, unless we are in the first row or column
                 // then the zero flag for the row or column must also be set to true
-                if ((matrix[row][0] == 0 && (row != 0 || zeroFirstRow)) || (matrix[0][column] == 0 && (column != 0 || zeroFirstColumn)))
+                if (matrix[row][0] == 0 && (row != 0 || zeroFirstRow) || matrix[0][column] == 0 && (column != 0 || zeroFirstColumn))
                 {
                     matrix[row][column] = 0;
                 }

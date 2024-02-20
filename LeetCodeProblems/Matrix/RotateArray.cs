@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.Matrix;
 public class RotateArray
 {
     public void Rotate(int[] nums, int k)

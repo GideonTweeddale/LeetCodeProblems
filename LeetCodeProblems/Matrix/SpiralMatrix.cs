@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.Matrix;
 public class SpiralMatrix
 {
     // TODO: retry this problem
