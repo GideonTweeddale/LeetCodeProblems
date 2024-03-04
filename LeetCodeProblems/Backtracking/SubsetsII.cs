@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace LeetCodeProblems.Backtracking;
+﻿namespace LeetCodeProblems.Backtracking;
 public class SubsetsII
 {        
     public IList<IList<int>> SubsetsWithDup(int[] nums)

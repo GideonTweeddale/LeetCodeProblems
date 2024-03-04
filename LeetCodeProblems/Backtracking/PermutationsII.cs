@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCodeProblems.Backtracking;
+﻿namespace LeetCodeProblems.Backtracking;
 public class PermutationsII
 {
     public IList<IList<int>> PermuteUnique(int[] nums)
