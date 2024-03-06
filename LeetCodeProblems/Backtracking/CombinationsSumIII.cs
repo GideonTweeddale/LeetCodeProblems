@@ -9,11 +9,13 @@ public class CombinationsSumIII
 
         void Backtrack(List<int> combinations, int index)
         {
-            if (combinations.Count == k || index == nums.Length)
+            if (combinations.Count == k)
             {
                 if (n == 0) output.Add(new List<int>(combinations));
                 return;
             }
+
+            if (index == nums.Length) return;
 
             n -= nums[index];
             combinations.Add(nums[index]);
