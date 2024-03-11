@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace LeetCodeProblems.Backtracking;
+﻿namespace LeetCodeProblems.Backtracking;
 public class TargetSum
 {
     // backtracking solution
@@ -10,7 +8,7 @@ public class TargetSum
 
         int count = 0;
 
-        void BackTrack(int i, int sum)
+        void Backtrack(int i, int sum)
         {
             if (i == nums.Length)
             {
@@ -19,13 +17,13 @@ public class TargetSum
             }
 
             // add nums at i, increment i, and call backtrack
-            BackTrack(i + 1, sum + nums[i]);
+            Backtrack(i + 1, sum + nums[i]);
 
             // subtract nums at i, increment i, and call backtrack
-            BackTrack(i + 1, sum - nums[i]);
+            Backtrack(i + 1, sum - nums[i]);
         }
 
-        BackTrack(0, 0);
+        Backtrack(0, 0);
 
         return count;
     }
