@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace LeetCodeProblems.DP;
+﻿namespace LeetCodeProblems.DP;
 public class HouseRobber
 {
     public int Rob(int[] nums)
