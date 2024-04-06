@@ -15,7 +15,6 @@ public class PalindromicSubstrings
         // the second "a" will return "a" and "aaa" for the odd expand and "aa" for the even expand
         // the third "a" will return "a" for the odd expand and nothing for the even expand because there is no following character
         // this will give us a result set of "a", "aa", "aaa", "a", "aa", "a" - which is what we want
-        // we should write up a longer test case to make sure that this actually works
 
         // this has a worst case time complexity of O(n^2) and space complexity of O(1)
 
