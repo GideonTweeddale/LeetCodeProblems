@@ -19,7 +19,9 @@ public class LongestPalindromicSubstring
             ExpandFromCenter(i, i + 1); 
         }
 
-        // helper function for expanding from the center
+        return longest;
+
+        // helper function
         void ExpandFromCenter(int left, int right)
         {
             // while we have characters to check and the next left and right characters are the same
@@ -33,12 +35,10 @@ public class LongestPalindromicSubstring
                     lengthOfLongest = right - left + 1;
                 }
 
-                left--; 
+                left--;
                 right++;
             }
         }
-
-        return longest;
     }
 }
 
