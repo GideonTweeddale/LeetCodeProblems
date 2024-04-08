@@ -1,6 +1,4 @@
-﻿using LeetCodeProblems.Utils;
-
-namespace LeetCodeProblems.LinkedList;
+﻿namespace LeetCodeProblems.LinkedList;
 public class MergeTwoSortedLists
 {
     public ListNode? MergeTwoLists(ListNode list1, ListNode list2)

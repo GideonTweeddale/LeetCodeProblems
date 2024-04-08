@@ -1,6 +1,4 @@
-﻿using LeetCodeProblems.Utils;
-
-namespace LeetCodeProblems.LinkedList;
+﻿namespace LeetCodeProblems.LinkedList;
 public class RemoveLiknedListElements
 {
     public ListNode? RemoveElements(ListNode head, int val)

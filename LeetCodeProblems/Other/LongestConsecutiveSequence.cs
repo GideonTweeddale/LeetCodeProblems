@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.Other;
 public class LongestConsecutiveSequence
 {
     public int LongestConsecutive(int[] nums)

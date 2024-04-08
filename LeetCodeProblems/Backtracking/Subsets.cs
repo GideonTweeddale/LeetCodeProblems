@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace LeetCodeProblems.Backtracking;
+﻿namespace LeetCodeProblems.Backtracking;
 public class Subsets78
 {
     public IList<IList<int>> Subsets(int[] nums)

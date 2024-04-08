@@ -1,6 +1,4 @@
-﻿using LeetCodeProblems.Utils;
-
-namespace LeetCodeProblems.LinkedList;
+﻿namespace LeetCodeProblems.LinkedList;
 public class RemoveDuplicatesFromSortedList
 {
     public ListNode? ReverseList(ListNode head)

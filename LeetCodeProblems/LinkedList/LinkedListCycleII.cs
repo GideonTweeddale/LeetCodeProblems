@@ -1,7 +1,10 @@
 ﻿namespace LeetCodeProblems.LinkedList;
-public class LinkedListCycle
+public class LinkedListCycleII
 {
-    public bool HasCycle(ListNode head)
+    // intuition
+    // we need to track the nodes we've visited and when we find a node we've visited before we know we've found the start of the cycle
+
+    public ListNode? DetectCycle(ListNode head)
     {
         // with hashset - each time we visit a node we add it to the hashset
         // if a node is every already in the hashset we've visited it already
@@ -13,14 +16,16 @@ public class LinkedListCycle
         {
             if (visitedNodes.Contains(currentNode))
             {
-                return true;
+                return currentNode;
             }
 
             visitedNodes.Add(currentNode);
             currentNode = currentNode.next;
         }
-        return false;
+
+        return null;
     }
+
     public bool HasCycleB(ListNode head)
     {
         // with fast and slow pointer - I wouldn't have thought of this on my own
