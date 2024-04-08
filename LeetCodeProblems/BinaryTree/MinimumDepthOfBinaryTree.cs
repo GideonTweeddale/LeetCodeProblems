@@ -1,20 +1,6 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class MinimumDepthOfBinaryTree
 {
-
-    // Definition for a binary tree node.
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-        {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
     public int MinDepthBFS(TreeNode root)
     {
         // with a bfs implementation which should be O(n) time complexity and space complexity of roughly O(n) in the worst case

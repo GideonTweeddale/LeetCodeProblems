@@ -1,19 +1,6 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class SubtreeOfAnotherTree
 {
-    // Definition for a binary tree node.
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-        {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
     public bool IsSubtree(TreeNode? root, TreeNode? subRoot)
     {
         // O(N+S) time and O(N) space in the worst case, where N is the number of nodes in the root tree and S is the number of nodes in the subtree

@@ -2,19 +2,6 @@
 public class AverageOfLevelsInABinaryTree
 {
 
-    // Definition for a binary tree node.
-    public class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-        {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
     public IList<double> AverageOfLevels(TreeNode root)
     {
         // bfs is required here - which should be O(N) time complexity and space complexity of roughly O(N) 
