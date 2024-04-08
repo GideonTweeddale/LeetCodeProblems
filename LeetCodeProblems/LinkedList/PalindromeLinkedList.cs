@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+﻿using LeetCodeProblems.Utils;
 
 namespace LeetCodeProblems.LinkedList;
 public class PalindromeLinkedList
@@ -41,17 +41,6 @@ public class PalindromeLinkedList
         }
 
         return true;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode? next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
 

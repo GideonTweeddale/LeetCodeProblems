@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+﻿using LeetCodeProblems.Utils;
 
 namespace LeetCodeProblems.LinkedList;
 public class RemoveLiknedListElements
@@ -35,17 +35,6 @@ public class RemoveLiknedListElements
         if (head.val == val) head = head.next;
 
         return head;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode? next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
 

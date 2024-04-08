@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+﻿using LeetCodeProblems.Utils;
 
 namespace LeetCodeProblems.LinkedList;
 public class RemoveDuplicatesFromSortedList
@@ -23,17 +23,6 @@ public class RemoveDuplicatesFromSortedList
         }
 
         return head;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode? next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
 

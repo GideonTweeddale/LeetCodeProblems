@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+﻿using LeetCodeProblems.Utils;
 
 namespace LeetCodeProblems.LinkedList;
 public class ReverseLinkedList
@@ -65,17 +65,6 @@ public class ReverseLinkedList
         ListNode next = ReverseNode(node.next);
         next.next = node;
         return node;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode? next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
 

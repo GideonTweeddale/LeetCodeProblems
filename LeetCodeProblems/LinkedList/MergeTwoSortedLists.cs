@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+﻿using LeetCodeProblems.Utils;
 
 namespace LeetCodeProblems.LinkedList;
 public class MergeTwoSortedLists
@@ -44,17 +44,6 @@ public class MergeTwoSortedLists
 
         // skip the dummy head
         return head.next;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode? next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
 

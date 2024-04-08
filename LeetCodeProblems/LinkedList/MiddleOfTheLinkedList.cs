@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using LeetCodeProblems.Utils;
 
 namespace LeetCodeProblems.LinkedList;
 public class MiddleOfTheLinkedList
@@ -51,17 +50,6 @@ public class MiddleOfTheLinkedList
         }
 
         return slowPointer;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
 

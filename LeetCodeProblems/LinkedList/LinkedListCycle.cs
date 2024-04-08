@@ -1,4 +1,6 @@
-﻿namespace LeetCodeProblems.LinkedList;
+﻿using LeetCodeProblems.Utils;
+
+namespace LeetCodeProblems.LinkedList;
 public class LinkedListCycle
 {
     public bool HasCycle(ListNode head)
@@ -39,16 +41,5 @@ public class LinkedListCycle
             }
         }
         return false;
-    }
-
-    public class ListNode
-    {
-        public int val;
-        public ListNode next;
-        public ListNode(int x)
-        {
-            val = x;
-            next = null;
-        }
     }
 }
