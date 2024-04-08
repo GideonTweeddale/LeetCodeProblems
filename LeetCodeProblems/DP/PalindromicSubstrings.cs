@@ -5,7 +5,6 @@ public class PalindromicSubstrings
     // there will always be at least as many palindromic substrings as there are characters in the string
     // expand from center immediately comes to mind
     // but a dp solution should also be possible
-
     public int CountSubstrings(string s)
     {
         // using expand outwards from the center simplifies checking for palindromes
