@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.LinkedList;
+﻿namespace LeetCodeProblems.FastAndSlowPointer;
 public class LinkedListCycleII
 {
     // intuition
@@ -44,7 +44,7 @@ public class LinkedListCycleII
 
             if (slowPointer == fastPointer) break;
         }
-        
+
         // this means we didn't find a loop
         if (fastPointer == null || fastPointer.next == null) return null;
 

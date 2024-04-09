@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.LinkedList;
+﻿namespace LeetCodeProblems.FastAndSlowPointer;
 public class AddTwoNumbers2
 {
     // intuition

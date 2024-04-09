@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.LinkedList;
+﻿namespace LeetCodeProblems.FastAndSlowPointer;
 
 public class RemoveNthNodeFromEndofList
 {
@@ -24,15 +24,15 @@ public class RemoveNthNodeFromEndofList
         ListNode? current = head;
         ListNode? prev = null;
 
-        for (int i = 0; i <= n+1; i++)
+        for (int i = 0; i <= n + 1; i++)
         {
             if (i == n - 1) prev = current;
 
-            if (current == null || i == n+1)
+            if (current == null || i == n + 1)
             {
                 prev.next = current;
                 return head;
-            } 
+            }
 
             current = current.next;
         }
@@ -52,9 +52,9 @@ public class RemoveNthNodeFromEndofList
         for (int i = 0; i < n; i++)
         {
             if (i == n)
-            { 
+            {
                 current.next = current.next.next;
-                return head;            
+                return head;
             }
 
             current = current.next;
@@ -80,7 +80,7 @@ public class RemoveNthNodeFromEndofList
         {
             fast = fast.next;
             n--;
-        }   
+        }
 
         while (fast != null)
         {
