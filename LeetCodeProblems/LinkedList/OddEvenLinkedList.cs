@@ -15,7 +15,7 @@ public class OddEvenLinkedList
     // questions
     // does it matter whether odd or even indices are at the end or the beginning of the new list so long as they are grouped?
 
-    public ListNode OddEvenList(ListNode head)
+    public ListNode OddEvenListA(ListNode head)
     {
         if (head == null || head.next == null) return head;
         ListNode dummy = new ListNode(0, head);
@@ -55,6 +55,28 @@ public class OddEvenLinkedList
         odd.next = evenHead;
 
         return dummy.next; // the first node always stays in the same place
+    }
+
+    // this is a more concise version of the same solution
+    public ListNode OddEvenList(ListNode head)
+    {
+        if (head == null || head.next == null) return head;
+
+        ListNode odd = head;
+        ListNode even = head.next;
+        ListNode ehead = even;
+
+        while (even != null && even.next != null)
+        {
+            odd.next = odd.next.next;
+            even.next = even.next.next;
+            odd = odd.next;
+            even = even.next;
+        }
+
+        odd.next = ehead;
+
+        return head;
     }
 }
 
