@@ -17,7 +17,7 @@ public class IntervalListIntersections
 
     // what does pairwise disjoint mean? It means that none of the intervals within each set overlap any other intervals within the same set.
     // do we include the outer elements? Yes. Sets [1,2] and [2,3] are considered to overlap at [2].
-    // are the lists already sorted?
+    // are the lists already sorted? Damn. I missed that they were. We can solve this in O(n) time if they are sorted using two pointers.
 
     // time complexity is O(n log n) where n is the combined firstList.length + secondList.Length becuase we sort the intervals first
 
@@ -33,7 +33,7 @@ public class IntervalListIntersections
 
         List<int[]> temp = [combined[0]];
 
-        for (int i = 1; i < combined.Length; i++) 
+        for (int i = 1; i < combined.Length; i++)
         {
             int[] interval = combined[i];
             int start = interval[0];
@@ -49,6 +49,37 @@ public class IntervalListIntersections
             {
                 temp.Add(interval);
             }
+        }
+
+        return results.ToArray();
+    }
+
+    // the time complexity of this is O(n) because we are iterating over the two lists once without sorting them
+
+    public int[][] IntervalIntersectionB(int[][] firstList, int[][] secondList)
+    {
+        List<int[]> results = [];
+
+        if (firstList.Length == 0 || secondList.Length == 0) return [];
+
+        int pointer1 = 0;
+        int pointer2 = 0;
+
+        while (pointer1 < firstList.Length && pointer2 < secondList.Length)
+        {
+            int[] first = firstList[pointer1];
+            int[] second = secondList[pointer2];
+
+            int start = Math.Max(first[0], second[0]);
+            int end = Math.Min(first[1], second[1]);
+
+            if (start <= end)
+                results.Add([start, end]);
+
+            if (first[1] < second[1])
+                pointer1++;
+            else
+                pointer2++;
         }
 
         return results.ToArray();
