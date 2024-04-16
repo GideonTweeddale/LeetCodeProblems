@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Sorting;
+﻿namespace LeetCodeProblems.Intervals;
 public class MergeIntervals
 {
     // intuition
