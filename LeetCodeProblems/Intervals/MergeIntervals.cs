@@ -19,6 +19,8 @@ public class MergeIntervals
     // question - are the intervals sorted? They appear to be. // They are not.
     // are the lower values always first in an interval? I am going to assume that they are. // Aparently they are.
 
+    // time complexity is O(n log n) becuase we sort the intervals first
+
     public int[][] Merge(int[][] intervals)
     {
         List<int[]> output = [];
