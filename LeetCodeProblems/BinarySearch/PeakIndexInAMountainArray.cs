@@ -8,6 +8,8 @@ public class PeakIndexInAMountainArray
     // this means that if the index we have chosen is greater than the index after it and smaller than the index before it, we are ahead of the goal index
     // and it means that if the index we have chosen is less than the index after and greater than the index before it, we are behind the goal index
 
+    // the time complexity of this solution is O(log n) because we are using binary search
+
     public int PeakIndexInMountainArray(int[] arr)
     {
         int firstIndex = 0;
