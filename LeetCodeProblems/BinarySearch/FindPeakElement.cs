@@ -7,10 +7,10 @@ public class FindPeakElement162
     // that is guaranteed to have a local maximum with each iteration
     // we can do this by comparing our midpoint with the elements either side of it
     // if it is larger than both, excellent, we have a peak
-    // if the left element is the largest, it will either be larger than its own left element or it won't all the way to the edge which will itself be a peak 
+    // if the left element is larger, it will either be larger than its own left element or it won't all the way to the edge which will itself be a peak 
     // (due to the fact that all elements are considered larger than out of bounds and no neighbouring elements are the same)
     // the same is true for the right element
-    // so we can always go in the direction of the larger of the two elements and be guaranteed to find a local maximum
+    // so we can always go in the direction of any larger element and be guaranteed to find a local maximum
 
     public int FindPeakElement(int[] nums)
     {
