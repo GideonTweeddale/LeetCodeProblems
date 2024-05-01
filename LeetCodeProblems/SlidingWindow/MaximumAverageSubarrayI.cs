@@ -10,7 +10,7 @@ public class MaximumAverageSubarrayI
         // return the largest average once we have run through the array
         // this should be O(N) time and O(1) space
 
-        double maxAverage = 0, currentAverage = 0;
+        double currentAverage = 0;
         int right = k;
 
         // init the siding window
@@ -19,7 +19,7 @@ public class MaximumAverageSubarrayI
             currentAverage += ((double)nums[i] / k);
         }
 
-        maxAverage = currentAverage;
+        double maxAverage = currentAverage;
 
         for (int left = 0; left < nums.Length - k; left++)
         {
@@ -48,13 +48,13 @@ public class MaximumAverageSubarrayI
         // return the largest average once we have run through the array
         // this should be O(N) time and O(1) space
 
-        double maxSum = 0, currentSum = 0;
+        double currentSum = 0;
         int right = k;
 
         // init the siding window
         for (int i = 0; i < k; i++) currentSum += nums[i];
 
-        maxSum = currentSum;
+        double maxSum = currentSum;
 
         for (int left = 0; left < nums.Length - k; left++)
         {
