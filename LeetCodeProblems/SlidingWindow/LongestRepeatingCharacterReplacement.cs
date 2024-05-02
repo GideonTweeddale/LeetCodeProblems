@@ -1,5 +1,5 @@
 ﻿namespace LeetCodeProblems.SlidingWindow;
-public class LongestRepeatingCharacterReplacementt
+public class LongestRepeatingCharacterReplacement
 {
     // intuition
     // this is effectively the two buckets sliding window problem, except that one of the buckets is size limited
