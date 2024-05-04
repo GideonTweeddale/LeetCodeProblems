@@ -5,7 +5,7 @@ public class TopKFrequentElements
     // the naive solution to this problem is to sort it
     // iterate through it counting the occurences of each element
     // and insert the elements into a heap once we counted the occurences of that element
-    // this would be O(log n) + O(n log k), so simplfied it is simply O(n log k)
+    // this would be O(n log n) for the sort + O(n log k) for the adding to the heap, so simplfied it is simply O(n log n)
 
     public int[] TopKFrequent(int[] nums, int k)
     {
@@ -45,8 +45,8 @@ public class TopKFrequentElements
 
     // try using a hashtable to count the occurences of each element rather than sorting the array
     // the sorting version is kinda slow
-    // this should be O(n) for the adding to the hashtable + O(n log k) for adding to the heap, so also O(n log k) overall
-    // although the O(n) is technically slower than the O(log n) of the sorting version, it might be quicker in practice
+    // this should be O(n) for the adding to the hashtable + O(n log k) for adding to the heap, so O(n log k) overall
+    // so this might be slightly quicker - it is actually slightly slower in practice
     public int[] TopKFrequentB(int[] nums, int k)
     {
         // add the occurences of each element to a hashtable
@@ -87,4 +87,6 @@ public class TopKFrequentElements
 
         return result.ToArray();
     }
+
+    // these turn out to be almost exactly the same speed
 }
