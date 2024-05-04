@@ -5,7 +5,7 @@ public class TopKFrequentElements
     // the naive solution to this problem is to sort it
     // iterate through it counting the occurences of each element
     // and insert the elements into a heap once we counted the occurences of that element
-    // this would be O(log n) + O(n log k), so simplfied it is simply O(n)
+    // this would be O(log n) + O(n log k), so simplfied it is simply O(n log k)
 
     public int[] TopKFrequent(int[] nums, int k)
     {
@@ -43,5 +43,48 @@ public class TopKFrequentElements
         return result.ToArray();
     }
 
-    // 
+    // try using a hashtable to count the occurences of each element rather than sorting the array
+    // the sorting version is kinda slow
+    // this should be O(n) for the adding to the hashtable + O(n log k) for adding to the heap, so also O(n log k) overall
+    // although the O(n) is technically slower than the O(log n) of the sorting version, it might be quicker in practice
+    public int[] TopKFrequentB(int[] nums, int k)
+    {
+        // add the occurences of each element to a hashtable
+        Dictionary<int, int> frequencies = new();
+
+        foreach (int num in nums)
+        {
+            if (!frequencies.ContainsKey(num))
+            {
+                frequencies.Add(num, 1);
+            }
+            else
+            {
+                frequencies[num]++;
+            }
+        }
+
+        // add the elements to a heap
+        PriorityQueue<int, int> heap = new();
+
+        foreach (KeyValuePair<int, int> frequency in frequencies)
+        {
+            heap.Enqueue(frequency.Key, frequency.Value);
+
+            if (heap.Count > k)
+            {
+                heap.Dequeue();
+            }
+        }
+
+        // return the k most frequent elements
+        List<int> result = new();
+
+        for (int i = 0; i < k; i++)
+        {
+            result.Add(heap.Dequeue());
+        }
+
+        return result.ToArray();
+    }
 }
