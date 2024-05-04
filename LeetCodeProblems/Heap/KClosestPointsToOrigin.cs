@@ -21,11 +21,10 @@ public class KClosestPointsToOrigin
         if (points.Length == k) return points;
 
         PriorityQueue<int[], int> heap = new();
-        List<int[]> result = new();
 
         foreach (int[] point in points)
         {
-            // add the negative to reverse the order of the heap
+            // add the negative to reverse the order of the heap - effectively turning it into a max heap
             heap.Enqueue(point, -(point[0] * point[0] + point[1] * point[1]));
 
             // keep the heap size at k
@@ -35,10 +34,11 @@ public class KClosestPointsToOrigin
             }
         }
 
+        List<int[]> result = new();
+
         for (int i = 0; i < k; i++)
         {
-            int[] point = heap.Dequeue();
-            result.Add(point);
+            result.Add(heap.Dequeue());
         }
 
         return result.ToArray();
