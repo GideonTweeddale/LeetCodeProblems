@@ -5,7 +5,7 @@ public class TopKFrequentElements
     // the naive solution to this problem is to sort it
     // iterate through it counting the occurences of each element
     // and insert the elements into a heap once we counted the occurences of that element
-    // this would be O(log n) + O(n) + O(log k) of which O(n) is by far the largest, so simplfied it is simply O(log n)
+    // this would be O(log n) + O(n log k), so simplfied it is simply O(n)
 
     public int[] TopKFrequent(int[] nums, int k)
     {
@@ -42,4 +42,6 @@ public class TopKFrequentElements
 
         return result.ToArray();
     }
+
+    // 
 }
