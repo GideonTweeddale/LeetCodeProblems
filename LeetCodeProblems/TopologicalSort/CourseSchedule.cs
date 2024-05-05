@@ -9,20 +9,20 @@ public class CourseSchedule
     public bool CanFinish(int numCourses, int[][] prerequisites)
     {
         // create the graph and add the prerequisites
-        Dictionary<int, List<int>> graph = new Dictionary<int, List<int>>();
+        Dictionary<int, List<int>> graph = new ();
 
         foreach (int[] prereq in prerequisites)
         {
             if (!graph.ContainsKey(prereq[0]))
             {
-                graph[prereq[0]] = new List<int>();
+                graph[prereq[0]] = [];
             }
 
             graph[prereq[0]].Add(prereq[1]);
         }
 
         // keep track of the nodes we've visited
-        HashSet<int> visited = new HashSet<int>();
+        HashSet<int> visited = new ();
 
         // visit all the nodes
         for (int node = 0; node < numCourses; node++)
