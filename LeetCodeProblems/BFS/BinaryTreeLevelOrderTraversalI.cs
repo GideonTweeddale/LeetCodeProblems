@@ -1,5 +1,5 @@
 ﻿namespace LeetCodeProblems.BFS;
-public class BinaryTreeLevelOrderReversalI
+public class BinaryTreeLevelOrderTraversalI
 {
     // intuition
     // we can solve this problem using BFS.
