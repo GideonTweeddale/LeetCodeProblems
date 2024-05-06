@@ -13,6 +13,9 @@ public class BinaryTreeLevelOrderTraversalII
 
     // we should only see each node once during BFS and once during reversal
     // so this will complete in O(n) time and we will have a function call in the stack for each node so our memory will be O(n) as well
+
+    // huh. I just realised that this recursion (obviusly) isn't truly BFS it is actually DFS
+    // Howver, we can actually use DFS to solve this problem because we don't care about the order of the nodes at each level
     public IList<IList<int>> LevelOrderBottom(TreeNode root)
     {
         if (root == null) return [];
@@ -47,7 +50,7 @@ public class BinaryTreeLevelOrderTraversalII
     }
 
     // using a queue instead of recursion
-    public IList<IList<int>> LevelOrderQueue(TreeNode root)
+    public IList<IList<int>> LevelOrderBottomQueue(TreeNode root)
     {
         if (root == null) return [];
 
@@ -86,7 +89,7 @@ public class BinaryTreeLevelOrderTraversalII
     }
 
     // using a queue and a stack instead of reverse
-    public IList<IList<int>> LevelOrderQueueAndStack(TreeNode root)
+    public IList<IList<int>> LevelOrderBottomQueueAndStack(TreeNode root)
     {
         if (root == null) return [];
 
