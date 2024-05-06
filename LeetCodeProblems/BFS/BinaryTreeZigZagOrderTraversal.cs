@@ -1,6 +1,4 @@
-﻿using LeetCodeProblems.Utils;
-
-namespace LeetCodeProblems.BFS;
+﻿namespace LeetCodeProblems.BFS;
 public class BinaryTreeZigZagOrderTraversalII
 {
     // intuition
