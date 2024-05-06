@@ -15,7 +15,9 @@ public class BinaryTreeLevelOrderReversalII
     // so this will complete in O(n) time and we will have a function call in the stack for each node so our memory will be O(n) as well
     public IList<IList<int>> LevelOrderBottom(TreeNode root)
     {
-        List<IList<int>> output  = new List<IList<int>>();
+        if (root == null) return [];
+
+        List<IList<int>> output  = [];
 
         output = BFS(root, 0);
         output.Reverse();
@@ -42,6 +44,88 @@ public class BinaryTreeLevelOrderReversalII
 
             return output;
         }
+    }
+
+    // using a queue instead of recursion
+    public IList<IList<int>> LevelOrderQueue(TreeNode root)
+    {
+        if (root == null) return [];
+
+        List<IList<int>> output = [];
+        Queue<TreeNode> queue = [];
+
+        queue.Enqueue(root);
+
+        while (queue.Any())
+        {
+            int length = queue.Count;
+            List<int> level = [];
+
+            for (int i = 0; i < length; i++)
+            {
+                TreeNode node = queue.Dequeue();
+                level.Add(node.val);
+
+                if (node.left != null)
+                {
+                    queue.Enqueue(node.left);
+                }
+
+                if (node.right != null)
+                {
+                    queue.Enqueue(node.right);
+                }
+            }
+
+            output.Add(level);
+        }
+
+        output.Reverse();
+
+        return output;
+    }
+
+    // using a queue and a stack instead of reverse
+    public IList<IList<int>> LevelOrderQueueAndStack(TreeNode root)
+    {
+        if (root == null) return [];
+
+        List<IList<int>> output = [];
+        Queue<TreeNode> queue = [];
+        Stack<IList<int>> stack = [];
+
+        queue.Enqueue(root);
+
+        while (queue.Any())
+        {
+            int length = queue.Count;
+            List<int> level = [];
+
+            for (int i = 0; i < length; i++)
+            {
+                TreeNode node = queue.Dequeue();
+                level.Add(node.val);
+
+                if (node.left != null)
+                {
+                    queue.Enqueue(node.left);
+                }
+
+                if (node.right != null)
+                {
+                    queue.Enqueue(node.right);
+                }
+            }
+
+            stack.Push(level);
+        }
+
+        while (stack.Any())
+        {
+            output.Add(stack.Pop());
+        }
+
+        return output;
     }
 }
 
