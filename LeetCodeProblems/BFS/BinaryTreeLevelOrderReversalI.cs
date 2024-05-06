@@ -11,14 +11,11 @@ public class BinaryTreeLevelOrderReversalI
     // return the output
 
     // we should only see each node once, so this will complete in O(n) time and we will have a function call in the stack for each node so our memory will be O(n) as well
-    public IList<IList<int>> LevelOrderBottom(TreeNode root)
+    public IList<IList<int>> LevelOrder(TreeNode root)
     {
         List<IList<int>> output  = new List<IList<int>>();
 
-        output = BFS(root, 0);
-        output.Reverse();
-
-        return output;
+        return BFS(root, 0);
 
         // helper BFS function
         List<IList<int>> BFS(TreeNode node, int depth)
