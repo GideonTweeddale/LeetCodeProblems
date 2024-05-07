@@ -15,7 +15,7 @@ public class LowestCommonAncestorOfABinarySearchTree
 
     public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
     {
-        while (root.next != null)
+        while (root != null)
         {
             if (root.val > p.val && root.val > q.val)
             {
