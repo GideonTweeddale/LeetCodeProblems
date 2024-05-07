@@ -15,9 +15,7 @@ public class LowestCommonAncestorOfABinarySearchTree
 
     public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
     {
-        TreeNode LCA = null;
-
-        while (LCA == null)
+        while (root.next != null)
         {
             if (root.val > p.val && root.val > q.val)
             {
@@ -29,11 +27,11 @@ public class LowestCommonAncestorOfABinarySearchTree
             }
             else
             {
-                LCA = root;
+                return root;
             }
         }
 
-        return LCA;
+        return null; // allegedly we should never reach this.
     }
 }
 
