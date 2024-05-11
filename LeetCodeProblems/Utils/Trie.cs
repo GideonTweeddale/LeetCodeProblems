@@ -41,8 +41,8 @@ public class Trie // also known as a Prefix Tree
     }
 
     // where n is the number of chars in the word
-    // search is O(n) where the word or a prefix with the same characters as the word is in the dictionary
-    // search is O(1) space because we use no extra data structures
+    // Search is O(n) where the word or a prefix with the same characters as the word is in the trie
+    // Search is O(1) space because we use no extra data structures
     public bool Search(string word)
     {
         TrieNode currentNode = root;
@@ -60,8 +60,8 @@ public class Trie // also known as a Prefix Tree
     }
 
     // where n is the number of chars in the word
-    // search is O(n) where the word or a prefix with the same characters as the word is in the dictionary
-    // search is O(1) space because we use no extra data structures
+    // StartsWith is O(n) where the word or a prefix with the same characters as the word is in the trie
+    // StartsWith is O(1) space because we use no extra data structures
     public bool StartsWith(string prefix)
     {
         TrieNode currentNode = root;
@@ -73,6 +73,26 @@ public class Trie // also known as a Prefix Tree
                 return false;
             }
             currentNode = currentNode.children[c];
+        }
+
+        return true;
+    }
+
+    // where n is the number of chars in the word
+    // HasPrefixes is O(n) where the all the prefixes of a word are in the trie
+    // HasPrefixes is O(1) space because we use no extra data structures
+    public bool HasPrefixes(string word)
+    {
+        TrieNode node = root;
+
+        foreach (char c in word)
+        {
+            if (!node.children.ContainsKey(c) || !node.children[c].wordEnd)
+            {
+                return false;
+            }
+
+            node = node.children[c];
         }
 
         return true;
