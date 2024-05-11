@@ -2,18 +2,23 @@
 public class SubarrayProductLessThanK
 {
     // intuition
-    // this is a classic two pointer problem
+    // this is a classic sliding window problem
     // we initialise both pointers to the left side of the list
-    // and while our left pointer is less < right pointer and our right pointer is less than the length of the list
-    // if the product is less than the k, add it to the output list, and shift the right pointer right
-    // if the product is greater than the k, shift the left pointer right
-    // note, if we shift our right pointer right, and our subarray product is still less than the target
-    // we are actually adding more than one item to the output, because our subarray must be added, but also the new value we added must be less than the product
-    // because if the combined product is less than the target then the individual products must be less than the target also
-    // in fact, we are actually adding elements equal to the length of our subarray to the output
-    // for example if we add  1 to the subarray [5,2] and the product is less than our target, we need to add [5,2,1] to our output, but also, [1], and [2,1]
-    // all must be less than our product and all will be new subarrays we haven't seen before because they include our new value
-    // because we only need the count, not the actual subarrays, the logic will be pretty easy
+    // and while our left pointer is less < right pointer and our right pointer is less than the length of the list we iterate our pointers over the list
+
+    // in this case we don't actually need to track the subarrays, just how many there are
+    // so we don't need an output list, just variables to track the product and the count of valid subarrays
+
+    // if the product is less than k shift the right pointer right
+    // if the product is greater than k shift the left pointer right
+
+    // if the product is less than k we have found some valid subarrays, so add to our count
+
+    // we need to add the length of our window/subarray to our count
+    // because if we were actually tracking the subarrays, we would need to include all the new subarrays of our subarray that include the new value
+    // this is because if the combined product is less than k then the individual products must be less than k
+
+    // for example if we add  1 to the subarray [5,2] and the product is less than k, we need to add [5,2,1] to our output, but also, [1], and [2,1]
 
     // this will run in O(n) time where n is the length of nums
     // because we iterate through the array max 2n times (once for each value with the left and right pointers)
