@@ -1,5 +1,5 @@
 ﻿namespace LeetCodeProblems.Backtracking;
-public class GlobalUsing
+public class Combinations
 {
     public IList<IList<int>> Combine(int n, int k)
     {
