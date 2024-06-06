@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
-public static class RemoveElement2
+public class RemoveElement2
 {
-    public static int RemoveElement(int[] nums, int val)
+    public int RemoveElement(int[] nums, int val)
     {
         int rm = 0;
 

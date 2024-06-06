@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
-public static class HIndex11
+public class HIndex11
 {
-    public static int HIndex(int[] citations)
+    public int HIndex(int[] citations)
     {
         int h = 0;
         Array.Sort(citations);
@@ -24,7 +24,7 @@ public static class HIndex11
         return h;
     }
 
-    public static int HIndexB(int[] citations)
+    public int HIndexB(int[] citations)
     {
         int start = 0;
         int end = citations.Length - 1;

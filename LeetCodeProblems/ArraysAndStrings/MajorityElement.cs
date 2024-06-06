@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
-public static class MajorityElement5
+public class MajorityElement5
 {
-    public static int MajorityElement(int[] nums)
+    public int MajorityElement(int[] nums)
     {
         Dictionary<int, int> map = new Dictionary<int, int>();
         int largest = nums[0];

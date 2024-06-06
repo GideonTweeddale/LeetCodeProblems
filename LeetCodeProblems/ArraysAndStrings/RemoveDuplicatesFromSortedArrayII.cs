@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
-public static class RemoveDuplicatesFromSortedArrayII
+public class RemoveDuplicatesFromSortedArrayII
 {
-    public static int RemoveDuplicates(int[] nums)
+    public int RemoveDuplicates(int[] nums)
     {
         int u = 0;
 
