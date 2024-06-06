@@ -1,10 +1,10 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public static class HIndex11
 {
     public static int HIndex(int[] citations)
     {
         int h = 0;
-        System.Array.Sort(citations);
+        Array.Sort(citations);
 
         for (int i = citations.Length - 1; i >= 0; i--)
         {
@@ -29,7 +29,7 @@ public static class HIndex11
         int start = 0;
         int end = citations.Length - 1;
 
-        System.Array.Sort(citations);
+        Array.Sort(citations);
 
         while (start <= end)
         {

@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public static class RemoveDuplicatesFromSortedArray
 {
     public static int RemoveDuplicates(int[] nums)

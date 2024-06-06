@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public static class JumpGameII
 {
     public static int CanJump(int[] nums)

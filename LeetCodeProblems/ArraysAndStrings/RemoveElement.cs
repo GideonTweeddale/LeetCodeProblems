@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public static class RemoveElement2
 {
     public static int RemoveElement(int[] nums, int val)

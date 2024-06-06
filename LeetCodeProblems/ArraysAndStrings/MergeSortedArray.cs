@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public static class MergeSortedArray
 {
     public static void Merge(int[] nums1, int m, int[] nums2, int n)

@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public static class MajorityElement5
 {
     public static int MajorityElement(int[] nums)
@@ -38,12 +38,12 @@ public static class MajorityElement5
 
         foreach (int num in nums)
         {
-            if (count == 0) 
+            if (count == 0)
                 candidate = num;
 
-            count += (num == candidate) ? 1 : -1;
+            count += num == candidate ? 1 : -1;
 
-            if (count > nums.Length / 2) 
+            if (count > nums.Length / 2)
                 return candidate.Value;
         }
 
