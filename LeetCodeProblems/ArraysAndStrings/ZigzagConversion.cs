@@ -1,4 +1,6 @@
-﻿namespace LeetCodeProblems.ArraysAndStrings;
+﻿using System.Text;
+
+namespace LeetCodeProblems.ArraysAndStrings;
 public class ZigzagConversion
 {
     // intuition
@@ -12,9 +14,11 @@ public class ZigzagConversion
 
     public string Convert(string s, int numRows)
     {
-        if (numRows == 1) return s;
+        if (numRows >= s.Length || numRows == 1) return s;
 
-        string[] rows = new string[numRows];
+        List<StringBuilder> rows = [];
+
+        for (int i = 0; i < numRows; i++) rows.Add(new StringBuilder());
 
         int rowIndex = 0;
         bool zig = true;
@@ -22,7 +26,7 @@ public class ZigzagConversion
         // create the strings
         for (int i = 0; i < s.Length; i++)
         {
-            rows[rowIndex] += s[i];
+            rows[rowIndex].Append(s[i]);
 
             if (zig)
             {
@@ -38,10 +42,10 @@ public class ZigzagConversion
         }
 
         // combine the string and return the combination
-        string output = string.Empty;
+        StringBuilder output = new();
 
-        foreach (string str in rows) output += str;
+        foreach (StringBuilder str in rows) output.Append(str);
 
-        return output;
+        return output.ToString();
     }
 }
