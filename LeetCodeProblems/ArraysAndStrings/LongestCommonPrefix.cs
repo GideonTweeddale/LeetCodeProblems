@@ -1,5 +1,5 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
-public class LongestCommonWord
+public class LongestCommonPrefix14
 {
     // intuition
     // a naive solution that would solve this in time O(t) time, where t is the combined number of characters in all of the elements in the array
