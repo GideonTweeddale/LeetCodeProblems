@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace LeetCodeProblems.ArraysAndStrings;
+﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class TextJustification
 {
     // intuition
