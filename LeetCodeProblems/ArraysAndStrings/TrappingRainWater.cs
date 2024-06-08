@@ -13,7 +13,7 @@ public class TrappingRainWater
     // this will run in O(3n) time and O(n) space because it will iterate over the original array twice 
     // and will create a extra array the length of the original array and iterate over it once
 
-    public int Trap(int[] height)
+    public int TrapA(int[] height)
     {
         int[] unitsOfWater = new int[height.Length];
         int max = height[0];
@@ -48,6 +48,49 @@ public class TrappingRainWater
 
         foreach(int units in unitsOfWater)
             total += units;
+
+        return total;
+    }
+
+    // I just saw a genius solution that I am going to try and code up here that solves this in O(n) time and O(1) constant space
+    // It basically does this in the same way I did
+    // except instead of tracking the units of water in the first pass, it finds the highest point in the array, or the peak/watershed
+    // then it iterates through the array from the left and right separatly until that point tracking the outer max
+    // and adding outer max - the current height to the total for each index
+
+    public int Trap(int[] height)
+    {
+        int maxI = 0;
+
+        // find the watershed peak
+        for (int i = 0; i < height.Length; i++)
+        {
+            if (height[maxI] < height[i])
+            {
+                maxI = i;
+            }
+        }
+
+        int total = 0;
+        int max = height[0];
+
+        // get all the water to the left of the watershed
+        for (int i = 0; i < maxI; i++)
+        {
+            max = Math.Max(max, height[i]);
+
+            total += max - height[i];
+        }
+
+        max = 0;
+
+        // get all the water to the right of the watershed
+        for (int i = height.Length - 1; i >= maxI; i--)
+        {
+            max = Math.Max(max, height[i]);
+
+            total += max - height[i];
+        }
 
         return total;
     }
