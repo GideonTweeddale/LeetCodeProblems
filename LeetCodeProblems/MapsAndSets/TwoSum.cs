@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.TwoPointer;
+﻿namespace LeetCodeProblems.MapsAndSets;
 public class TwoSum1
 {
     // intuition
@@ -20,7 +20,7 @@ public class TwoSum1
 
             if (dict.ContainsKey(complement))
             {
-                return new int[] { dict[complement], i};
+                return new int[] { dict[complement], i };
             }
 
             dict[nums[i]] = i;
