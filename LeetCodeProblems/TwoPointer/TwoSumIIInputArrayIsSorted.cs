@@ -7,6 +7,9 @@ public class TwoSumIIInputArrayIsSorted
     // starting with the outer indexes, if the sum of the values is greater than the target we need to move the right pointer inwards
     // if the sum is smaller then we need to move the left pointer inwards
 
+    // this will run in O(n) time in the worst case where the most inner pair of numbers is the solution
+    // and in O(1) time because we don't need any additional data structures
+
     public int[] TwoSum(int[] numbers, int target)
     {
         int left = 0;
@@ -15,12 +18,10 @@ public class TwoSumIIInputArrayIsSorted
         while (left < right)
         {
             // base case
-            if (numbers[left] + numbers[right] == target)
-            {
+            if (numbers[left] + numbers[right] == target) 
                 return [left+1, right+1]; // add one becuase the return array is supposed to be 1-indexed
-            }
 
-            if(numbers[left] + numbers[right] > target)
+            if(numbers[left] + numbers[right] > target) 
                 right--;
             else 
                 left++;
