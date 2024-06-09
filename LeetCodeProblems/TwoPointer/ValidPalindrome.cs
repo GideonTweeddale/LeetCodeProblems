@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.ArraysAndStrings;
+﻿namespace LeetCodeProblems.TwoPointer;
 public class ValidPalindrome
 {
     // intuition
@@ -30,7 +30,7 @@ public class ValidPalindrome
             while (!char.IsLetterOrDigit(s[right]) && left < right) right--;
 
             // exit early
-            if (char.ToLower(s[left]) != char.ToLower(s[right])) 
+            if (char.ToLower(s[left]) != char.ToLower(s[right]))
             {
                 return false;
             }
