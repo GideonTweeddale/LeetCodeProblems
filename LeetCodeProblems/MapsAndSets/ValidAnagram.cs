@@ -14,11 +14,13 @@ public class ValidAnagram
     // this will run in worst case O(2n) or O(n) time simplified, where n is the length of s and t and they are a valid anagram 
     // because we will iterate through all indexes in both strings
     // this will use in O(26) space for the map containing the occurences of all lowercase english characters
+    // this is constant space
 
     // to adapt this code to work for all unicode characters, we would need to create our map in the method
     // and add each character in s as a key to it as well as counting the occurences
     // then as we iterate through t, we would need to check that the character exists as a key before checking the occurence count
     // and return false, if it didn't
+    // this approach is O(m) space where m is the number of valid unicode chars
 
     // init the map of lowercase english letters
     private Dictionary<char, int> counts = new Dictionary<char, int>
