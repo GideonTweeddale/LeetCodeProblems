@@ -34,10 +34,6 @@ public class PartitionList
         return left.next;
     }
 
-
-
-
-
     // intuition
     // we can solve this using two pointers
     // one pointer for the current
@@ -56,7 +52,7 @@ public class PartitionList
 
     // handle head being null
 
-    public ListNode Partition(ListNode head, int x)
+    public ListNode PartitionB(ListNode head, int x)
     {
         if (head == null) return null;
 
