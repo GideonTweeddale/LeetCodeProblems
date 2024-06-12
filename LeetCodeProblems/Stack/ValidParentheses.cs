@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.SlidingWindow;
+﻿namespace LeetCodeProblems.Stack;
 public class ValidParentheses
 {
     // intuition

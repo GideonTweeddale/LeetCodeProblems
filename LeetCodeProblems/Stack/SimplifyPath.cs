@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace LeetCodeProblems.SlidingWindow;
+﻿namespace LeetCodeProblems.Stack;
 public class SimplifyPath71
 {
     // intuition
