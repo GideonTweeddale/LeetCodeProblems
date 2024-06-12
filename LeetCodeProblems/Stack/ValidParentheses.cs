@@ -34,4 +34,24 @@ public class ValidParentheses
 
         return parentheses.Count == 0;
     }
+
+    // I saw this solution and I think it's clever
+    public bool IsValidB(string s)
+    {
+        Stack<char> stack = new();
+
+        foreach (char c in s)
+        {
+            if (c == '(') stack.Push(')');
+
+            else if (c == '[') stack.Push(']');
+
+            else if (c == '{') stack.Push('}');
+
+            // this works because the strings can only contain the opening and closing parentheses 
+            else if (stack.Count == 0 || c != stack.Pop()) return false;
+        }
+
+        return stack.Count == 0;
+    }
 }
