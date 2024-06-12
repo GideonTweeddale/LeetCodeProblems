@@ -76,3 +76,50 @@ public class Node
  * int param_3 = obj.Top();
  * int param_4 = obj.GetMin();
  */
+
+// Interestingly this slightly simpler version is slightly quicker and slightly less memory efficient
+// I do like how intuitive it is
+public class MinStackB
+{
+    private Stack<int> _stack;
+    private Stack<int> _minStack;
+
+    public MinStackB()
+    {
+        _stack = new Stack<int>();
+        _minStack = new Stack<int>();
+    }
+
+    public void Push(int val)
+    {
+        _stack.Push(val);
+
+        if (_minStack.Count == 0)
+        {
+            _minStack.Push(val);
+        }
+        else
+        {
+            int minVal = _minStack.Peek();
+
+            if (minVal > val) _minStack.Push(val);
+            else _minStack.Push(minVal);
+        }
+    }
+
+    public void Pop()
+    {
+        _stack.Pop();
+        _minStack.Pop();
+    }
+
+    public int Top()
+    {
+        return _stack.Peek();
+    }
+
+    public int GetMin()
+    {
+        return _minStack.Peek();
+    }
+}
