@@ -42,4 +42,29 @@ public class SummaryRanges228
 
         return ranges;
     }
+
+    public IList<string> SummaryRangesB(int[] nums)
+    {
+        if (nums.Length == 0) return [];
+
+        IList<string> ranges = new List<string>();
+
+        int numA = nums[0];
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (i < nums.Length - 1 && nums[i] + 1 == nums[i + 1]) 
+                continue;
+
+            if (numA != nums[i])
+                ranges.Add($"{numA}->{nums[i]}");
+            else
+                ranges.Add($"{numA}");
+
+            if (i < nums.Length - 1)
+                numA = nums[i + 1];
+        }
+
+        return ranges;
+    }
 }
