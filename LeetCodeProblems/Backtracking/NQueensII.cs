@@ -115,38 +115,18 @@ public class NQueensII
     {
         switch(n)
         {
-            case 1:
-                return 1;
-            default: // 2 and 3
-                return 0;
-            case 4:
-                return 2;
-            case 5:
-                return 10;
-            case 6:
-                return 4;
-            case 7:
-                return 40;
-            case 8:
-                return 92;
-            case 9:
-                return 352;
+            case 1: return 1;
+            default: return 0; // 2 and 3
+            case 4: return 2;
+            case 5: return 10;
+            case 6: return 4;
+            case 7: return 40;
+            case 8: return 92;
+            case 9: return 352;
         }
     }
     
-    static int[] arr = new int[10]
-    {
-        0,
-        1,
-        0,
-        0,
-        2,
-        10,
-        4,
-        40,
-        92,
-        352,
-    };
+    static int[] arr = [0, 1, 0, 0, 2, 10, 4, 40, 92, 352,];
     public int TotalNQueensHardCodedTwo(int n)
     {
         return arr[n];
