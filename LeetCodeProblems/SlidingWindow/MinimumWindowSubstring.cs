@@ -26,6 +26,59 @@ public class MinimumWindowSubstring
     // and O(n) space where n is the length of t - this would actually be O(2n) where n is the number of unique chars in t
 
     public string MinWindow(string s, string t) {
+        if (s.Length <= 0 || t.Length <= 0 || t.Length > s.Length) 
+        {
+            return string.Empty;
+        }
+
+        Dictionary<char, int> map = new();
+
+        foreach (char c in t)
+        {
+            if (!map.ContainsKey(c))
+            {
+                map.Add(c, 0);
+            }
+
+            map[c]++;
+        }
+
+        int left = 0, right = 0;
+        int minStart = 0;
+        int minLength = int.MaxValue;
+        int requiredChars = t.Length;
+
+        while (right < s.Length)
+        {            
+            if (map.ContainsKey(s[right]) && map[s[right]]-- > 0) {
+                requiredChars--;
+            }
+
+            right++;
+
+            while (requiredChars == 0) {
+                if (right - left < minLength) {
+                    minLength = right - left;
+                    minStart = left;
+                }
+
+                if (map.ContainsKey(s[left]) && map[s[left]]++ == 0) {
+                    requiredChars++;
+                }
+
+                left++;
+            }
+        }
+
+        if (minLength != int.MaxValue)
+        {
+            return s.Substring(minStart, minLength);
+        }
+
+        return string.Empty;
+    }    
+
+    public string MinWindowA(string s, string t) {
         if (s.Length <= 0 && t.Length <= 0) return string.Empty;
         if (t.Length > s.Length) return string.Empty;
 
@@ -89,7 +142,7 @@ public class MinimumWindowSubstring
             }         
         }
 
-        if (minRight-minLeft < s.Length + 1)
+        if (minRight-minLeft < s.Length+1)
         {
             return s.Substring(minLeft, minRight-minLeft);
         }
@@ -97,4 +150,3 @@ public class MinimumWindowSubstring
         return string.Empty;
     }
 }
-
