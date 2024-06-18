@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Other;
+﻿namespace LeetCodeProblems.DivideAndConquer;
 public class ConvertSortedArrayToBinarySearchTree
 
 {    
