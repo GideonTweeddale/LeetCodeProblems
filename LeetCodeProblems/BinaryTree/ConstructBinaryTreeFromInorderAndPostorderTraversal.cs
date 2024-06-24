@@ -9,30 +9,60 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
     // then we assign the return values to our left and right nodes
     // and return the root node
 
-    public TreeNode BuildTree(int[] inorder, int[] postorder) {
-        if (inorder.Length != postorder.Length || inorder.Length == 0) return null;
+    // this is big O(n^2) because of the index lookup within each node node
+    // let's make it O(n) with a hashmap
+    // there is an index error in here somewhere TODO
+    public TreeNode BuildTreeA(int[] inorder, int[] postorder) {
+        Dictionary<int, int> map = new(); // <value, index>
 
-        if (inorder.Length == 1) return new TreeNode(inorder[0]);
+        for (int i = 0; i < inorder.Length; i++)
+        {
+            map.Add(inorder[i], i);
+        }
 
-        TreeNode root = new TreeNode(postorder[^1]);
+        return Helper(inorder, postorder);
 
-        // find the root index
-        int rootIndex = Array.IndexOf(inorder, postorder[^1]);
-        // int rootIndex = int.MaxValue;
+        TreeNode Helper(int[] inorder, int[] postorder)
+        {
+            if (inorder.Length == 1) return new TreeNode(inorder[0]);
 
-        // for (int i = 0; i < inorder.Length; i++)
-        // {
-        //     if (inorder[i] == root.val)
-        //     {
-        //         rootIndex = i;
-        //         break;
-        //     }
-        // }
+            TreeNode root = new TreeNode(postorder[^1]);
+            int rootIndex = map[root.val];
 
-        root.left = BuildTree(inorder[..rootIndex], postorder[..rootIndex]);
-        root.right = BuildTree(inorder[(rootIndex+1)..], postorder[rootIndex..^1]);
+            root.left = Helper(inorder[..rootIndex], postorder[..rootIndex]);
+            root.right = Helper(inorder[(rootIndex+1)..], postorder[rootIndex..^1]);
 
-        return root;
+            return root;
+        }
     }
+
+    // neetcode solution
+    // O(n) time and space    
+    private int fromEnd = 1;
+
+    public TreeNode BuildTree(int[] inorder, int[] postorder) {
+        Dictionary<int, int> map = new(); // <value, index>
+
+        for (int i = 0; i < inorder.Length; i++)
+        {
+            map.Add(inorder[i], i);
+        }
+
+        return Helper(0, inorder.Length - 1);
+
+        TreeNode Helper(int left, int right)
+        {
+            if (left > right) return null;
+
+            TreeNode root = new TreeNode(postorder[^fromEnd++]);
+
+            int rootIndex = map[root.val];
+
+            root.right = Helper(rootIndex + 1, right);
+            root.left = Helper(left, rootIndex - 1);
+
+            return root;
+        }
+    }    
 }
 
