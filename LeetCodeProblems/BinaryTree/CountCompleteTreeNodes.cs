@@ -8,7 +8,7 @@ public class CountCompleteTreeNodes
     // that tells us the number of nodes, which would be 2^(n+1) – 1 nodes
     // if not, we call count nodes on the subtrees
 
-    // the time compleity of this will be O(log n^2)
+    // the time complexity of this will be O(log n^2)
 
     public int CountNodes(TreeNode root) {
         if (root == null) return 0;
