@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Utils;
+﻿namespace LeetCodeProblems.Trie;
 
 public class Trie // also known as a Prefix Tree
 {
