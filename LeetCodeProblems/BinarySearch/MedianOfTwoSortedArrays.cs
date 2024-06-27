@@ -28,8 +28,6 @@ public class MedianOfTwoSortedArrays
     // this will run in O(1) extra memory
     // and O(log k) time where k is the length of the shorter array
 
-    // TODO - Review this. I don't understand it well enough to re-implement it.
-
     public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
         if (nums2.Length < nums1.Length)
         {
