@@ -16,15 +16,15 @@ public class WordDictionary {
 
         foreach (char c in word)
         {
-            if (!node.map.ContainsKey(c))
+            if (!node.children.ContainsKey(c))
             {
-                node.map[c] = new Trie();
+                node.children[c] = new Trie();
             }
 
-            node = node.map[c];
+            node = node.children[c];
         }
 
-        node.map['~'] = new Trie();
+        node.children['~'] = new Trie();
     }
     
     public bool Search(string word) {
@@ -39,7 +39,7 @@ public class WordDictionary {
 
             if (c == '.')
             {
-                foreach(Trie letter in node.map.Values)
+                foreach(Trie letter in node.children.Values)
                 {
                     if (Search(chars[(i+1)..], letter))
                     {
@@ -48,18 +48,18 @@ public class WordDictionary {
                 }
             }
 
-            if (!node.map.ContainsKey(c))
+            if (!node.children.ContainsKey(c))
             {
                 return false;
             }
 
-            node = node.map[c];
+            node = node.children[c];
         }
 
-        return node.map.ContainsKey('~');
+        return node.children.ContainsKey('~');
     }
 
     class Trie {
-        public Dictionary<char, Trie> map = new();
+        public Dictionary<char, Trie> children = new();
     }
 }
