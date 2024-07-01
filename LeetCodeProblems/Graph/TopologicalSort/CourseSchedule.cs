@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.TopologicalSort;
+﻿namespace LeetCodeProblems.Graph.TopologicalSort;
 public class CourseSchedule
 {
     // intuition
