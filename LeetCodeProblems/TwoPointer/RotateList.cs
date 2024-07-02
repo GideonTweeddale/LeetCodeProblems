@@ -30,7 +30,7 @@ public class RotateList
 
         // we need to find the length of the list
         int length = 0;
-        ListNode? current = head;
+        ListNode current = head;
         while(current != null)
         {
             length++;
@@ -49,7 +49,7 @@ public class RotateList
             return head;
         }
 
-        ListNode? nodeK = dummy;
+        ListNode nodeK = dummy;
         current = dummy;
 
         // find the kth node - and find the final node in the list

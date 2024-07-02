@@ -63,7 +63,7 @@ public class SameTree
         return true;
     }
 
-    public static bool IsSameTreeDFS(TreeNode p, TreeNode q)
+    public static bool IsSameTreeDFS(TreeNode? p, TreeNode? q)
     {
         // dfs recursive solution - should be O(N) time complexity and O(N) space complexity in the worst case
         // the code is much more concise - but should be a little slower
