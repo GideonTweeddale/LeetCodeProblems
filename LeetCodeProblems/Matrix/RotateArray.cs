@@ -8,7 +8,7 @@ public class RotateArray
             return;
         }
 
-        k = k % nums.Length;
+        k %= nums.Length;
 
         if (k == 0)
         {
@@ -24,7 +24,7 @@ public class RotateArray
 
             if (ni > nums.Length - 1)
             {
-                ni = ni - nums.Length;
+                ni -= nums.Length;
             }
 
             nums[ni] = nums2[i];
@@ -38,7 +38,7 @@ public class RotateArray
             return;
         }
 
-        k = k % nums.Length;
+        k %= nums.Length;
         if (k == 0)
         {
             return;
@@ -58,7 +58,7 @@ public class RotateArray
 
             if (ni > nums.Length - 1)
             {
-                ni = ni - nums.Length;
+                ni -= nums.Length;
             }
 
             buffer[ni] = nums[i];

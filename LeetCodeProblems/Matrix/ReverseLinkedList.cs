@@ -85,7 +85,7 @@ public class ReverseLinkedList
 
             if (midpoint % 2 == 0)
             {
-                midpoint = midpoint / 2;
+                midpoint /= 2;
             }
             else
             {

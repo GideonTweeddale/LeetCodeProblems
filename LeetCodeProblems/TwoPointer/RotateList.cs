@@ -40,7 +40,7 @@ public class RotateList
         // deal with k being greater than the length of the list by dividing by the length of the list and taking the remainder as k
         if (k > length)
         {
-            k = k % length;
+            k %= length;
         }
 
         // edge case - k == the length of the list or is a multiple of the length of the list

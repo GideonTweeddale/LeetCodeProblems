@@ -40,7 +40,7 @@ public class ConstructQuadTree
             }
 
             // get the four children
-            n = n / 2;
+            n /= 2;
 
             Node topLeft = QuadifyGrid(n, row, column);
             Node topRight = QuadifyGrid(n, row, column + n);
@@ -101,7 +101,7 @@ public class ConstructQuadTree
                 return node;
             }
 
-            n = n / 2;
+            n /= 2;
 
             node.topLeft = QuadifyGrid(n, row, column);
             node.topRight = QuadifyGrid(n, row, column + n);

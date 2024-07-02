@@ -58,7 +58,7 @@ public class BackspaceStringCompare
                 }
                 else
                 {
-                    leftSub = leftSub + s[i];
+                    leftSub += s[i];
                 }
             }
 
@@ -70,7 +70,7 @@ public class BackspaceStringCompare
                 }
                 else
                 {
-                    rightSub = rightSub + t[i];
+                    rightSub += t[i];
                 }
             }
         }

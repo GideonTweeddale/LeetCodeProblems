@@ -37,9 +37,9 @@ public class HappyNumber
         while (n != 0)
         {
             int digit = n % 10;
-            digit = digit * digit;
+            digit *= digit;
             sum += digit;
-            n = n / 10;
+            n /= 10;
         }
 
         return sum;
