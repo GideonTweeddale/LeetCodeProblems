@@ -27,7 +27,7 @@ public class MiddleOfTheLinkedList
         return currentNode;
     }
 
-    public static ListNode MiddleNodeB(ListNode head)
+    public static ListNode? MiddleNodeB(ListNode head)
     {
         // looking at the solutions, this can also be solved with a fast and a slow point (duh)
         // this approach uses less memory O(1) space and O(n) time

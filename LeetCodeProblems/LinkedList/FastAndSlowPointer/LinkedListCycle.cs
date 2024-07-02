@@ -10,7 +10,7 @@ public class LinkedListCycle
         // if a node is every already in the hashset we've visited it already
         // this should be O(n) time and space
         HashSet<ListNode> visitedNodes = [];
-        ListNode currentNode = head;
+        ListNode? currentNode = head;
 
         while (currentNode != null)
         {
@@ -29,11 +29,11 @@ public class LinkedListCycle
         // with fast and slow pointer - I wouldn't have thought of this on my own
         // this approach uses less memory O(1) space (it is also O(n) time)
         // if there is a loop the fast pointer will eventually catch up to the slow pointer
-        ListNode slowPointer = head, fastPointer = head;
+        ListNode? slowPointer = head, fastPointer = head;
 
         while (fastPointer != null && fastPointer.next != null)
         {
-            slowPointer = slowPointer.next;
+            slowPointer = slowPointer?.next;
             fastPointer = fastPointer.next.next;
 
             if (slowPointer == fastPointer)

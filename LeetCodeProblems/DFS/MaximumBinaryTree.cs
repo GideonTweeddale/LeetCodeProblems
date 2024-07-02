@@ -15,7 +15,7 @@ public class MaximumBinaryTree
 
     // this doesn't work - I still think it can. Come back and fix it.
 
-    public static TreeNode ConstructMaximumBinaryTree(int[] nums)
+    public static TreeNode? ConstructMaximumBinaryTree(int[] nums)
     {
         if (nums == null)
         {
@@ -29,7 +29,7 @@ public class MaximumBinaryTree
 
         TreeNode root = new(nums[0]);
         TreeNode current = root;
-        TreeNode previous = null;
+        TreeNode? previous = null;
 
         for(int i = 1; i < nums.Length; i++)
         {
@@ -44,7 +44,7 @@ public class MaximumBinaryTree
                     current.right = next;
                 }
                 // insert the node inbetween the previous and next nodes
-                else if (current.val < next.val)
+                else if (current.val < next.val && previous != null)
                 {
                     previous.right = next;
                     next.left = current;
@@ -65,12 +65,12 @@ public class MaximumBinaryTree
     }
 
     // recursive O(n^2) solution
-    public static TreeNode ConstructMaximumBinaryTreeRecursive(int[] nums)
+    public static TreeNode? ConstructMaximumBinaryTreeRecursive(int[] nums)
     {
-        return Dfs(0, nums.Length - 1);
+        return DFS(0, nums.Length - 1);
 
         // dfs helper function
-        TreeNode Dfs(int start, int end)
+        TreeNode? DFS(int start, int end)
         {
             if(start > end)
             {
@@ -94,8 +94,8 @@ public class MaximumBinaryTree
 
             TreeNode? node = new(nums[maxI]);
 
-            node.left = Dfs(start, maxI - 1);
-            node.right = Dfs(maxI + 1, end);
+            node.left = DFS(start, maxI - 1);
+            node.right = DFS(maxI + 1, end);
 
             return node;
         }

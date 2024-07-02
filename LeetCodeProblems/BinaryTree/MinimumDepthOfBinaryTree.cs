@@ -49,7 +49,7 @@ public class MinimumDepthOfBinaryTree
         return level;
     }
 
-    public static int MinDepth(TreeNode root)
+    public static int MinDepth(TreeNode? root)
     {
         // dfs solution - should be O(N) time complexity and O(1) space complexity
         // intuitively the bfs solution should be faster because the dfs solution only stops evaluating the local branch when it finds a leaf node

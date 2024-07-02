@@ -18,7 +18,7 @@ public class LowestCommonAncestorOfABinaryTree
 
     // this will run in O(n) worst case time, where our target nodes the right nodes on the bottom level of the tree and we are forced to check every node
     // this will run in O(n) space assuming we include the stack frames in the same worst case
-    public static TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
+    public static TreeNode? LowestCommonAncestor(TreeNode? root, TreeNode p, TreeNode q)
     {
         if (root == null)
         {
@@ -34,8 +34,8 @@ public class LowestCommonAncestorOfABinaryTree
         }
 
         // DFS our children
-        TreeNode left = LowestCommonAncestor(root.left, p, q);
-        TreeNode right = LowestCommonAncestor(root.right, p, q);
+        TreeNode? left = LowestCommonAncestor(root.left, p, q);
+        TreeNode? right = LowestCommonAncestor(root.right, p, q);
 
         // if neither is null, then this the first ancestor of both
         // return this node instead of either one

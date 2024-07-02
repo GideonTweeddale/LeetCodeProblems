@@ -25,7 +25,7 @@ public class ValidateBinarySearchTree
         return DFS(root, double.MinValue, double.MaxValue);
 
         // DFS helper function
-        bool DFS(TreeNode node, double left, double right)
+        static bool DFS(TreeNode? node, double left, double right)
         {
             if (node == null)
             {
@@ -53,7 +53,7 @@ public class ValidateBinarySearchTree
 
         return DFS(root, null, null);
 
-        bool DFS(TreeNode node, int? left, int? right)
+        static bool DFS(TreeNode? node, int? left, int? right)
         {
             if (node == null)
             {

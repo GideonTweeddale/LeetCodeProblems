@@ -23,7 +23,7 @@ public class PathSumIII
         return pathsCount;
 
         // helper DFS function
-        void DFS(TreeNode node, int sum)
+        void DFS(TreeNode? node, int sum)
         {
             if (node == null)
             {
@@ -60,7 +60,7 @@ public class PathSumIII
 
         return CountPaths(root, 0); 
         
-        int CountPaths(TreeNode node, int lastSum)
+        int CountPaths(TreeNode? node, int lastSum)
         {
             if (node == null)
             {

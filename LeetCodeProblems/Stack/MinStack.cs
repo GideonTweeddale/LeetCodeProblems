@@ -25,9 +25,10 @@ public class MinStack
 
     public void Push(int val)
     {
-        Node node = new(val);
-        
-        node.next = top;
+        Node node = new(val)
+        {
+            next = top
+        };
 
         if (top != null && val > top.min)
         {
@@ -61,16 +62,11 @@ public class MinStack
 }
 
 // linked list node
-public class Node
+public class Node(int val)
 {
-    public int val;
+    public int val = val;
     public int min;
     public Node? next;
-
-    public Node(int val)
-    {
-        this.val = val;
-    }
 }
 
 

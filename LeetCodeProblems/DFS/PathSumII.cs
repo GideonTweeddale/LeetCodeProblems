@@ -23,7 +23,7 @@ public class PathSumII
         return output;
 
         // helper dfs function
-        void DFS(List<int> workingList, int sum, TreeNode node)
+        void DFS(List<int> workingList, int sum, TreeNode? node)
         {
             // if the node is null return
             if (node == null)

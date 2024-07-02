@@ -31,7 +31,7 @@ public class MergeKSortedLists
     
     // lists = temp;
 
-    public static ListNode MergeKLists(ListNode[] lists) {
+    public static ListNode? MergeKLists(ListNode[] lists) {
         if (lists == null || lists.Length == 0)
         {
             return null;
@@ -46,7 +46,12 @@ public class MergeKSortedLists
                 ListNode l1 = lists[i];
                 ListNode? l2 = i + 1 < lists.Length ? lists[i + 1] : null;
 
-                mergedLists.Add(MergeLinkedLists(l1, l2));
+                ListNode? combined = MergeLinkedLists(l1, l2);
+
+                if (combined != null)
+                {
+                    mergedLists.Add(combined);
+                }
             }
 
             lists = mergedLists.ToArray();
@@ -56,7 +61,7 @@ public class MergeKSortedLists
         return lists[0];
     }
 
-    private static ListNode MergeLinkedLists(ListNode l1, ListNode? l2) 
+    private static ListNode? MergeLinkedLists(ListNode? l1, ListNode? l2) 
     {
         ListNode dummy = new(0);
         ListNode tail = dummy;
@@ -93,13 +98,8 @@ public class MergeKSortedLists
 
 
 // Definition for singly-linked list.
-public class ListNode
+public class ListNode(int val = 0, ListNode? next = null)
 {
-    public int val;
-    public ListNode next;
-    public ListNode(int val = 0, ListNode next = null)
-    {
-        this.val = val;
-        this.next = next;
-    }
+    public int val = val;
+    public ListNode? next = next;
 }

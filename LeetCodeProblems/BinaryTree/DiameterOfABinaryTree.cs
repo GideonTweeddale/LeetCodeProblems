@@ -12,7 +12,7 @@ public class DiameterOfABinaryTree
 
         return maxDiameter;
     }
-    private int DiameterOfSubtree(TreeNode root)
+    private int DiameterOfSubtree(TreeNode? root)
     {
         if (root == null)
         {

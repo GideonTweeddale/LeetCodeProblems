@@ -17,7 +17,7 @@ public class AddTwoNumbers2
     public static ListNode? AddTwoNumbers(ListNode l1, ListNode l2)
     {
         bool carry = false;
-        int value = 0; // we could move this inside the loop for better safety and readability or leave it here for marginally better performance
+        int value; // we could move this inside the loop for better safety and readability or leave it here for marginally better performance
         ListNode? head = null;
         ListNode? current = null;
 

@@ -22,7 +22,7 @@ public class ConstructQuadTree
     // I believe that this is because in most cases test cases don't actually need to be subdivided
     // meaning that while the worst case complexity is worse, the average complexity is likely better
     
-    public static Node ConstructA(int[][] grid) {
+    public static Node? ConstructA(int[][] grid) {
         if (grid == null || grid.Length < 1 || grid[0].Length < 1)
         {
             return null;
@@ -36,7 +36,7 @@ public class ConstructQuadTree
             // if leaf node
             if (n == 1)
             {
-                return new Node((grid[row][column] == 1? true : false), true);
+                return new Node(grid[row][column] == 1, true);
             }
 
             // get the four children
@@ -67,7 +67,7 @@ public class ConstructQuadTree
 
 
     // O(n^2 * log n) solution   
-    public static Node Construct(int[][] grid) {
+    public static Node? Construct(int[][] grid) {
         if (grid == null || grid.Length < 1 || grid[0].Length < 1)
         {
             return null;
@@ -96,7 +96,7 @@ public class ConstructQuadTree
 
             if (allSame)
             {
-                node.val = grid[row][column] == 1? true : false;
+                node.val = grid[row][column] == 1;
                 node.isLeaf = true;
                 return node;
             }

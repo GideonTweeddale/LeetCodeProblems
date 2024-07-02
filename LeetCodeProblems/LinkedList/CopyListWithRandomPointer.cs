@@ -31,7 +31,7 @@ public class CopyListWithRandomPointer
 
     // handle empty linked list, edgecase
 
-    public static Node CopyRandomList(Node head)
+    public static Node? CopyRandomList(Node head)
     {
         if (head == null)
         {
@@ -40,7 +40,7 @@ public class CopyListWithRandomPointer
 
         Dictionary<Node, Node> nodeToCopy = [];
 
-        Node current = head;
+        Node? current = head;
 
         while (current != null) 
         {
@@ -71,18 +71,11 @@ public class CopyListWithRandomPointer
         return nodeToCopy[head];
     }
 
-    public class Node
+    public class Node(int _val)
     {
-        public int val;
-        public Node next;
-        public Node random;
-
-        public Node(int _val)
-        {
-            val = _val;
-            next = null;
-            random = null;
-        }
+        public int val = _val;
+        public Node? next = null;
+        public Node? random = null;
     }
 }
 

@@ -52,7 +52,7 @@ public class PartitionList
 
     // handle head being null
 
-    public static ListNode PartitionB(ListNode head, int x)
+    public static ListNode? PartitionB(ListNode head, int x)
     {
         if (head == null)
         {

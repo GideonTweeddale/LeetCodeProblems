@@ -11,7 +11,7 @@ public class ConvertSortedArrayToBinarySearchTree
 
     // this should complete in O(n) time
 
-    public static TreeNode SortedArrayToBSTA(int[] nums)
+    public static TreeNode? SortedArrayToBSTA(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
@@ -32,7 +32,7 @@ public class ConvertSortedArrayToBinarySearchTree
     // without array slicing for more speed, maybe
     // it doesn't seem any different
 
-    public static TreeNode SortedArrayToBSTB(int[] nums)
+    public static TreeNode? SortedArrayToBSTB(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
@@ -42,7 +42,7 @@ public class ConvertSortedArrayToBinarySearchTree
         return GetBSTFromSortedArray(0, nums.Length - 1);
 
         // helper
-        TreeNode GetBSTFromSortedArray(int left, int right)
+        TreeNode? GetBSTFromSortedArray(int left, int right)
         {
             if (left > right)
             {
@@ -60,7 +60,7 @@ public class ConvertSortedArrayToBinarySearchTree
     }    
 
     // more concise version
-    public static TreeNode SortedArrayToBST(int[] nums)
+    public static TreeNode? SortedArrayToBST(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
@@ -70,7 +70,7 @@ public class ConvertSortedArrayToBinarySearchTree
         return Helper(0, nums.Length - 1);
 
         // helper
-        TreeNode Helper(int left, int right)
+        TreeNode? Helper(int left, int right)
         {
             if (left > right)
             {
@@ -85,17 +85,11 @@ public class ConvertSortedArrayToBinarySearchTree
 }
 
 // Definition for a binary tree node.
-public class TreeNode
+public class TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
 {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-    {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
+    public int val = val;
+    public TreeNode? left = left;
+    public TreeNode? right = right;
 }
 
 

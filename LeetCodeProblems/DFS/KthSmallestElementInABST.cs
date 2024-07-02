@@ -18,7 +18,7 @@ public class KthSmallestElementInABST
 
         // helper functions
         // dfs
-        TreeNode[] DFS(TreeNode node) 
+        static TreeNode[] DFS(TreeNode? node) 
         {
             if (node == null)
             {

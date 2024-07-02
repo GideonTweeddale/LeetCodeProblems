@@ -48,14 +48,14 @@ public class RemoveNthNodeFromEndofList
     // we could make this even fast by setting prev.next to prev.next.next immediately after setting prev
     // we could even get rid of the prev variable and just set current.next to current.next.next when we reach n-1
 
-    public static ListNode RemoveNthFromEndB(ListNode head, int n)
+    public static ListNode? RemoveNthFromEndB(ListNode head, int n)
     {
         if (head == null || head.next == null)
         {
             return null;
         }
 
-        ListNode? current = head;
+        ListNode current = head;
 
         for (int i = 0; i < n; i++)
         {
@@ -95,11 +95,14 @@ public class RemoveNthNodeFromEndofList
 
         while (fast != null)
         {
-            slow = slow.next;
+            slow = slow?.next;
             fast = fast.next;
         }
 
-        slow.next = slow.next.next;
+        if (slow != null)
+        { 
+            slow.next = slow?.next?.next;
+        }
 
         return dummy.next;
     }
