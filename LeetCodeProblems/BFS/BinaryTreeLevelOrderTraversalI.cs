@@ -62,7 +62,7 @@ public class BinaryTreeLevelOrderTraversalI
 
         queue.Enqueue(root);
 
-        while(queue.Any())
+        while(queue.Count != 0)
         {
             int length = queue.Count;
             List<int> level = [];

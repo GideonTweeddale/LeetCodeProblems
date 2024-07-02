@@ -72,7 +72,7 @@ public static class EvaluateDivision
             q.Enqueue((source, 1));
             visited.Add(source);
 
-            while (q.Any())
+            while (q.Count != 0)
             {
                 (string neighbour, double weight) = q.Dequeue();
                 
@@ -136,7 +136,7 @@ public static class EvaluateDivision
             q.Enqueue((source, 1));
             visited.Add(source);
 
-            while (q.Any())
+            while (q.Count != 0)
             {
                 (string neighbour, double weight) = q.Dequeue();
                 

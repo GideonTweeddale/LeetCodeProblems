@@ -19,7 +19,7 @@ public class MinimumDepthOfBinaryTree
 
         int level = 0;
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             int count = queue.Count;
             level += 1;

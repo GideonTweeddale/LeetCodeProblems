@@ -23,7 +23,7 @@ public class SameTree
         pq.Enqueue(item: p);
         qq.Enqueue(item: q);
 
-        while (pq.Any() && qq.Any())
+        while (pq.Count != 0 && qq.Count != 0)
         {
             int count = pq.Count;
 

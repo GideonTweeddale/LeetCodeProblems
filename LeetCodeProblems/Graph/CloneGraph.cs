@@ -53,7 +53,7 @@ public class CloneGraph133
         Node clone = new(node.val);
         visited.Add(node, clone);
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             Node current = queue.Dequeue();
 

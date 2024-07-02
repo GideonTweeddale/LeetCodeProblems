@@ -35,7 +35,7 @@ public class BinaryTreeZigZagOrderTraversalII
 
         q.Enqueue(root);
 
-        while(q.Any())
+        while(q.Count != 0)
         {
             int length = q.Count;
             List<int> level = [];

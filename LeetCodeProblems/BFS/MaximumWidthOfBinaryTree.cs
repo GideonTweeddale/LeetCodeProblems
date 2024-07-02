@@ -58,7 +58,7 @@ public class MaximumWidthOfBinaryTree
         Queue<TreeNode> q = new();
         q.Enqueue(root);
 
-        while (q.Any())
+        while (q.Count != 0)
         {
             int qCount = q.Count;
             int levelCount = 0;
@@ -175,7 +175,7 @@ public class MaximumWidthOfBinaryTree
         int prevLevel = 0;
         int prevNum = 1;
 
-        while (q.Any())
+        while (q.Count != 0)
         {
             QueueVal val = q.Dequeue();
 

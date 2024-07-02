@@ -22,7 +22,7 @@ public class AverageOfLevelsInABinaryTree
 
         List<double> averages = [];
 
-        while (queue.Any())
+        while (queue.Count != 0)
         {
             int count = queue.Count;
             double sum = 0;
