@@ -1,8 +1,7 @@
 namespace LeetCodeProblems.Graph.Matrix;
 
 public static class EvaluateDivision
-{
-    
+{    
     // Hm. This seems like a graph problem to me.
 
     // as I understand it, the equations and values are just solved divisions where values is the result
@@ -25,6 +24,8 @@ public static class EvaluateDivision
     // we also want to add the inverse edges
 
     // then we need to search the adjacency list for each of our queries, for the shortest path
+
+    // the version using the dictionary seems a lot quicker than the version using the tuple
     public static double[] CalcEquationA(IList<IList<string>> equations, double[] values, IList<IList<string>> queries) {
         Dictionary<string, List<(string, double)>> adjacency = new();
 
