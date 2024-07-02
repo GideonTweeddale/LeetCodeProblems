@@ -10,7 +10,7 @@ public class TwoSumIIInputArrayIsSorted
     // this will run in O(n) time in the worst case where the most inner pair of numbers is the solution
     // and in O(1) time because we don't need any additional data structures
 
-    public int[] TwoSum(int[] numbers, int target)
+    public static int[]? TwoSum(int[] numbers, int target)
     {
         int left = 0;
         int right = numbers.Length - 1;
@@ -18,13 +18,19 @@ public class TwoSumIIInputArrayIsSorted
         while (left < right)
         {
             // base case
-            if (numbers[left] + numbers[right] == target) 
+            if (numbers[left] + numbers[right] == target)
+            {
                 return [left+1, right+1]; // add one becuase the return array is supposed to be 1-indexed
+            }
 
-            if(numbers[left] + numbers[right] > target) 
+            if (numbers[left] + numbers[right] > target)
+            {
                 right--;
-            else 
+            }
+            else
+            {
                 left++;
+            }
         }
 
         // we should never reach this - ideally the method definition should be changed to reflect the fact that we are guaranteed to have a valid sum

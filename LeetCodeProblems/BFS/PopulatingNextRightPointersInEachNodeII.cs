@@ -12,7 +12,7 @@ public class PopulatingNextRightPointersInEachNodeII
     // this should be O(n) time and O(n) space because we will iterate through each node once
     // and our queue will have at most n/2 nodes in it because it will never have nodes from more than two levels at a time
 
-    public TreeNode Connect(TreeNode root)
+    public static TreeNode? Connect(TreeNode root)
     {
         if (root == null)
         {
@@ -22,7 +22,7 @@ public class PopulatingNextRightPointersInEachNodeII
         Queue<TreeNode> q = [];
         q.Enqueue(root);
 
-        while(q.Any())
+        while(q.Count != 0)
         {
             int count = q.Count;
 
@@ -68,11 +68,11 @@ public class PopulatingNextRightPointersInEachNodeII
 
     // this will run in O(n) time (seeing each node only once) and O(1) space because we are only storing three pointers to individual nodes at any given time
 
-    public TreeNode ConnectConstantSpace(TreeNode root)
+    public static TreeNode ConnectConstantSpace(TreeNode root)
     {
-        TreeNode nextHead = null; //head of the next level
-        TreeNode prev = null; //the leading node on the next level
-        TreeNode cur = root;  //current node of current level
+        TreeNode? nextHead = null; //head of the next level
+        TreeNode? prev = null; //the leading node on the next level
+        TreeNode? cur = root;  //current node of current level
 
         while (cur != null)
         {

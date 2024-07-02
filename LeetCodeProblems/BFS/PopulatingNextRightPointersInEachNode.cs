@@ -12,7 +12,7 @@ public class PopulatingNextRightPointersInEachNode
     // this should be O(n) time and O(n) space because we will iterate through each node once
     // and our queue will have at most n/2 nodes in it because it will never have nodes from more than two levels at a time
 
-    public PerfectNode Connect(PerfectNode root)
+    public static PerfectNode? Connect(PerfectNode root)
     {
         if (root == null)
         {
@@ -22,7 +22,7 @@ public class PopulatingNextRightPointersInEachNode
         Queue<PerfectNode> q = [];
         q.Enqueue(root);
 
-        while(q.Any())
+        while(q.Count != 0)
         {
             int count = q.Count;
 

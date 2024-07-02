@@ -83,7 +83,7 @@ public class AllNodesDistanceKInBinaryTree
         return output;
 
         // helper functions
-        void BuildGraph(TreeNode node, TreeNode parent)
+        void BuildGraph(TreeNode node, TreeNode? parent)
         {
             if (node == null) return;
 

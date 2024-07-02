@@ -21,19 +21,22 @@ public class BinaryTreeRightSideView
     // there may be a more efficient way to solve this,
     // but we can solve it in O(n) time by doing a normal BFS traversal
 
-    public IList<int> RightSideView(TreeNode root)
+    public static IList<int> RightSideView(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<int> output = [];
         Queue<TreeNode> q = [];
 
         q.Enqueue(root);
 
-        while (q.Any())
+        while (q.Count != 0)
         {
             int length = q.Count;
-            TreeNode rightMost = null; // we could use just one variable here, dequeue the node into it, and just add the last one to the list.
+            TreeNode? rightMost = null; // we could use just one variable here, dequeue the node into it, and just add the last one to the list.
 
             for (int i = 0; i < length; i++)
             {
