@@ -16,7 +16,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
     // because the array slices are implemented as views in C# taking only constant extra space
     public static TreeNode? BuildTree(int[]? preorder, int[]? inorder)
     {
-        if (preorder == null || !preorder.Any() || inorder == null || !inorder.Any())
+        if (preorder == null || preorder.Length == 0 || inorder == null || inorder.Length == 0)
         {
             return null;
         }
