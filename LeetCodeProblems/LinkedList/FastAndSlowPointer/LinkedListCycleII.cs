@@ -45,17 +45,26 @@ public class LinkedListCycleII
             slowPointer = slowPointer.next;
             fastPointer = fastPointer.next.next;
 
-            if (slowPointer == fastPointer) break;
+            if (slowPointer == fastPointer)
+            {
+                break;
+            }
         }
 
         // this means we didn't find a loop
-        if (fastPointer == null || fastPointer.next == null) return null;
+        if (fastPointer == null || fastPointer.next == null)
+        {
+            return null;
+        }
 
         slowPointer = head;
 
         while (slowPointer.next != null)
         {
-            if (slowPointer == fastPointer) return slowPointer;
+            if (slowPointer == fastPointer)
+            {
+                return slowPointer;
+            }
 
             slowPointer = slowPointer.next;
             fastPointer = fastPointer.next;

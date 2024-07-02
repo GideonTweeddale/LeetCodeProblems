@@ -8,10 +8,14 @@ public class MergeTwoBinaryTrees
         // set the value of the current node to the combined value of the two present nodes
         // this should complete in O(N) time and O(N) space, where N is the number of overlapping nodes in both trees
         if (root1 == null)
+        {
             return root2;
+        }
 
         if (root2 == null)
+        {
             return root1;
+        }
 
         root1.val += root2.val;
 
@@ -26,10 +30,14 @@ public class MergeTwoBinaryTrees
         // this behaved exactly as I expected and ran in roughly the same time, while using slightly more memory
         // it shouldd be O(N) time and O(2N) space, because of the combination of the stack depth and the new tree
         if (root1 == null)
+        {
             return root2;
+        }
 
         if (root2 == null)
+        {
             return root1;
+        }
 
         TreeNode? result = new(root1.val + root2.val, MergeTrees(root1.left, root2.left), MergeTrees(root1.right, root2.right));
 

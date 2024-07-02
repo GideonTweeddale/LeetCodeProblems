@@ -15,7 +15,9 @@ public class DiameterOfABinaryTree
     private int DiameterOfSubtree(TreeNode root)
     {
         if (root == null)
+        {
             return 0;
+        }
 
         int left = DiameterOfSubtree(root.left);
         int right = DiameterOfSubtree(root.right);

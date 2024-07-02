@@ -43,8 +43,15 @@ public class MaximumWidthOfBinaryTree
     // this does not work - because we should be including inner null children of inner null children
     public int WidthOfBinaryTreeWrong(TreeNode root)
     {
-        if (root == null) return 0;
-        if (root.left == null && root.right == null) return 1;
+        if (root == null)
+        {
+            return 0;
+        }
+
+        if (root.left == null && root.right == null)
+        {
+            return 1;
+        }
 
         int maxWidth = 0;
 
@@ -126,12 +133,18 @@ public class MaximumWidthOfBinaryTree
         // dfs helper function
         void DFS(TreeNode node, int level, int count)
         {
-            if (node == null) return;
+            if (node == null)
+            {
+                return;
+            }
 
             // update the level
             level += 1;
 
-            if (!levels.ContainsKey(level)) levels.Add(level, (0, 0));
+            if (!levels.ContainsKey(level))
+            {
+                levels.Add(level, (0, 0));
+            }
 
             // update the left value if lower or the right value if higher
             if (count < levels[level].Item1)
@@ -215,13 +228,19 @@ public class MaximumWidthOfBinaryTree
         // dfs helper function
         void DFS(TreeNode node, int level, int count)
         {
-            if (node == null) return;
+            if (node == null)
+            {
+                return;
+            }
 
             // update the level
             level += 1;
 
             // with DFS this will always happen on the leftmost node
-            if (!levels.ContainsKey(level)) levels.Add(level, count);
+            if (!levels.ContainsKey(level))
+            {
+                levels.Add(level, count);
+            }
 
             maxWidth = Math.Max(maxWidth, count - levels[level] + 1);
 

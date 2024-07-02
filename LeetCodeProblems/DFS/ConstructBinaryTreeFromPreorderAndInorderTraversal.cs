@@ -16,7 +16,10 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
     // because the array slices are implemented as views in C# taking only constant extra space
     public TreeNode BuildTree(int[]? preorder, int[]? inorder)
     {
-        if (preorder == null || !preorder.Any() || inorder == null || !inorder.Any()) return null;
+        if (preorder == null || !preorder.Any() || inorder == null || !inorder.Any())
+        {
+            return null;
+        }
 
         TreeNode root = new(preorder[0]);
         int mid = Array.IndexOf(inorder, root.val);
@@ -43,7 +46,10 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
         // DFS helper function
         TreeNode ArrayToTree(int left, int right)
         {
-            if (left > right) return null;
+            if (left > right)
+            {
+                return null;
+            }
 
             // Select the current root's value from the preorder traversal
             int rootVal = preorder[preorderIndex++];

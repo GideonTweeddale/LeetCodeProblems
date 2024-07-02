@@ -25,7 +25,10 @@ public class BinaryTreeZigZagOrderTraversalII
     
     public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output = [];
         Queue<TreeNode> q = [];
@@ -69,7 +72,10 @@ public class BinaryTreeZigZagOrderTraversalII
     // because we care about the order of the elements at this level, it isn't (as far as I can see) simple to use DFS to solve this problem
     public IList<IList<int>> ZigzagLevelOrderDFS(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output = [];
 

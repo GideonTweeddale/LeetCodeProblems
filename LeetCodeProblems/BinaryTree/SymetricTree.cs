@@ -16,9 +16,20 @@ public class SymetricTree
     // helper
     private bool MatchingTrees(TreeNode left, TreeNode right)
     {
-        if (left == null && right == null) return true;
-        if (left == null || right == null) return false; // one of the trees must have a node where the other doesn't
-        if (left.val != right.val) return false;
+        if (left == null && right == null)
+        {
+            return true;
+        }
+
+        if (left == null || right == null)
+        {
+            return false; // one of the trees must have a node where the other doesn't
+        }
+
+        if (left.val != right.val)
+        {
+            return false;
+        }
 
         return MatchingTrees(left.left, right.right) && MatchingTrees(left.right, right.left);
     } 

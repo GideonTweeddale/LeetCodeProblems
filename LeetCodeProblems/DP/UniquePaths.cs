@@ -11,8 +11,15 @@ public class UniquePaths62
         int[,] dp = new int[m, n];
 
         // fill the first row and column with 1 because there can only be one way to reach them
-        for (int i = 0; i < m; i++) dp[i, 0] = 1;
-        for (int i = 0; i < n; i++) dp[0, i] = 1;
+        for (int i = 0; i < m; i++)
+        {
+            dp[i, 0] = 1;
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            dp[0, i] = 1;
+        }
 
         for (int i = 1; i < m; i++)
         {

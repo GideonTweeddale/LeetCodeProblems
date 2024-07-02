@@ -12,7 +12,10 @@ public class HouseRobberII
         
         // making this a O(2N) time and O(1) space solution
 
-        if (nums.Length == 1) return nums[0];
+        if (nums.Length == 1)
+        {
+            return nums[0];
+        }
 
         return Math.Max(rob(nums, 0, nums.Length - 2), rob(nums, 1, nums.Length - 1));
     }

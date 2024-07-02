@@ -19,7 +19,10 @@ public class BinaryTreeLevelOrderTraversalI
     // Howver, we can actually use DFS to solve this problem because we don't care about the order of the nodes at each level
     public IList<IList<int>> LevelOrder(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output  = [];
 
@@ -49,7 +52,10 @@ public class BinaryTreeLevelOrderTraversalI
 
     public IList<IList<int>> LevelOrderQueue(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output = [];
         Queue<TreeNode> queue = [];

@@ -25,18 +25,26 @@ public class RansomNote
         foreach(char c in magazine)
         {
             if (map.ContainsKey(c))
+            {
                 map[c]++;
+            }
             else
+            {
                 map.Add(c, 1);
+            }
         }
 
         // check the ransom note
         foreach(char c in ransomNote)
         {
             if (map.ContainsKey(c) && map[c] > 0)
+            {
                 map[c]--;
+            }
             else
+            {
                 return false;
+            }
         }
 
         return true;
@@ -54,14 +62,20 @@ public class RansomNote
         int[] counts = new int[26];
 
         // add the chars to the array
-        foreach (char c in magazine) counts[c - 'a']++;
+        foreach (char c in magazine)
+        {
+            counts[c - 'a']++;
+        }
 
         // check the ransom note
         foreach (char c in ransomNote)
         {
             counts[c - 'a']--;
 
-            if (counts[c - 'a'] < 0) return false;
+            if (counts[c - 'a'] < 0)
+            {
+                return false;
+            }
         }
 
         return true;

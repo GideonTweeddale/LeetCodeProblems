@@ -17,11 +17,17 @@ public class LongestSubarrayOfOnesAfterDeletingOneElement
 
         while (right < nums.Length)
         {
-            if (nums[right] == 0) k--;
+            if (nums[right] == 0)
+            {
+                k--;
+            }
 
             if (k < 0)
             {
-                if (nums[left] == 0) k++;
+                if (nums[left] == 0)
+                {
+                    k++;
+                }
 
                 left++;
             }

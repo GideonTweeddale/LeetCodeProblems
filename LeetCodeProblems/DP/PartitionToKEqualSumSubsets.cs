@@ -17,18 +17,30 @@ public class PartitionToKEqualSumSubsets
         int sum = nums.Sum();
         int target = sum / k;
 
-        if (sum % k != 0) return false;
+        if (sum % k != 0)
+        {
+            return false;
+        }
 
         Dictionary<int, int> dp = new Dictionary<int, int> { { 0, 1 } };
 
         for (int i = nums.Length - 1; i >=0; i--)
         {
-            if (nums[i] > target) return false;
+            if (nums[i] > target)
+            {
+                return false;
+            }
 
             foreach (int t in dp.Keys.ToArray())
             {
-                if (dp.ContainsKey(t + nums[i])) dp[t + nums[i]]++;
-                else dp[t + nums[i]] = 1;
+                if (dp.ContainsKey(t + nums[i]))
+                {
+                    dp[t + nums[i]]++;
+                }
+                else
+                {
+                    dp[t + nums[i]] = 1;
+                }
             }
         }
 
@@ -42,7 +54,10 @@ public class PartitionToKEqualSumSubsets
         int sum = nums.Sum();
         int target = sum / k;
 
-        if (sum % k != 0) return false;
+        if (sum % k != 0)
+        {
+            return false;
+        }
 
         bool[] used = new bool[nums.Length];
 
@@ -53,16 +68,29 @@ public class PartitionToKEqualSumSubsets
 
         bool Backtrack(int i, int k, int subsetSum)
         {
-            if (k == 0) return true;
-            if (subsetSum == target) return Backtrack(0, k - 1, 0);
+            if (k == 0)
+            {
+                return true;
+            }
+
+            if (subsetSum == target)
+            {
+                return Backtrack(0, k - 1, 0);
+            }
 
             for (int j = i; j < nums.Length; j++)
             {
-                if (used[j] || subsetSum + nums[j] > target) continue;
+                if (used[j] || subsetSum + nums[j] > target)
+                {
+                    continue;
+                }
 
                 used[j] = true;
 
-                if (Backtrack(j + 1, k, subsetSum + nums[j])) return true;
+                if (Backtrack(j + 1, k, subsetSum + nums[j]))
+                {
+                    return true;
+                }
 
                 used[j] = false;
             }

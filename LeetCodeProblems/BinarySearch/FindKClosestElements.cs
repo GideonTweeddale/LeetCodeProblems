@@ -26,8 +26,15 @@ public class FindKClosestElements
 
     public IList<int> FindClosestElements(int[] arr, int k, int x)
     {
-        if (x > arr[arr.Length - 1]) return arr.TakeLast(k).ToList(); 
-        if (x < arr[0]) return arr.Take(k).ToList();
+        if (x > arr[arr.Length - 1])
+        {
+            return arr.TakeLast(k).ToList();
+        }
+
+        if (x < arr[0])
+        {
+            return arr.Take(k).ToList();
+        }
 
         int left = 0;
         int right = arr.Length - 1;

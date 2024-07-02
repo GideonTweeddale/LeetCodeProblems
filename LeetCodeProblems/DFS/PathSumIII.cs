@@ -11,7 +11,10 @@ public class PathSumIII
 
     public int PathSumA(TreeNode root, int targetSum)
     {
-        if (root == null) return 0;
+        if (root == null)
+        {
+            return 0;
+        }
 
         int pathsCount = 0;
 
@@ -22,7 +25,10 @@ public class PathSumIII
         // helper DFS function
         void DFS(TreeNode node, int sum)
         {
-            if (node == null) return;
+            if (node == null)
+            {
+                return;
+            }
 
             sum += node.val;
 
@@ -56,7 +62,10 @@ public class PathSumIII
         
         int CountPaths(TreeNode node, int lastSum)
         {
-            if (node == null) return 0;
+            if (node == null)
+            {
+                return 0;
+            }
 
             int currentSum = lastSum + node.val;
 

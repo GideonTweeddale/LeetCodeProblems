@@ -44,7 +44,10 @@ public class ReverseLinkedList
 
     public ListNode? ReverseListRecursive(ListNode head)
     {
-        if (head == null) return head;
+        if (head == null)
+        {
+            return head;
+        }
 
         ListNode last = ReverseNode(head);
         last.next = null;

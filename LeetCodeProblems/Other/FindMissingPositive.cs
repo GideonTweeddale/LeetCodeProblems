@@ -21,7 +21,10 @@ public class FindMissingPositive41
         // remove our negatives so that we can use the negative to mark the found values
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] <= 0) nums[i] = nums.Length + 1;
+            if (nums[i] <= 0)
+            {
+                nums[i] = nums.Length + 1;
+            }
         }
 
         for (int i = 0; i < nums.Length; i++) 
@@ -40,7 +43,10 @@ public class FindMissingPositive41
         // loop though the indexes in nums and return the first positive index
         for (int i = 0; i < nums.Length; i++)
         {
-            if (nums[i] > 0) return i + 1;
+            if (nums[i] > 0)
+            {
+                return i + 1;
+            }
         }
 
         return nums.Length + 1;

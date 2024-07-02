@@ -20,7 +20,10 @@ public class BinaryTreeLevelOrderTraversalII
     // Howver, we can actually use DFS to solve this problem because we don't care about the order of the nodes at each level
     public IList<IList<int>> LevelOrderBottom(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output  = [];
 
@@ -54,7 +57,10 @@ public class BinaryTreeLevelOrderTraversalII
     // using a queue instead of recursion
     public IList<IList<int>> LevelOrderBottomQueue(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output = [];
         Queue<TreeNode> queue = [];
@@ -93,7 +99,10 @@ public class BinaryTreeLevelOrderTraversalII
     // using a queue and a stack instead of reverse
     public IList<IList<int>> LevelOrderBottomQueueAndStack(TreeNode root)
     {
-        if (root == null) return [];
+        if (root == null)
+        {
+            return [];
+        }
 
         List<IList<int>> output = [];
         Queue<TreeNode> queue = [];

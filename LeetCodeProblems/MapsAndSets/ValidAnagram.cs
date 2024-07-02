@@ -36,14 +36,24 @@ public class ValidAnagram
 
     public bool IsAnagram(string s, string t)
     {
-        if(s.Length != t.Length) return false;
+        if(s.Length != t.Length)
+        {
+            return false;
+        }
 
         // count the chars in s
-        foreach (char c in s) counts[c]++;
+        foreach (char c in s)
+        {
+            counts[c]++;
+        }
 
         foreach (char c in t)
         {
-            if (counts[c] <= 0) return false;
+            if (counts[c] <= 0)
+            {
+                return false;
+            }
+
             counts[c]--;
         }
 
@@ -53,7 +63,10 @@ public class ValidAnagram
     // and here is the unicode compliant version
     public bool IsAnagramUnicode(string s, string t)
     {
-        if (s.Length != t.Length) return false;
+        if (s.Length != t.Length)
+        {
+            return false;
+        }
 
         Dictionary<char, int> cCounts = new();
 
@@ -61,14 +74,19 @@ public class ValidAnagram
         foreach (char c in s)
         {
             if (!cCounts.ContainsKey(c))
+            {
                 cCounts.Add(c, 0);
+            }
 
             cCounts[c]++;
         }
 
         foreach (char c in t)
         {
-            if (!cCounts.ContainsKey(c) || counts[c] <= 0) return false;
+            if (!cCounts.ContainsKey(c) || counts[c] <= 0)
+            {
+                return false;
+            }
 
             counts[c]--;
         }

@@ -21,9 +21,13 @@ public class TrappingRainWater
         for(int i = 1; i < height.Length; i++)
         {
             if (height[i] < max)
+            {
                 unitsOfWater[i] = max - height[i];
+            }
             else
+            {
                 max = height[i];
+            }
 
             // Console.WriteLine($"Index {i} Max {max} height {height[i]} units {unitsOfWater[i]}");
         }
@@ -36,10 +40,14 @@ public class TrappingRainWater
             // Console.WriteLine($"Max {max} height {height[i]} units {unitsOfWater[i]}");
 
             if (unitsOfWater[i] + height[i] > max)
+            {
                 unitsOfWater[i] = Math.Max(max - height[i], 0);
+            }
 
             if (height[i] > max)
+            {
                 max = height[i];
+            }
 
             // Console.WriteLine($"Max {max} height {height[i]} units {unitsOfWater[i]}");
         }
@@ -47,7 +55,9 @@ public class TrappingRainWater
         int total = 0;
 
         foreach(int units in unitsOfWater)
+        {
             total += units;
+        }
 
         return total;
     }

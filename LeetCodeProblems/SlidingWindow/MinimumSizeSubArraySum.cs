@@ -27,7 +27,10 @@ public class MinimumSizeSubArraySum
             }
         }
 
-        if (min == int.MaxValue) return 0;
+        if (min == int.MaxValue)
+        {
+            return 0;
+        }
 
         return min;
     }

@@ -21,7 +21,10 @@ public class HappyNumber
             visited.Add(n);
             n = SumOfSquares(n);
 
-            if (n == 1) return true; // it's happy!!!
+            if (n == 1)
+            {
+                return true; // it's happy!!!
+            }
         }
 
         return false; // we found a loop

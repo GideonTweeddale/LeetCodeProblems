@@ -10,7 +10,10 @@ public class PalindromeLinkedList
         // and then iterate through the two halves seeing if they match as we go
         // this solution should be roughly O(n) time and O(1) space
 
-        if (head == null || head.next == null) return true;
+        if (head == null || head.next == null)
+        {
+            return true;
+        }
 
         ListNode slow = head;
         ListNode fast = head;
@@ -35,7 +38,10 @@ public class PalindromeLinkedList
         // compare first and second half of the list
         while (slow != null)
         {
-            if (slow.val != previous.val) return false;
+            if (slow.val != previous.val)
+            {
+                return false;
+            }
 
             slow = slow.next;
             previous = previous.next;

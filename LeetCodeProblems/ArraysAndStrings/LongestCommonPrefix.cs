@@ -14,19 +14,28 @@ public class LongestCommonPrefix14
     // naive solution
     public string LongestCommonPrefix(string[] strs)
     {
-        if (strs is null || strs[0] is null || strs[0].Length < 1) return string.Empty;
+        if (strs is null || strs[0] is null || strs[0].Length < 1)
+        {
+            return string.Empty;
+        }
 
         string prefix = string.Empty;
 
         // loop over the first string
         for (int i = 0; i < strs[0].Length; i++)
         {
-            if (strs[0].Length <= i) return prefix;
+            if (strs[0].Length <= i)
+            {
+                return prefix;
+            }
 
             // loop over the other strings
             foreach (string str in strs)
             {
-                if (str.Length <= i || str[i] != strs[0][i]) return prefix;
+                if (str.Length <= i || str[i] != strs[0][i])
+                {
+                    return prefix;
+                }
             }
 
             // if we found no mismatch or end of string append the char to the end of the string

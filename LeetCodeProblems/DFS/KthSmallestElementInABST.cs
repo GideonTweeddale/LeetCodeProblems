@@ -20,7 +20,10 @@ public class KthSmallestElementInABST
         // dfs
         TreeNode[] DFS(TreeNode node) 
         {
-            if (node == null) return [];
+            if (node == null)
+            {
+                return [];
+            }
 
             return [.. DFS(node.left), node, ..DFS(node.right)];
         }

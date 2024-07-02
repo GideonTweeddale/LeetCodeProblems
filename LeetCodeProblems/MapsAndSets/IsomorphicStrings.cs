@@ -33,14 +33,25 @@ public class IsomorphicStrings
         {
             // add the chars to our maps
             if (!mapS.ContainsKey(s[i]))
+            {
                 mapS[s[i]] = t[i];
+            }
 
             if (!mapT.ContainsKey(t[i]))
+            {
                 mapT[t[i]] = s[i];
+            }
 
             // check our char pairings
-            if (mapS[s[i]] != t[i]) return false;
-            if (mapT[t[i]] != s[i]) return false;
+            if (mapS[s[i]] != t[i])
+            {
+                return false;
+            }
+
+            if (mapT[t[i]] != s[i])
+            {
+                return false;
+            }
         }
 
         return true;
@@ -62,7 +73,10 @@ public class IsomorphicStrings
 
     public bool IsIsomorphicIncorrect(string s, string t)
     {
-        if (s.Length != t.Length) return false;
+        if (s.Length != t.Length)
+        {
+            return false;
+        }
 
         // get the number of occurences of each char in each string
         Dictionary<char, int> mapS = MapCharCounts(s);
@@ -73,8 +87,10 @@ public class IsomorphicStrings
 
         foreach (KeyValuePair<char, int> kvp in mapS)
         {
-            if (!mapCounts.ContainsKey(kvp.Value)) 
+            if (!mapCounts.ContainsKey(kvp.Value))
+            {
                 mapCounts.Add(kvp.Value, 0);
+            }
 
             mapCounts[kvp.Value]++;
         }
@@ -83,7 +99,10 @@ public class IsomorphicStrings
         // if we find a mismatch return false
         foreach(KeyValuePair<char, int> kvp in mapT)
         {
-            if (!mapCounts.ContainsKey(kvp.Value) || mapCounts[kvp.Value] <= 0) return false;
+            if (!mapCounts.ContainsKey(kvp.Value) || mapCounts[kvp.Value] <= 0)
+            {
+                return false;
+            }
 
             mapCounts[kvp.Value]--;
         }
@@ -97,7 +116,10 @@ public class IsomorphicStrings
 
         foreach(char c in s)
         {
-            if (!mapS.ContainsKey(c)) mapS.Add(c, 0);
+            if (!mapS.ContainsKey(c))
+            {
+                mapS.Add(c, 0);
+            }
 
             mapS[c]++;
         }

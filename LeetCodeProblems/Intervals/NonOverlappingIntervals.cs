@@ -20,7 +20,10 @@ public class NonOverlappingIntervals
     {
         int count = 0;
 
-        if (intervals.Length == 0) return count;
+        if (intervals.Length == 0)
+        {
+            return count;
+        }
 
         Array.Sort(intervals, (a, b) => a[0] - b[0]);
 
@@ -32,7 +35,9 @@ public class NonOverlappingIntervals
             int end = interval[1];
 
             if (start >= lastEnd)
+            {
                 lastEnd = end;
+            }
             else
             {
                 count++;

@@ -21,7 +21,9 @@ public class PermutationsII
             for (int i = 0; i < count; i++)
             {
                 if (i > 0 && input[i - 1] == input[i])
+                {
                     continue;
+                }
 
                 List<int>? tempPermResult = new (tempResult);
                 List<int>? tempPermInput = new (input);

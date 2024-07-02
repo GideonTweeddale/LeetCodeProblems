@@ -8,7 +8,10 @@ public class BinaryTreeMaximumPathSum
     // do this recursively
 
     public int MaxPathSumA(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null)
+        {
+            return 0;
+        }
 
         int pathSum = root.val;
         DFSA(root);
@@ -16,9 +19,12 @@ public class BinaryTreeMaximumPathSum
         return pathSum;
 
         // dfs helper
-        int DFSA(TreeNode node)
+        int DFSA(TreeNode? node)
         {
-            if (node == null) return 0;
+            if (node == null)
+            {
+                return 0;
+            }
 
             int leftSum = DFSA(node.left);
             int rightSum = DFSA(node.right);
@@ -36,7 +42,10 @@ public class BinaryTreeMaximumPathSum
     }
 
     public int MaxPathSum(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null)
+        {
+            return 0;
+        }
 
         int pathSum = root.val;
         DFS(root);
@@ -46,7 +55,10 @@ public class BinaryTreeMaximumPathSum
         // dfs helper
         int DFS(TreeNode node)
         {
-            if (node == null) return 0;
+            if (node == null)
+            {
+                return 0;
+            }
 
             int leftSum = Math.Max(0, DFS(node.left));
             int rightSum = Math.Max(0, DFS(node.right));

@@ -11,11 +11,18 @@ public class CombinationsSumIII
         {
             if (combinations.Count == k)
             {
-                if (n == 0) output.Add(new List<int>(combinations));
+                if (n == 0)
+                {
+                    output.Add(new List<int>(combinations));
+                }
+
                 return;
             }
 
-            if (index == nums.Length) return;
+            if (index == nums.Length)
+            {
+                return;
+            }
 
             n -= nums[index];
             combinations.Add(nums[index]);

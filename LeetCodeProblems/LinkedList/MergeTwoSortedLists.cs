@@ -6,8 +6,15 @@ public class MergeTwoSortedLists
         // Traverse through the lists adding the smaller item to the merged list each time
         // This should be O(n + n) time and O(1) space
 
-        if (list1 == null) return list2;
-        if (list2 == null) return list1;
+        if (list1 == null)
+        {
+            return list2;
+        }
+
+        if (list2 == null)
+        {
+            return list1;
+        }
 
         // create a dummy head to make things easier to read
         ListNode head = new ListNode(0);

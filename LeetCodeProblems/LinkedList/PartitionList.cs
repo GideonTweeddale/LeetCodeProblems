@@ -54,7 +54,10 @@ public class PartitionList
 
     public ListNode PartitionB(ListNode head, int x)
     {
-        if (head == null) return null;
+        if (head == null)
+        {
+            return null;
+        }
 
         ListNode dummy = new(0, head);
         ListNode current = dummy;

@@ -13,7 +13,10 @@ public class ConvertSortedArrayToBinarySearchTree
 
     public TreeNode SortedArrayToBSTA(int[] nums)
     {
-        if (nums == null || nums.Length == 0) return null;
+        if (nums == null || nums.Length == 0)
+        {
+            return null;
+        }
 
         // get midpoint
         // integer division in C# means that this will default 
@@ -31,14 +34,20 @@ public class ConvertSortedArrayToBinarySearchTree
 
     public TreeNode SortedArrayToBSTB(int[] nums)
     {
-        if (nums == null || nums.Length == 0) return null;
+        if (nums == null || nums.Length == 0)
+        {
+            return null;
+        }
 
         return GetBSTFromSortedArray(0, nums.Length - 1);
 
         // helper
         TreeNode GetBSTFromSortedArray(int left, int right)
         {
-            if (left > right) return null;
+            if (left > right)
+            {
+                return null;
+            }
 
             int mid = left + (right - left) / 2;
             TreeNode node = new();
@@ -53,14 +62,20 @@ public class ConvertSortedArrayToBinarySearchTree
     // more concise version
     public TreeNode SortedArrayToBST(int[] nums)
     {
-        if (nums == null || nums.Length == 0) return null;
+        if (nums == null || nums.Length == 0)
+        {
+            return null;
+        }
 
         return Helper(0, nums.Length - 1);
 
         // helper
         TreeNode Helper(int left, int right)
         {
-            if (left > right) return null;
+            if (left > right)
+            {
+                return null;
+            }
 
             int mid = left + (right - left) / 2;
             

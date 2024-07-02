@@ -10,7 +10,10 @@ public class SortList148
             
     public ListNode SortList(ListNode head)
     {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
 
         ListNode left = head;
         ListNode mid = FindMiddle(head);
@@ -57,9 +60,15 @@ public class SortList148
                 tail = tail.next;
             }
 
-            if (left != null) tail.next = left;
+            if (left != null)
+            {
+                tail.next = left;
+            }
 
-            if (right != null) tail.next = right;
+            if (right != null)
+            {
+                tail.next = right;
+            }
 
             return dummy.next;
         }

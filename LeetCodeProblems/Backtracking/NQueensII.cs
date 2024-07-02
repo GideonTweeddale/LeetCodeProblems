@@ -68,9 +68,20 @@ public class NQueensII
 
     // let's try the backtracking solution
     public int TotalNQueens(int n) {
-        if (n == 1) return 1;
-        if (n == 2 || n == 3) return 0;
-        if (n == 4) return 2;
+        if (n == 1)
+        {
+            return 1;
+        }
+
+        if (n == 2 || n == 3)
+        {
+            return 0;
+        }
+
+        if (n == 4)
+        {
+            return 2;
+        }
 
         HashSet<int> columns = new();
         HashSet<int> positiveDiagonal = new();

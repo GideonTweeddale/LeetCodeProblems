@@ -17,8 +17,15 @@ public class MaximumBinaryTree
 
     public TreeNode ConstructMaximumBinaryTree(int[] nums)
     {
-        if (nums == null) return null;
-        if (nums.Length == 1) return new TreeNode(nums[0]);
+        if (nums == null)
+        {
+            return null;
+        }
+
+        if (nums.Length == 1)
+        {
+            return new TreeNode(nums[0]);
+        }
 
         TreeNode root = new(nums[0]);
         TreeNode current = root;
@@ -65,14 +72,24 @@ public class MaximumBinaryTree
         // dfs helper function
         TreeNode Dfs(int start, int end)
         {
-            if(start > end)  return null;
-            if (start >= end) return new TreeNode(nums[start]);
+            if(start > end)
+            {
+                return null;
+            }
+
+            if (start >= end)
+            {
+                return new TreeNode(nums[start]);
+            }
 
             int maxI = start;
 
             for (int i = start + 1; i <= end; i++)
             {
-                if (nums[i] > nums[maxI]) maxI = i;
+                if (nums[i] > nums[maxI])
+                {
+                    maxI = i;
+                }
             }
 
             TreeNode? node = new(nums[maxI]);

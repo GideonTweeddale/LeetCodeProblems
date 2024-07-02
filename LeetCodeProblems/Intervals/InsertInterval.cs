@@ -18,8 +18,15 @@ public class InsertInterval
 
     public int[][] Insert(int[][] intervals, int[] newInterval)
     {
-        if (intervals.Length == 0) return [newInterval];
-        if (newInterval.Length == 0) return intervals;
+        if (intervals.Length == 0)
+        {
+            return [newInterval];
+        }
+
+        if (newInterval.Length == 0)
+        {
+            return intervals;
+        }
 
         List<int[]> output = new();
 
@@ -48,8 +55,15 @@ public class InsertInterval
 
     public int[][] InsertB(int[][] intervals, int[] newInterval)
     {
-        if (intervals.Length == 0) return [newInterval];
-        if (newInterval.Length == 0) return intervals;
+        if (intervals.Length == 0)
+        {
+            return [newInterval];
+        }
+
+        if (newInterval.Length == 0)
+        {
+            return intervals;
+        }
 
         List<int[]> output = new();
 

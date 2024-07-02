@@ -37,8 +37,15 @@ public class ValidSudoku
             for (int c = 0; c < 9; c++)
             {
                 int v = board[r][c];
-                if(v == '.') continue;
-                if (rows.Contains((r, v)) || columns.Contains((c, v)) || grids.Contains((r / 3, c / 3, v))) return false; // duplicate found
+                if(v == '.')
+                {
+                    continue;
+                }
+
+                if (rows.Contains((r, v)) || columns.Contains((c, v)) || grids.Contains((r / 3, c / 3, v)))
+                {
+                    return false; // duplicate found
+                }
 
                 rows.Add((r, v));
                 columns.Add((c, v));

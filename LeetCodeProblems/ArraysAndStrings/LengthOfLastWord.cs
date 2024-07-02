@@ -19,10 +19,14 @@ public class LengthOfLastWord58
         for (int i = 0; i < s.Length; i++)
         {
             if (s[i] != ' ')
+            {
                 length++;
+            }
 
             if (s[i] == ' ' && i + 1 < s.Length && s[i + 1] != ' ')
+            {
                 length = 0;
+            }
         }
 
         return length;
@@ -38,10 +42,14 @@ public class LengthOfLastWord58
         for (int i = n; i >= 0; i--)
         {
             if (s[i] == ' ' && i + 1 <= n && s[i + 1] != ' ')
+            {
                 return length;
+            }
 
             if (s[i] != ' ')
+            {
                 length++;
+            }
         }
 
         return length;

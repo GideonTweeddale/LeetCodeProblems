@@ -12,13 +12,17 @@ public class BinarySearch
             int num = nums[mid];
 
             if (num == target)
+            {
                 return mid;
-
+            }
             else if (num > target) // move left
+            {
                 right = mid - 1;
-
+            }
             else // move right
+            {
                 left = mid + 1;
+            }
         }
 
         return -1;

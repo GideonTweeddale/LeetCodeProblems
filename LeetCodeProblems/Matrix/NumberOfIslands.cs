@@ -35,7 +35,10 @@ public class NumberOfIslands
         void FindIsland(int row, int col)
         {
             // if we have already seen this cell or it is out of bounds/water
-            if (visited.Contains((row,col)) || row < 0 || col < 0 || row == rows || col == cols || grid[row][col] == '0') return;
+            if (visited.Contains((row,col)) || row < 0 || col < 0 || row == rows || col == cols || grid[row][col] == '0')
+            {
+                return;
+            }
 
             // mark this cell as visited so that we don't double count islands
             visited.Add((row,col));

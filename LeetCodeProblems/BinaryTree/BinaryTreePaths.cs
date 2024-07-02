@@ -13,7 +13,10 @@ public class BinaryTreePaths257
 
         List<string> paths = new();
 
-        if (root == null) return paths;
+        if (root == null)
+        {
+            return paths;
+        }
 
         if (root.left != null)
         {
@@ -26,19 +29,26 @@ public class BinaryTreePaths257
         }
 
         if (root.left == null && root.right == null)
+        {
             paths.Add($"{root.val}");
+        }
 
         return paths;
     }
 
     private bool BinaryTreePath(TreeNode node, string path, List<string> paths)
     {
-        if (node == null) return false;
+        if (node == null)
+        {
+            return false;
+        }
 
         string newPath = $"{path}->{node.val}";
 
         if (node.left == null && node.right == null) // leaf node
+        {
             paths.Add(newPath);
+        }
         else
         {
             if (node.left != null)
@@ -62,7 +72,10 @@ public class BinaryTreePaths257
         // I'd still like to rewrite it to use less variable passing for clarity though.
 
         List<string> paths = new();
-        if (root == null) return paths;
+        if (root == null)
+        {
+            return paths;
+        }
 
         string path = $"{root.val}";
 
@@ -70,19 +83,26 @@ public class BinaryTreePaths257
         BinaryTreePathB(root.right, path, paths);
 
         if (root.left == null && root.right == null)
+        {
             paths.Add(path);
+        }
 
         return paths;
     }
 
     private void BinaryTreePathB(TreeNode? node, string path, List<string> paths)
     {
-        if (node == null) return;
+        if (node == null)
+        {
+            return;
+        }
 
         string newPath = $"{path}->{node.val}";
 
         if (node.left == null && node.right == null) // leaf node
+        {
             paths.Add(newPath);
+        }
         else
         {
             BinaryTreePathB(node.left, newPath, paths);

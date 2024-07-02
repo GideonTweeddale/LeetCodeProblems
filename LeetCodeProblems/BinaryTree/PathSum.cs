@@ -8,10 +8,14 @@ public class PathSum
         // we should recursively evaluate each path, passing down the sum until the end of the path is reached
 
         if (root == null)
+        {
             return false;
+        }
 
         if (root.left == null && root.right == null && root.val == targetSum)
+        {
             return true;
+        }
 
         return HasPathSum(root.left, targetSum, root.val) || HasPathSum(root.right, targetSum, root.val);
     }
@@ -19,13 +23,17 @@ public class PathSum
     private bool HasPathSum(TreeNode? node, int targetSum, int currentSum)
     {
         if (node == null)
+        {
             return false;
+        }
 
         currentSum += node.val;
 
         // is leaf and path adds up
         if (node.left == null && node.right == null && targetSum == currentSum)
+        {
             return true;
+        }
 
         return HasPathSum(node.left, targetSum, currentSum) || HasPathSum(node.right, targetSum, currentSum);
     }
@@ -39,10 +47,14 @@ public class PathSum
         // I don't think I would have thought of this by myself 
 
         if (root == null)
+        {
             return false;
+        }
 
         if (root.left == null && root.right == null && root.val == targetSum)
+        {
             return true;
+        }
 
         targetSum -= root.val;
 

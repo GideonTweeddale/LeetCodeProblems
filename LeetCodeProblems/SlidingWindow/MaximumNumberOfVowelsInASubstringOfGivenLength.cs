@@ -14,7 +14,10 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength
 
     public int MaxVowels(string s, int k)
     {
-        if (s == null || s.Length == 0) return 0;
+        if (s == null || s.Length == 0)
+        {
+            return 0;
+        }
 
         int count = 0;
         int left = 0;
@@ -67,7 +70,10 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength
 
     public int MaxVowelsConcise(string s, int k)
     {
-        if (s == null || s.Length == 0) return 0;
+        if (s == null || s.Length == 0)
+        {
+            return 0;
+        }
 
         int count = 0, left = 0, right = 0;
 
@@ -75,7 +81,9 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength
         while (right < k)
         {
             if (vowels.Contains(s[right])) // is vowel
-                count++; 
+            {
+                count++;
+            }
 
             right++;
         }
@@ -87,15 +95,22 @@ public class MaximumNumberOfVowelsInASubstringOfGivenLength
         // return early if the maxVowels equals k
         while (right < s.Length)
         {
-            if (maxVowels == k) return maxVowels; // return early
+            if (maxVowels == k)
+            {
+                return maxVowels; // return early
+            }
 
             // if our left pointer value is a vowel, decrement our count
-            if (vowels.Contains(s[left])) 
-                count--; 
+            if (vowels.Contains(s[left]))
+            {
+                count--;
+            }
 
             // if the new char is a vowel, increment our count 
-            if (vowels.Contains(s[right])) 
-                count++; 
+            if (vowels.Contains(s[right]))
+            {
+                count++;
+            }
 
             // move our left and rights pointer one place right
             left++; right++;

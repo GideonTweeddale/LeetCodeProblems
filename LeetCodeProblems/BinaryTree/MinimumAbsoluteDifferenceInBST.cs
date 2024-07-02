@@ -1,19 +1,5 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 
-// Definition for a binary tree node.
-public class TreeNode
-{
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
-    {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class MinimumAbsoluteDifferenceInBST
 {
     // intuition
@@ -34,9 +20,12 @@ public class MinimumAbsoluteDifferenceInBST
         return GetSubtreeMinimumDifference(root, int.MaxValue, int.MaxValue).min;
     }
 
-    private (int min, int last) GetSubtreeMinimumDifference(TreeNode node, int last, int min)
+    private (int min, int last) GetSubtreeMinimumDifference(TreeNode? node, int last, int min)
     {
-        if (node == null || min == 1) return (min, last);
+        if (node == null || min == 1)
+        {
+            return (min, last);
+        }
 
         (min, last) = GetSubtreeMinimumDifference(node.left, last, min);
 

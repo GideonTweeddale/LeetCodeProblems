@@ -18,20 +18,28 @@ public class SubstringWithConcatenationOfAllWords
 
     public IList<int> FindSubstring(string s, string[] words)
     {
-        if (s.Length == 0 || words.Length == 0) return [];
+        if (s.Length == 0 || words.Length == 0)
+        {
+            return [];
+        }
 
         int wordLength = words[0].Length; 
         int totalWords = words.Length; 
         int substringLength = wordLength * totalWords;
 
-        if (s.Length < substringLength) return [];
+        if (s.Length < substringLength)
+        {
+            return [];
+        }
 
         Dictionary<string, int> wordCounts = new();
 
         foreach (string word in words)
         {
             if (!wordCounts.ContainsKey(word))
+            {
                 wordCounts.Add(word, 0);
+            }
 
             wordCounts[word] += 1;
         }
@@ -52,9 +60,13 @@ public class SubstringWithConcatenationOfAllWords
                 if (wordCounts.ContainsKey(currentWord))
                 {
                     if (currentWordCounts.ContainsKey(currentWord))
+                    {
                         currentWordCounts[currentWord]++;
+                    }
                     else
+                    {
                         currentWordCounts[currentWord] = 1;
+                    }
 
                     wordsFound++;
 

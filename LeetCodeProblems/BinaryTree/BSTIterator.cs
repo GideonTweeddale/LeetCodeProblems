@@ -25,7 +25,10 @@ public class BSTIterator
     }
     
     public int Next() {
-        if (stack.Count < 1) return -1; // we should throw an error because this violates the constraints
+        if (stack.Count < 1)
+        {
+            return -1; // we should throw an error because this violates the constraints
+        }
 
         TreeNode node = stack.Pop();
 

@@ -14,11 +14,17 @@ public class ZigzagConversion
 
     public string Convert(string s, int numRows)
     {
-        if (numRows >= s.Length || numRows == 1) return s;
+        if (numRows >= s.Length || numRows == 1)
+        {
+            return s;
+        }
 
         List<StringBuilder> rows = [];
 
-        for (int i = 0; i < numRows; i++) rows.Add(new StringBuilder());
+        for (int i = 0; i < numRows; i++)
+        {
+            rows.Add(new StringBuilder());
+        }
 
         int rowIndex = 0;
         bool zig = true;
@@ -44,7 +50,10 @@ public class ZigzagConversion
         // combine the string and return the combination
         StringBuilder output = new();
 
-        foreach (StringBuilder str in rows) output.Append(str);
+        foreach (StringBuilder str in rows)
+        {
+            output.Append(str);
+        }
 
         return output.ToString();
     }

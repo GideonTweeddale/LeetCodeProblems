@@ -8,10 +8,14 @@ public class AverageOfLevelsInABinaryTree
 
         // handle null or childless root
         if (root == null)
+        {
             return new List<double>() { 0 };
+        }
 
         if (root.left == null && root.right == null)
+        {
             return new List<double>() { root.val };
+        }
 
         Queue<TreeNode> queue = new Queue<TreeNode>();
         queue.Enqueue(root);
@@ -29,10 +33,14 @@ public class AverageOfLevelsInABinaryTree
                 sum += node.val;
 
                 if (node.left != null)
+                {
                     queue.Enqueue(node.left);
+                }
 
                 if (node.right != null)
+                {
                     queue.Enqueue(node.right);
+                }
             }
 
             averages.Add(sum / count);

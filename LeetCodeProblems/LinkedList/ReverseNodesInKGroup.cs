@@ -62,7 +62,10 @@ public class ReverseNodesInKGroup
             ListNode? kthNode = GetKthNode(previousNode, k);
 
             // if there isn't a kth node, we are done
-            if (kthNode == null) break;
+            if (kthNode == null)
+            {
+                break;
+            }
 
             // find the next node so that we can start our next group when we are done with this group
             ListNode nextNode = kthNode.next;

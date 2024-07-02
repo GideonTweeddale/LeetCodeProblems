@@ -17,7 +17,11 @@ public class OddEvenLinkedList
 
     public ListNode OddEvenListA(ListNode head)
     {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
+
         ListNode dummy = new ListNode(0, head);
 
         // create odd and even pointers
@@ -60,7 +64,10 @@ public class OddEvenLinkedList
     // this is a more concise version of the same solution
     public ListNode OddEvenList(ListNode head)
     {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.next == null)
+        {
+            return head;
+        }
 
         ListNode odd = head;
         ListNode even = head.next;

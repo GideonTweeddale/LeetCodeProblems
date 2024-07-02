@@ -32,7 +32,10 @@ public class GameOfLife289
     // }
 
     public void GameOfLife(int[][] board) {
-        if (board == null || board.Length < 1 || board[0].Length < 1) return;
+        if (board == null || board.Length < 1 || board[0].Length < 1)
+        {
+            return;
+        }
 
         int rows = board.Length;
         int columns = board[0].Length;
@@ -89,12 +92,23 @@ public class GameOfLife289
         // alive
         int Alive(int row, int column)
         {
-            if (row < 0 || row >= rows) return 0;
-            if (column < 0 || column >= columns) return 0;
-            
+            if (row < 0 || row >= rows)
+            {
+                return 0;
+            }
+
+            if (column < 0 || column >= columns)
+            {
+                return 0;
+            }
+
             int value = board[row][column];
 
-            if (value == 1 || value == 3) return 1;
+            if (value == 1 || value == 3)
+            {
+                return 1;
+            }
+
             return 0;
         }
     }

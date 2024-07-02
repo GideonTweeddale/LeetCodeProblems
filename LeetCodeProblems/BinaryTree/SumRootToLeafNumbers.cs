@@ -11,11 +11,17 @@ public class  SumRootToLeafNumbers
 
     private int SumPath(TreeNode? node, int pathSum)
     {
-        if (node == null) return 0;
+        if (node == null)
+        {
+            return 0;
+        }
 
         pathSum = pathSum * 10 + node.val;
 
-        if (node.left == null && node.right == null) return pathSum;
+        if (node.left == null && node.right == null)
+        {
+            return pathSum;
+        }
 
         return SumPath(node.left, pathSum) + SumPath(node.right, pathSum);
     }

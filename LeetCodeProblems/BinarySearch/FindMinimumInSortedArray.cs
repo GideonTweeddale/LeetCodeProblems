@@ -32,9 +32,13 @@ public class FindMinimumInSortedArray
             min = Math.Min(min, nums[mid]);
 
             if (nums[mid] >= nums[leftIndex])
+            {
                 leftIndex = mid + 1;
+            }
             else
+            {
                 rightIndex = mid - 1;
+            }
         }
 
         return min;

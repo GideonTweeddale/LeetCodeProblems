@@ -23,7 +23,10 @@ public class ConstructQuadTree
     // meaning that while the worst case complexity is worse, the average complexity is likely better
     
     public Node ConstructA(int[][] grid) {
-        if (grid == null || grid.Length < 1 || grid[0].Length < 1) return null;
+        if (grid == null || grid.Length < 1 || grid[0].Length < 1)
+        {
+            return null;
+        }
 
         return QuadifyGrid(grid.Length, 0, 0);
         
@@ -65,7 +68,10 @@ public class ConstructQuadTree
 
     // O(n^2 * log n) solution   
     public Node Construct(int[][] grid) {
-        if (grid == null || grid.Length < 1 || grid[0].Length < 1) return null;
+        if (grid == null || grid.Length < 1 || grid[0].Length < 1)
+        {
+            return null;
+        }
 
         return QuadifyGrid(grid.Length, 0, 0);
         

@@ -30,7 +30,9 @@ public class TaskScheduler
         foreach (char task in tasks)
         {
             if (!taskOccurences.ContainsKey(task))
+            {
                 taskOccurences[task] = 0;
+            }
 
             taskOccurences[task]++;
         }
@@ -40,7 +42,9 @@ public class TaskScheduler
 
         // enqueue the task occurences
         foreach (var taskOccurence in taskOccurences)
+        {
             taskHeap.Enqueue(-taskOccurence.Value, -taskOccurence.Value);
+        }
 
         int cycle = 0;
 
@@ -55,7 +59,9 @@ public class TaskScheduler
             {
                 int task = taskHeap.Dequeue()+1;
                 if (task < 0)
+                {
                     q.Enqueue((task, cycle + n));
+                }
             }
 
             if (q.Count > 0 && q.Peek().cycle == cycle)

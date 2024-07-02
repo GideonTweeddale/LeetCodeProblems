@@ -28,7 +28,10 @@ public class RemoveNthNodeFromEndofList
 
         for (int i = 0; i <= n + 1; i++)
         {
-            if (i == n - 1) prev = current;
+            if (i == n - 1)
+            {
+                prev = current;
+            }
 
             if (current == null || i == n + 1)
             {
@@ -47,7 +50,10 @@ public class RemoveNthNodeFromEndofList
 
     public ListNode RemoveNthFromEndB(ListNode head, int n)
     {
-        if (head == null || head.next == null) return null;
+        if (head == null || head.next == null)
+        {
+            return null;
+        }
 
         ListNode? current = head;
 
@@ -72,7 +78,10 @@ public class RemoveNthNodeFromEndofList
 
     public ListNode? RemoveNthFromEnd(ListNode head, int n)
     {
-        if (head == null || head.next == null) return null;
+        if (head == null || head.next == null)
+        {
+            return null;
+        }
 
         ListNode? dummy = new ListNode(0, head);
         ListNode? slow = dummy;

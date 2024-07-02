@@ -8,10 +8,14 @@ public class SameTree
         // this should be O(N) time complexity and O(N) space complexity in the worst case where the two lists have only one level
 
         if (p == null && q == null)
+        {
             return true;
-        
+        }
+
         if (p == null || q == null)
+        {
             return false;
+        }
 
         // bfs search
         Queue<TreeNode> pq = new();
@@ -29,7 +33,9 @@ public class SameTree
                 TreeNode qNode = qq.Dequeue();
 
                 if ((pNode.val != qNode.val))
+                {
                     return false;
+                }
 
                 if (pNode.right != null && qNode.right != null)
                 {
@@ -63,13 +69,19 @@ public class SameTree
         // the code is much more concise - but should be a little slower
 
         if (p == null && q == null)
+        {
             return true;
-        
-        if (p == null || q == null)
-            return false;
+        }
 
-        if (p.val != q.val) 
+        if (p == null || q == null)
+        {
             return false;
+        }
+
+        if (p.val != q.val)
+        {
+            return false;
+        }
 
         return IsSameTreeDFS(p.left, q.left) && IsSameTreeDFS(p.right, q.right);
     }

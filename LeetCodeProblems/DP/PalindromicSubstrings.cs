@@ -67,6 +67,7 @@ public class PalindromicSubstrings
 
         // find all the palindromes of length 3 or more
         for (int len = 3; len <= s.Length; len++)
+        {
             for (int i = 0, j = i + len - 1; j < s.Length; ++i, ++j)
             {
                 if (dp[i + 1, j - 1] && (s[i] == s[j]))
@@ -75,6 +76,7 @@ public class PalindromicSubstrings
                     count++;
                 }
             }
+        }
 
         return count;
     }

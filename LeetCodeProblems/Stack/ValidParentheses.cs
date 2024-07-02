@@ -22,13 +22,16 @@ public class ValidParentheses
 
         foreach (char c in s) 
         { 
-            if (c == '(' || c == '[' || c == '{') 
+            if (c == '(' || c == '[' || c == '{')
+            {
                 parentheses.Push(c);
-
+            }
             else if (c ==  ')' || c == ']' || c == '}')
             {
-                if (parentheses.Count == 0 || pairs[parentheses.Pop()] != c) 
+                if (parentheses.Count == 0 || pairs[parentheses.Pop()] != c)
+                {
                     return false;
+                }
             }
         }
 
@@ -42,14 +45,24 @@ public class ValidParentheses
 
         foreach (char c in s)
         {
-            if (c == '(') stack.Push(')');
-
-            else if (c == '[') stack.Push(']');
-
-            else if (c == '{') stack.Push('}');
+            if (c == '(')
+            {
+                stack.Push(')');
+            }
+            else if (c == '[')
+            {
+                stack.Push(']');
+            }
+            else if (c == '{')
+            {
+                stack.Push('}');
+            }
 
             // this works because the strings can only contain the opening and closing parentheses 
-            else if (stack.Count == 0 || c != stack.Pop()) return false;
+            else if (stack.Count == 0 || c != stack.Pop())
+            {
+                return false;
+            }
         }
 
         return stack.Count == 0;

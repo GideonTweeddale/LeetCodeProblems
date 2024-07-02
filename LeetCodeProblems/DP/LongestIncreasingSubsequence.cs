@@ -26,8 +26,11 @@ public class LongestIncreasingSubsequence
 
     public int LengthOfLISB(int[] nums)
     {
-        if (nums.Length <= 1) return 1;
-        
+        if (nums.Length <= 1)
+        {
+            return 1;
+        }
+
         // create a dp array to store the max length of the subsequence
         int[] dp = new int[nums.Length];
 

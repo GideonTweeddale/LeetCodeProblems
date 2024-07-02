@@ -20,7 +20,10 @@ public class LowestCommonAncestorOfABinaryTree
     // this will run in O(n) space assuming we include the stack frames in the same worst case
     public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
     {
-        if (root == null) return null;
+        if (root == null)
+        {
+            return null;
+        }
 
         // we have found one of the two nodes we are looking for
         // meaning that our LCA will either be this node or one of its parents

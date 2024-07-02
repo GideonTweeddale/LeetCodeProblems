@@ -8,7 +8,10 @@ public class LongestConsecutiveSequence
 
         // weirdly this solution is very very fast - beating almost 96% of other solutions in C#
 
-        if (nums == null || nums.Length == 0) return 0;
+        if (nums == null || nums.Length == 0)
+        {
+            return 0;
+        }
 
         int consecutive = 1;
         int currentRun = 1;
@@ -47,7 +50,10 @@ public class LongestConsecutiveSequence
         // the difference was well within the margin of error / natural variability
         // and I suspect would invert with a large input for nums
 
-        if (nums == null || nums.Length == 0) return 0;
+        if (nums == null || nums.Length == 0)
+        {
+            return 0;
+        }
 
         HashSet<int> set = new HashSet<int>(nums);
 
@@ -56,7 +62,10 @@ public class LongestConsecutiveSequence
         foreach (int number in set)
         {
             // if number isn't the first in a sequence, skip it
-            if (set.Contains(number-1)) continue;
+            if (set.Contains(number-1))
+            {
+                continue;
+            }
 
             int currentRun = 1;
             while (set.Contains(number + currentRun))

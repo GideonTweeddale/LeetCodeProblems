@@ -14,7 +14,10 @@ public class WordPattern290
     {
         string[] words = s.Split(' ');
 
-        if (words.Length != pattern.Length) return false;
+        if (words.Length != pattern.Length)
+        {
+            return false;
+        }
 
         Dictionary<char, string> patternToWord = new();
         Dictionary<string, char> wordToPattern = new();
@@ -22,13 +25,24 @@ public class WordPattern290
         for (int i = 0; i < pattern.Length; i++)
         {
             if (!patternToWord.ContainsKey(pattern[i]))
+            {
                 patternToWord.Add(pattern[i], words[i]);
+            }
 
             if (!wordToPattern.ContainsKey(words[i]))
+            {
                 wordToPattern.Add(words[i], pattern[i]);
+            }
 
-            if (patternToWord[pattern[i]] != words[i]) return false;
-            if (wordToPattern[words[i]] != pattern[i]) return false;
+            if (patternToWord[pattern[i]] != words[i])
+            {
+                return false;
+            }
+
+            if (wordToPattern[words[i]] != pattern[i])
+            {
+                return false;
+            }
 
             //if (!patternToWord.ContainsKey(pattern[i]))
             //{

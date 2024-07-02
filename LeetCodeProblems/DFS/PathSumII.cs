@@ -26,7 +26,10 @@ public class PathSumII
         void DFS(List<int> workingList, int sum, TreeNode node)
         {
             // if the node is null return
-            if (node == null) return;
+            if (node == null)
+            {
+                return;
+            }
 
             workingList.Add(node.val);
             sum += node.val;

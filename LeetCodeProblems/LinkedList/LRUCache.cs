@@ -58,7 +58,10 @@ public class LRUCache
 
     public int Get(int key)
     {
-        if (!map.ContainsKey(key)) return -1;
+        if (!map.ContainsKey(key))
+        {
+            return -1;
+        }
 
         Node node = map[key];
 
@@ -71,7 +74,9 @@ public class LRUCache
     public void Put(int key, int value)
     {
         if (map.ContainsKey(key))
+        {
             RemoveFromLinkedList(map[key]);
+        }
 
         Node node = new Node(key, value);
 

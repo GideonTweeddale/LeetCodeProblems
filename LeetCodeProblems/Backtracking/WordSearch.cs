@@ -18,7 +18,9 @@ public class WordSearch
                 if (c == word[0]) // begin our backtracking search
                 {
                     if (MatchWord(board, word, row, col, 0))
+                    {
                         return true;
+                    }
                 }
             }
         }
@@ -29,11 +31,15 @@ public class WordSearch
     private bool MatchWord(char[][] board, string word, int row, int col, int wordIndex)
     {
         if (wordIndex == word.Length) // we've found the whole word
+        {
             return true;
+        }
 
         // check that this is a valid index to seach and then if the char matches
         if (row < 0 || row >= board.Length || col < 0 || col >= board[0].Length || board[row][col] != word[wordIndex])
+        {
             return false;
+        }
 
         // save the char
         char c = board[row][col];

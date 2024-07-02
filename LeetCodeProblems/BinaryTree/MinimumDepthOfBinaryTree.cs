@@ -9,7 +9,9 @@ public class MinimumDepthOfBinaryTree
         // and would have already returned if one of them was a leaf
 
         if (root == null)
+        {
             return 0;
+        }
 
         // bfs search
         Queue<TreeNode> queue = new();
@@ -27,13 +29,19 @@ public class MinimumDepthOfBinaryTree
                 TreeNode node = queue.Dequeue();
 
                 if (node.left == null && node.right == null) // this is a leaf node
+                {
                     return level;
+                }
 
                 if (node.right != null)
+                {
                     queue.Enqueue(node.right);
+                }
 
                 if (node.left != null)
+                {
                     queue.Enqueue(node.left);
+                }
             }
 
         }
@@ -47,7 +55,9 @@ public class MinimumDepthOfBinaryTree
         // intuitively the bfs solution should be faster because the dfs solution only stops evaluating the local branch when it finds a leaf node
         // however, the dfs solution is faster in practice - maybe because it is inherently threadable or perhaps because of the small sizes of the test cases
         if (root == null)
+        {
             return 0;
+        }
 
         int leftMin = MinDepth(root.left);
         int rightMin = MinDepth(root.right);

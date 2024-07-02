@@ -28,7 +28,9 @@ public class GroupAnagrams49
             string sortedString = new string(charArray);
 
             if (!map.ContainsKey(sortedString))
+            {
                 map[sortedString] = [];
+            }
 
             map[sortedString].Add(s);
         }

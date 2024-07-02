@@ -26,7 +26,10 @@ public class ThreeSum15
             int num1 = nums[i];
 
             // if we have a previous index and its value is the same as our current index, skip the duplicate
-            if (i > 0 && num1 == nums[i - 1]) continue;
+            if (i > 0 && num1 == nums[i - 1])
+            {
+                continue;
+            }
 
             int left = i + 1;
             int right = nums.Length - 1;

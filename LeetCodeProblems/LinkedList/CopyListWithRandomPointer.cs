@@ -33,7 +33,10 @@ public class CopyListWithRandomPointer
 
     public Node CopyRandomList(Node head)
     {
-        if (head == null) return null; 
+        if (head == null)
+        {
+            return null;
+        }
 
         Dictionary<Node, Node> nodeToCopy = new();
 
@@ -52,8 +55,15 @@ public class CopyListWithRandomPointer
             Node copy = nodeToCopy[current];
 
             // the random and next pointers may point to null
-            if (current.next != null) copy.next = nodeToCopy[current.next];
-            if (current.random != null) copy.random = nodeToCopy[current.random];
+            if (current.next != null)
+            {
+                copy.next = nodeToCopy[current.next];
+            }
+
+            if (current.random != null)
+            {
+                copy.random = nodeToCopy[current.random];
+            }
 
             current = current.next;
         }

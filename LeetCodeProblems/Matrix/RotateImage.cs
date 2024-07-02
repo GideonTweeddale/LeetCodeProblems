@@ -20,7 +20,9 @@ public class RotateImage
         int rows = matrix.Length;
 
         if (rows < 2)
+        {
             return;
+        }
 
         for (int row = 0; row < rows / 2; row++)
         {
@@ -48,7 +50,9 @@ public class RotateImage
         int last = matrix.Length - 1;
 
         if (width < 2)
+        {
             return;
+        }
 
         for (int row = 0; row < width / 2; row++)
         {

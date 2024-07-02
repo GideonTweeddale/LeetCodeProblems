@@ -16,11 +16,17 @@ public class MaxConsecutiveOnesIII
         while (right < nums.Length)
         {
             // if right is 0 decrement k
-            if (nums[right] == 0) k--;
+            if (nums[right] == 0)
+            {
+                k--;
+            }
 
             if (k < 0)
             {
-                if (nums[left] == 0) k++;
+                if (nums[left] == 0)
+                {
+                    k++;
+                }
 
                 left++;
             }

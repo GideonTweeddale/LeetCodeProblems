@@ -36,7 +36,10 @@ public class ReverseLinkedList
 
     public ListNode ReverseBetweenA(ListNode head, int left, int right)
     {
-        if (right == left) return head;
+        if (right == left)
+        {
+            return head;
+        }
 
         ListNode current = head;
         List<ListNode> nodes = [];
@@ -80,8 +83,14 @@ public class ReverseLinkedList
         {
             int midpoint = right - left;
 
-            if (midpoint % 2 == 0) midpoint = midpoint / 2;
-            else midpoint = (midpoint + 1) / 2;
+            if (midpoint % 2 == 0)
+            {
+                midpoint = midpoint / 2;
+            }
+            else
+            {
+                midpoint = (midpoint + 1) / 2;
+            }
 
             return midpoint + left;
         }   
@@ -92,8 +101,15 @@ public class ReverseLinkedList
 
     public ListNode ReverseBetween(ListNode head, int left, int right)
     {
-        if (right == left) return head;
-        if (head.next == null) return head;
+        if (right == left)
+        {
+            return head;
+        }
+
+        if (head.next == null)
+        {
+            return head;
+        }
 
         ListNode dummy = new ListNode(0, head);
 

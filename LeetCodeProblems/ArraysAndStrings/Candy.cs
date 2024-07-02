@@ -34,9 +34,13 @@ public class Candy135
         for (int i = 0; i < ratings.Length; i++) 
         {
             if (i != 0 && ratings[i] > ratings[i - 1])
+            {
                 candiesRequired++;
+            }
             else if (i < ratings.Length - 1 && ratings[i] > ratings[i + 1])
+            {
                 candiesRequired++;
+            }
         }
 
         return candiesRequired;
@@ -52,7 +56,10 @@ public class Candy135
     
     public int CandyTwoPass(int[] ratings)
     {
-        if (ratings.Length == 0) return 0;
+        if (ratings.Length == 0)
+        {
+            return 0;
+        }
 
         int[] candiesAssigned = new int[ratings.Length];
 
@@ -60,20 +67,26 @@ public class Candy135
         for (int i = 1; i < ratings.Length; i++)
         {
             if (ratings[i] > ratings[i-1])
+            {
                 candiesAssigned[i] = candiesAssigned[i - 1] + 1;
+            }
         }
 
         // right pass
         for (int i = ratings.Length - 2; i >= 0; i--)
         {
             if (ratings[i] > ratings[i+1])
+            {
                 candiesAssigned[i] = Math.Max(candiesAssigned[i], candiesAssigned[i+1] + 1);
+            }
         }
 
         int candiesRequired = ratings.Length;
 
         foreach (int candies in candiesAssigned)
+        {
             candiesRequired += candies;
+        }
 
         return candiesRequired;
     }

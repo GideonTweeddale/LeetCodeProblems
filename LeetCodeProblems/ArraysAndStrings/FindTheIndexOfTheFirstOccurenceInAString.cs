@@ -16,9 +16,15 @@ public class FindTheIndexOfTheFirstOccurenceInAString
         {
             for (int j = 0; j < needle.Length; j++)
             {
-                if (haystack[i + j] != needle[j]) break;
+                if (haystack[i + j] != needle[j])
+                {
+                    break;
+                }
 
-                if (j == needle.Length -1) return i;
+                if (j == needle.Length -1)
+                {
+                    return i;
+                }
             }
         }
 

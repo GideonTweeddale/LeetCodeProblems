@@ -24,7 +24,10 @@ public class MaximumSubarray
         foreach (int num in nums)
         {
             // if the sum is negative, start a new sum
-            if (sum < 0) sum = 0;
+            if (sum < 0)
+            {
+                sum = 0;
+            }
 
             sum += num;
 

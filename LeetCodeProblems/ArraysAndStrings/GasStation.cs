@@ -20,7 +20,10 @@ public class GasStation
             sum += net[i];
         }
 
-        if (sum < 0) return -1;
+        if (sum < 0)
+        {
+            return -1;
+        }
 
         for (int i = 0; i < gas.Length; i++)
         {

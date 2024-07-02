@@ -20,13 +20,19 @@ public class ReverseWordsInAString
         for (int i = s.Length - 1; i >= 0; i--)
         {
             // if we are at the first index or the char is not a space and the first index has not been set: set the end index
-            if (s[i] != ' ' && end == int.MaxValue) end = i + 1;
+            if (s[i] != ' ' && end == int.MaxValue)
+            {
+                end = i + 1;
+            }
 
             // if the next char is a space or the first index and the end index has been set: append the new word and reset end index 
             if ((i == 0 || s[i - 1] == ' ') && end != int.MaxValue)
             {
                 // handle adding a space
-                if (output.Length > 0) output += ' ';
+                if (output.Length > 0)
+                {
+                    output += ' ';
+                }
 
                 output += s[i..end];
                 end = int.MaxValue;
@@ -55,7 +61,9 @@ public class ReverseWordsInAString
             string str = strings[i];
 
             if (output.Length > 0 && str.Length > 0)
+            {
                 str += ' ';
+            }
 
             output = str + output;
         }

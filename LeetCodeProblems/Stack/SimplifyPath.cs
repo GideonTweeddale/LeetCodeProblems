@@ -21,18 +21,31 @@ public class SimplifyPath71
 
         foreach (string str in strs)
         {
-            if (string.IsNullOrWhiteSpace(str) || str == ".") continue;
-
-            else if (str == "..") stack.TryPop(out _);
-
-            else stack.Push(str);
+            if (string.IsNullOrWhiteSpace(str) || str == ".")
+            {
+                continue;
+            }
+            else if (str == "..")
+            {
+                stack.TryPop(out _);
+            }
+            else
+            {
+                stack.Push(str);
+            }
         }
 
-        if (stack.Count == 0) return "/";
+        if (stack.Count == 0)
+        {
+            return "/";
+        }
 
         path = string.Empty;
 
-        while (stack.Count > 0) path = "/" + stack.Pop() + path;
+        while (stack.Count > 0)
+        {
+            path = "/" + stack.Pop() + path;
+        }
 
         return path;
     }

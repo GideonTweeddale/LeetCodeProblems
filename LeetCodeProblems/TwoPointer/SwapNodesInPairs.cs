@@ -18,7 +18,7 @@ public class SwapNodesInPairs
     // worst case complexity
     // O(N) time where N is the number of nodes in the list and O(1) space
 
-    public static ListNode SwapPairs(ListNode head)
+    public static ListNode? SwapPairs(ListNode head)
     {
         // we don't need this check if we init dummy to head and perform a null check on head.next during node2 init
         // because the while check actually handles this condition
@@ -29,8 +29,8 @@ public class SwapNodesInPairs
         }
 
         ListNode dummy = new(0);
-        ListNode node1 = head;
-        ListNode node2 = head.next;
+        ListNode? node1 = head;
+        ListNode? node2 = head.next;
         ListNode previous = dummy;
 
         while (node1 != null && node2 != null)

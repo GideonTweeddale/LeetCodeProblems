@@ -13,7 +13,11 @@ public class FlattenBinaryTreeToLinkedList
 
     public void Flatten(TreeNode root) 
     {
-        if (root == null) return;
+        if (root == null)
+        {
+            return;
+        }
+
         Flattener(root, null);
     } 
 
@@ -40,7 +44,10 @@ public class FlattenBinaryTreeToLinkedList
     public void FlattenB(TreeNode root) => DFS(root);
     private TreeNode DFS(TreeNode node)
     {        
-        if (node == null) return null;
+        if (node == null)
+        {
+            return null;
+        }
 
         TreeNode leftTail = DFS(node.left);
         TreeNode rightTail = DFS(node.right);
@@ -52,8 +59,16 @@ public class FlattenBinaryTreeToLinkedList
             node.left = null;
         }
 
-        if (rightTail != null) return rightTail;
-        if (leftTail != null) return leftTail;
+        if (rightTail != null)
+        {
+            return rightTail;
+        }
+
+        if (leftTail != null)
+        {
+            return leftTail;
+        }
+
         return node;
     }
 }

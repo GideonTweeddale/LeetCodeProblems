@@ -55,10 +55,16 @@ public class HouseRobber
         int Backtrack(int sum, int index)
         {
             // base case is when we reach the end of the array
-            if (index >= nums.Length) return sum;
+            if (index >= nums.Length)
+            {
+                return sum;
+            }
 
             // if we have already computed the subproblem, return that instead
-            if (dp.ContainsKey((sum, index))) return dp[(sum, index)];
+            if (dp.ContainsKey((sum, index)))
+            {
+                return dp[(sum, index)];
+            }
 
             // call the backtrack function for the index + 2 and index + 1
             dp[(sum, index)] = Math.Max(Backtrack(sum + nums[index], index + 2), Backtrack(sum, index + 1));

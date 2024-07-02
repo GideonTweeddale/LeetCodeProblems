@@ -15,10 +15,16 @@ public class KClosestPointsToOrigin
     public int[][] KClosest(int[][] points, int k)
     {
         // sanity check
-        if (points == null || points.Length == 0 || k == 0) return [];
+        if (points == null || points.Length == 0 || k == 0)
+        {
+            return [];
+        }
 
         // if we need all the points, then we don't need to do anything
-        if (points.Length == k) return points;
+        if (points.Length == k)
+        {
+            return points;
+        }
 
         PriorityQueue<int[], int> heap = new();
 

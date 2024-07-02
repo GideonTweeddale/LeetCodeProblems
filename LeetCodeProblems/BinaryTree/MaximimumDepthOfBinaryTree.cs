@@ -7,7 +7,9 @@ public class MaximimumDepthOfBinaryTree
         // should be O(N) time complexity and O(N) space complexity in the worst case
 
         if (root == null)
+        {
             return 0;
+        }
 
         // this check is unnecesary and covered by the null check above and the Math.Max below
         // interestingly, removing it cut runtime by 25% going from the 33rd percentile to the 81st percentile

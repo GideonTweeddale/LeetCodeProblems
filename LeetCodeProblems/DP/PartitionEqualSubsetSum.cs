@@ -14,9 +14,15 @@ public class PartitionEqualSubsetSum
     {
         int sum = 0;
 
-        for (int i = 0; i < nums.Length; i++) sum += nums[i];
+        for (int i = 0; i < nums.Length; i++)
+        {
+            sum += nums[i];
+        }
 
-        if (sum % 2 != 0) return false;
+        if (sum % 2 != 0)
+        {
+            return false;
+        }
 
         Array.Sort(nums);
 
@@ -28,9 +34,15 @@ public class PartitionEqualSubsetSum
             Console.WriteLine(nums[i]);
 
             // if any element is greater than half of the sum, then we can't divide the array into two equal sum subsets
-            if (nums[i] > (sum / 2)) return false;
+            if (nums[i] > (sum / 2))
+            {
+                return false;
+            }
 
-            if (nums[i] <= target) target -= nums[i];
+            if (nums[i] <= target)
+            {
+                target -= nums[i];
+            }
         }
 
         return target == 0;
@@ -41,16 +53,25 @@ public class PartitionEqualSubsetSum
         int sum = nums.Sum();
         int target = sum / 2;
 
-        if (sum % 2 != 0) return false;
+        if (sum % 2 != 0)
+        {
+            return false;
+        }
 
         HashSet<int> dp = new HashSet<int> { 0 };
 
         for (int i = nums.Length - 1; i >= 0; i--)
+        {
             foreach (int t in dp.ToArray())
             {
-                if (t + nums[i] == target) return true;                
+                if (t + nums[i] == target)
+                {
+                    return true;
+                }
+
                 dp.Add(t + nums[i]);
             }
+        }
 
         return dp.Contains(target);
     }

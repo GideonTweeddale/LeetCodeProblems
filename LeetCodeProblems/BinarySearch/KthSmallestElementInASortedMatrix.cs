@@ -21,9 +21,13 @@ public class KthSmallestElementInASortedMatrix
             int count = CountLessOrEqual(mid);
 
             if (count < k)
+            {
                 min = mid + 1;
+            }
             else
+            {
                 max = mid;
+            }
         }
 
         return min;

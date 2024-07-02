@@ -14,7 +14,10 @@ public class SummaryRanges228
 
     public IList<string> SummaryRanges(int[] nums)
     {
-        if (nums.Length == 0) return [];
+        if (nums.Length == 0)
+        {
+            return [];
+        }
 
         IList<string> ranges = new List<string>();
 
@@ -26,26 +29,37 @@ public class SummaryRanges228
             if (nums[i-1] + 1 != nums[i])
             {
                 if (nums[startIndex] == nums[i - 1])
+                {
                     ranges.Add(nums[startIndex].ToString());
+                }
                 else
+                {
                     ranges.Add($"{nums[startIndex]}->{nums[i - 1]}");
-                
+                }
+
                 startIndex = i;
             }
         }
 
         // add the last range
         if (nums[startIndex] == nums[nums.Length - 1])
+        {
             ranges.Add(nums[startIndex].ToString());
+        }
         else
+        {
             ranges.Add($"{nums[startIndex]}->{nums[nums.Length - 1]}");
+        }
 
         return ranges;
     }
 
     public IList<string> SummaryRangesB(int[] nums)
     {
-        if (nums.Length == 0) return [];
+        if (nums.Length == 0)
+        {
+            return [];
+        }
 
         IList<string> ranges = new List<string>();
 
@@ -53,16 +67,24 @@ public class SummaryRanges228
 
         for (int i = 0; i < nums.Length; i++)
         {
-            if (i < nums.Length - 1 && nums[i] + 1 == nums[i + 1]) 
+            if (i < nums.Length - 1 && nums[i] + 1 == nums[i + 1])
+            {
                 continue;
+            }
 
             if (numA != nums[i])
+            {
                 ranges.Add($"{numA}->{nums[i]}");
+            }
             else
+            {
                 ranges.Add($"{numA}");
+            }
 
             if (i < nums.Length - 1)
+            {
                 numA = nums[i + 1];
+            }
         }
 
         return ranges;

@@ -29,7 +29,10 @@ public class CoinChange322
             }
         }
 
-        if (amount < 0) return -1;
+        if (amount < 0)
+        {
+            return -1;
+        }
 
         return count;
     }
@@ -55,7 +58,10 @@ public class CoinChange322
             }
         }
 
-        if (dp[amount] != amount + 1) return dp[amount];
+        if (dp[amount] != amount + 1)
+        {
+            return dp[amount];
+        }
 
         return -1;
     }

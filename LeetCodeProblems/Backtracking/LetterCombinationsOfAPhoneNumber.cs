@@ -18,7 +18,9 @@ public class LetterCombinationsOfAPhoneNumber
     public IList<string> LetterCombinations(string digits)
     {
         if (digits.Length == 0)
+        {
             return new List<string>();
+        }
 
         IList<string> result = new List<string>();
         Backtrack(0, new StringBuilder());

@@ -23,7 +23,11 @@ public class SingleNumber136
         // I would have never come up with this on my own, but it is very clever 
         // and it saves the need for the sort operation
         int n = 0;
-        foreach (int i in nums) n ^= i;
+        foreach (int i in nums)
+        {
+            n ^= i;
+        }
+
         return n;
     }
 }

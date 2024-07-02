@@ -12,7 +12,10 @@ public class CloneGraph133
 
     public Node CloneGraph(Node node)
     {
-        if (node == null) return null;
+        if (node == null)
+        {
+            return null;
+        }
 
         Dictionary<Node, Node> visited = new([]);
 
@@ -20,7 +23,10 @@ public class CloneGraph133
 
         Node DFS(Node node)
         {
-            if (visited.ContainsKey(node)) return visited[node];
+            if (visited.ContainsKey(node))
+            {
+                return visited[node];
+            }
 
             Node clone = new Node(node.val);
             visited.Add(node, clone);
@@ -36,7 +42,10 @@ public class CloneGraph133
 
     public Node CloneGraphA(Node node)
     {
-        if (node == null) return null;
+        if (node == null)
+        {
+            return null;
+        }
 
         Dictionary<Node, Node> visited = new([]);
         Queue<Node> queue = new([node]);

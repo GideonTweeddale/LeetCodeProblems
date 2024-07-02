@@ -64,9 +64,15 @@ public class ReorderList143
             current = current.next.next;
         }
 
-        if (left != null) current.next = left;
+        if (left != null)
+        {
+            current.next = left;
+        }
 
-        if (right != null) current.next = right;
+        if (right != null)
+        {
+            current.next = right;
+        }
 
         return dummy.next;
     }

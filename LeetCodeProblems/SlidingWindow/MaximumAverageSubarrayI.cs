@@ -30,7 +30,10 @@ public class MaximumAverageSubarrayI
             currentAverage += ((double)nums[right] / k);
 
             // if the average is higher than the max
-            if (currentAverage > maxAverage) maxAverage = currentAverage;
+            if (currentAverage > maxAverage)
+            {
+                maxAverage = currentAverage;
+            }
 
             // shift the window
             right++;
@@ -52,7 +55,10 @@ public class MaximumAverageSubarrayI
         int right = k;
 
         // init the siding window
-        for (int i = 0; i < k; i++) currentSum += nums[i];
+        for (int i = 0; i < k; i++)
+        {
+            currentSum += nums[i];
+        }
 
         double maxSum = currentSum;
 
@@ -62,7 +68,10 @@ public class MaximumAverageSubarrayI
             currentSum =  currentSum - nums[left] + nums[right];
 
             // if the average is higher than the max
-            if (currentSum > maxSum) maxSum = currentSum;
+            if (currentSum > maxSum)
+            {
+                maxSum = currentSum;
+            }
 
             // shift the window
             right++;

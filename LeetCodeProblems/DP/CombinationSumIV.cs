@@ -36,15 +36,24 @@ public class CombinationSumIV
 
         int helper(int t)
         {
-            if (memo.ContainsKey(t)) return memo[t];
+            if (memo.ContainsKey(t))
+            {
+                return memo[t];
+            }
 
-            if (t == 0) return 1;
+            if (t == 0)
+            {
+                return 1;
+            }
 
             int count = 0;
 
             foreach (int num in nums)
             {
-                if (t - num < 0) break;
+                if (t - num < 0)
+                {
+                    break;
+                }
 
                 count += helper(t - num);
             }

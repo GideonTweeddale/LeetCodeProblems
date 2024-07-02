@@ -33,10 +33,16 @@ public class RotateArray
 
     public void Rotate2(int[] nums, int k)
     {
-        if (nums.Length == 1) return;
+        if (nums.Length == 1)
+        {
+            return;
+        }
 
         k = k % nums.Length;
-        if (k == 0) return;
+        if (k == 0)
+        {
+            return;
+        }
 
         int ni;
         int[] buffer = new int[nums.Length];

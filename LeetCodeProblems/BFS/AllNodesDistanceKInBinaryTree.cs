@@ -23,7 +23,10 @@ public class AllNodesDistanceKInBinaryTree
 
     public IList<int> DistanceK(TreeNode root, TreeNode target, int k)
     {
-        if (root == null || target == null) return [];
+        if (root == null || target == null)
+        {
+            return [];
+        }
 
         Dictionary<TreeNode, List<TreeNode>> graph = [];
 
@@ -31,16 +34,25 @@ public class AllNodesDistanceKInBinaryTree
         BuildGraph(root, null);
 
         // if the graph doesn't contain the target, return empty
-        if (!graph.ContainsKey(target)) return [];
+        if (!graph.ContainsKey(target))
+        {
+            return [];
+        }
 
         // if the target doesn't have any neighbours, return empty
-        if (graph[target].Count == 0) return [];
+        if (graph[target].Count == 0)
+        {
+            return [];
+        }
 
         foreach (KeyValuePair<TreeNode, List<TreeNode>> item in graph)
         {
             string str = $"Item {item.Key} links";
 
-            foreach (TreeNode link in item.Value) str = str + " " + link.val;
+            foreach (TreeNode link in item.Value)
+            {
+                str = str + " " + link.val;
+            }
 
             Console.WriteLine(str);
         }
@@ -85,7 +97,10 @@ public class AllNodesDistanceKInBinaryTree
         // helper functions
         void BuildGraph(TreeNode node, TreeNode? parent)
         {
-            if (node == null) return;
+            if (node == null)
+            {
+                return;
+            }
 
             if (!graph.ContainsKey(node)) 
             {

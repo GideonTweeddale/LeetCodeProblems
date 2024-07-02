@@ -18,7 +18,10 @@ public class Permutations
 
             foreach (int num in nums)
             {
-                if (path.Contains(num)) continue;
+                if (path.Contains(num))
+                {
+                    continue;
+                }
 
                 path.Add(num);
 

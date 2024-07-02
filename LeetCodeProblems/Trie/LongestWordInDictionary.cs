@@ -27,10 +27,19 @@ public  class LongestWordInDictionary
                 }
             }
 
-            if (!found) continue;
+            if (!found)
+            {
+                continue;
+            }
 
-            if (result.Length < w.Length) result = w;
-            else if (result.Length == w.Length && StringComparer.Ordinal.Compare(w, result) < 0) result = w;
+            if (result.Length < w.Length)
+            {
+                result = w;
+            }
+            else if (result.Length == w.Length && StringComparer.Ordinal.Compare(w, result) < 0)
+            {
+                result = w;
+            }
         }
 
         return result;

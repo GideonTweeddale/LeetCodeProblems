@@ -1,4 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
+
+using LeetCodeProblems.Nodes;
+
 public class ConstructBinaryTreeFromInorderAndPostorderTraversal
 
 {
@@ -12,8 +15,8 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
     // this is big O(n^2) because of the index lookup within each node node
     // let's make it O(n) with a hashmap
     // there is an index error in here somewhere TODO
-    public TreeNode BuildTreeA(int[] inorder, int[] postorder) {
-        Dictionary<int, int> map = new(); // <value, index>
+    public static TreeNode BuildTreeA(int[] inorder, int[] postorder) {
+        Dictionary<int, int> map = []; // <value, index>
 
         for (int i = 0; i < inorder.Length; i++)
         {
@@ -24,9 +27,12 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
 
         TreeNode Helper(int[] inorder, int[] postorder)
         {
-            if (inorder.Length == 1) return new TreeNode(inorder[0]);
+            if (inorder.Length == 1)
+            {
+                return new TreeNode(inorder[0]);
+            }
 
-            TreeNode root = new TreeNode(postorder[^1]);
+            TreeNode root = new(postorder[^1]);
             int rootIndex = map[root.val];
 
             root.left = Helper(inorder[..rootIndex], postorder[..rootIndex]);
@@ -37,10 +43,10 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
     }
 
     // neetcode solution
-    // O(n) time and space    
-    private int fromEnd = 1;
+    // O(n) time and space  
 
-    public TreeNode BuildTree(int[] inorder, int[] postorder) {
+    public static TreeNode BuildTree(int[] inorder, int[] postorder) {
+        int fromEnd = 1;
         Dictionary<int, int> map = new(); // <value, index>
 
         for (int i = 0; i < inorder.Length; i++)
@@ -52,9 +58,12 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
 
         TreeNode Helper(int left, int right)
         {
-            if (left > right) return null;
+            if (left > right)
+            {
+                return null;
+            }
 
-            TreeNode root = new TreeNode(postorder[^fromEnd++]);
+            TreeNode root = new(postorder[^fromEnd++]);
 
             int rootIndex = map[root.val];
 

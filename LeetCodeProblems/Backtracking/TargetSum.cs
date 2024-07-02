@@ -12,7 +12,11 @@ public class TargetSum
         {
             if (i == nums.Length)
             {
-                if (sum == target) count++;
+                if (sum == target)
+                {
+                    count++;
+                }
+
                 return;
             }
 

@@ -7,11 +7,15 @@ public class IsSubsequence392
         // if we reach the end of the t before we find all the chars in s return false
         // this solution is O(N) time and O(1) space where N = the length of t
 
-        if (t.Length == 0 && s.Length != 0) 
+        if (t.Length == 0 && s.Length != 0)
+        {
             return false;
+        }
 
         if (s.Length == 0)
+        {
             return true;
+        }
 
         for (int ti = 0, si = 0; ti < t.Length; ti++)
         {
@@ -20,7 +24,9 @@ public class IsSubsequence392
                 si++;
 
                 if (si == s.Length)
+                {
                     return true;
+                }
             }
         }
 

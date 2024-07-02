@@ -8,8 +8,15 @@ public class RemoveLiknedListElements
         // return head
         // this should run in O(n) time and O(1) space
 
-        if (head == null) return null;
-        if (head.next == null && head.val != val) return head;
+        if (head == null)
+        {
+            return null;
+        }
+
+        if (head.next == null && head.val != val)
+        {
+            return head;
+        }
 
         ListNode? previous = head;
         ListNode? current = head.next;
@@ -30,7 +37,10 @@ public class RemoveLiknedListElements
             current = current.next;
         }
 
-        if (head.val == val) head = head.next;
+        if (head.val == val)
+        {
+            head = head.next;
+        }
 
         return head;
     }

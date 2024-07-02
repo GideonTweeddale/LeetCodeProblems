@@ -32,7 +32,10 @@ public class MergeKSortedLists
     // lists = temp;
 
     public ListNode MergeKLists(ListNode[] lists) {
-        if (lists == null || lists.Length == 0) return null;
+        if (lists == null || lists.Length == 0)
+        {
+            return null;
+        }
 
         while (lists.Length > 1)
         {
@@ -74,8 +77,15 @@ public class MergeKSortedLists
             tail = tail.next;
         }
 
-        if (l1 != null) tail.next = l1;
-        if (l2 != null) tail.next = l2;
+        if (l1 != null)
+        {
+            tail.next = l1;
+        }
+
+        if (l2 != null)
+        {
+            tail.next = l2;
+        }
 
         return dummy.next;
     }

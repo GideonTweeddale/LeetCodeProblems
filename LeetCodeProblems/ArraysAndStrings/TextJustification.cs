@@ -44,7 +44,11 @@ public class TextJustification
         }
 
         string lastLine = string.Join(" ", line);
-        while (lastLine.Length < maxWidth) lastLine += " ";
+        while (lastLine.Length < maxWidth)
+        {
+            lastLine += " ";
+        }
+
         paragraph.Add(lastLine);
 
         return paragraph;

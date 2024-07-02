@@ -31,7 +31,10 @@ public class FindKPairsWithSmallestSums
         IList<IList<int>> result = [];
 
         // sanity check
-        if (nums1 == null || nums2 == null || k == 0) return result;
+        if (nums1 == null || nums2 == null || k == 0)
+        {
+            return result;
+        }
 
         PriorityQueue<(int, int), int> heap = new();
         HashSet<(int, int)> visited = new();

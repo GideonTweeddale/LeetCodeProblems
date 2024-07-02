@@ -15,10 +15,16 @@ public class BestTimeToBuyAndSellStocksWithCooldown
         int dfs(int i, bool lookingToBuy)
         {
             // if we are out of bounds, return 0
-            if (i >= prices.Length) return 0;
+            if (i >= prices.Length)
+            {
+                return 0;
+            }
 
             // if we have already calculated the result, return it
-            if (cache.ContainsKey((i, lookingToBuy))) return cache[(i, lookingToBuy)];
+            if (cache.ContainsKey((i, lookingToBuy)))
+            {
+                return cache[(i, lookingToBuy)];
+            }
 
             // we can always skip a day
             int cooldown = dfs(i + 1, lookingToBuy);

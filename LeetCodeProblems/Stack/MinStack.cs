@@ -29,8 +29,14 @@ public class MinStack
         
         node.next = top;
 
-        if (top != null && val > top.min) node.min = top.min;
-        else node.min = val;
+        if (top != null && val > top.min)
+        {
+            node.min = top.min;
+        }
+        else
+        {
+            node.min = val;
+        }
 
         top = node;
     }
@@ -102,8 +108,14 @@ public class MinStackB
         {
             int minVal = _minStack.Peek();
 
-            if (minVal > val) _minStack.Push(val);
-            else _minStack.Push(minVal);
+            if (minVal > val)
+            {
+                _minStack.Push(val);
+            }
+            else
+            {
+                _minStack.Push(minVal);
+            }
         }
     }
 

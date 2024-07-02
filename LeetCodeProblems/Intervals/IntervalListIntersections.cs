@@ -25,7 +25,10 @@ public class IntervalListIntersections
     {
         List<int[]> results = [];
 
-        if (firstList.Length == 0 || secondList.Length == 0) return [];
+        if (firstList.Length == 0 || secondList.Length == 0)
+        {
+            return [];
+        }
 
         int[][] combined = firstList.Concat(secondList).ToArray();
 
@@ -60,7 +63,10 @@ public class IntervalListIntersections
     {
         List<int[]> results = [];
 
-        if (firstList.Length == 0 || secondList.Length == 0) return [];
+        if (firstList.Length == 0 || secondList.Length == 0)
+        {
+            return [];
+        }
 
         int pointer1 = 0;
         int pointer2 = 0;
@@ -74,12 +80,18 @@ public class IntervalListIntersections
             int end = Math.Min(first[1], second[1]);
 
             if (start <= end)
+            {
                 results.Add([start, end]);
+            }
 
             if (first[1] < second[1])
+            {
                 pointer1++;
+            }
             else
+            {
                 pointer2++;
+            }
         }
 
         return results.ToArray();

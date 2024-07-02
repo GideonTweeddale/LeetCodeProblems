@@ -24,7 +24,10 @@ public class MergeIntervals
     public int[][] Merge(int[][] intervals)
     {
         List<int[]> output = [];
-        if (intervals.Length == 0) return output.ToArray();
+        if (intervals.Length == 0)
+        {
+            return output.ToArray();
+        }
 
         Array.Sort(intervals, (a, b) => a[0] - b[0]);
 
@@ -37,9 +40,13 @@ public class MergeIntervals
             int lastEnd = output[^1][1];
 
             if (start <= lastEnd)
+            {
                 output[^1][1] = Math.Max(output[^1][1], end);
+            }
             else
+            {
                 output.Add(interval);
+            }
         }
 
         return output.ToArray();

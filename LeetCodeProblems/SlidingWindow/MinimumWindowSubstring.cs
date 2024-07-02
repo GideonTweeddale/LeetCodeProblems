@@ -79,8 +79,15 @@ public class MinimumWindowSubstring
     }    
 
     public string MinWindowA(string s, string t) {
-        if (s.Length <= 0 && t.Length <= 0) return string.Empty;
-        if (t.Length > s.Length) return string.Empty;
+        if (s.Length <= 0 && t.Length <= 0)
+        {
+            return string.Empty;
+        }
+
+        if (t.Length > s.Length)
+        {
+            return string.Empty;
+        }
 
         Dictionary<char, int> charCounts = new();
         Dictionary<char, int> currentCharCounts = new();

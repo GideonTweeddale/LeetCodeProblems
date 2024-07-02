@@ -26,11 +26,17 @@ public class MinimumNumberOfArrowsToBurstBalloons
 
     public int FindMinArrowShots(int[][] points)
     {
-        if (points.Length == 0) return 0;
+        if (points.Length == 0)
+        {
+            return 0;
+        }
 
         Array.Sort(points, (a, b) => a[0].CompareTo(b[0]));
 
-        foreach (int[] point in points) Console.WriteLine($"[{point[0]},{point[1]}]");
+        foreach (int[] point in points)
+        {
+            Console.WriteLine($"[{point[0]},{point[1]}]");
+        }
 
         int previousEnd = points[0][1];
         int count = 1;

@@ -34,8 +34,10 @@ public class PacificAtlanticWaterFlow
         {
             for (int col = 0; col < cols; col++)
             {
-                if (pacific.Contains((row, col)) && atlantic.Contains((row, col))) 
+                if (pacific.Contains((row, col)) && atlantic.Contains((row, col)))
+                {
                     result.Add([row, col]);
+                }
             }
         }
 
@@ -43,7 +45,10 @@ public class PacificAtlanticWaterFlow
         
         void DFS(int row, int col, HashSet<(int, int)> visited, int prevHeight)
         {
-            if (visited.Contains((row, col)) || row < 0 || col < 0 || row == rows || col == cols || heights[row][col] < prevHeight) return;
+            if (visited.Contains((row, col)) || row < 0 || col < 0 || row == rows || col == cols || heights[row][col] < prevHeight)
+            {
+                return;
+            }
 
             visited.Add((row, col));
 

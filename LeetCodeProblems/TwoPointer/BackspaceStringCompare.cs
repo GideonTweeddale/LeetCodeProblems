@@ -13,12 +13,16 @@ public class BackspaceStringCompare
         int sProcessedLength = ProcessString(sChars);
         int tProcessedLength = ProcessString(tChars);
 
-        if (sProcessedLength != tProcessedLength) 
+        if (sProcessedLength != tProcessedLength)
+        {
             return false;
+        }
 
         for (int i = 0; i < sProcessedLength; i++) {
-            if (sChars[i] != tChars[i]) 
+            if (sChars[i] != tChars[i])
+            {
                 return false;
+            }
         }
 
         return true;
@@ -49,17 +53,25 @@ public class BackspaceStringCompare
             if (i < s.Length)
             {
                 if (s[i] == '#')
+                {
                     leftSub = leftSub.Remove(leftSub.Length - 1, 1);
+                }
                 else
+                {
                     leftSub = leftSub + s[i];
+                }
             }
 
             if (i < t.Length)
             {
                 if (t[i] == '#')
+                {
                     rightSub = rightSub.Remove(rightSub.Length - 1, 1);
+                }
                 else
+                {
                     rightSub = rightSub + t[i];
+                }
             }
         }
 

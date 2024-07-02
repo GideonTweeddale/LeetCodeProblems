@@ -26,8 +26,15 @@ public class ValidPalindrome
         while (left < right)
         {
             // skip any invalid chars
-            while (!char.IsLetterOrDigit(s[left]) && left < right) left++;
-            while (!char.IsLetterOrDigit(s[right]) && left < right) right--;
+            while (!char.IsLetterOrDigit(s[left]) && left < right)
+            {
+                left++;
+            }
+
+            while (!char.IsLetterOrDigit(s[right]) && left < right)
+            {
+                right--;
+            }
 
             // exit early
             if (char.ToLower(s[left]) != char.ToLower(s[right]))
@@ -52,7 +59,13 @@ public class ValidPalindrome
         string validS = string.Empty;
 
         // filter out the invalid characters
-        foreach (char c in s) if (char.IsLetterOrDigit(c)) validS += c;
+        foreach (char c in s)
+        {
+            if (char.IsLetterOrDigit(c))
+            {
+                validS += c;
+            }
+        }
 
         int left = 0;
         int right = validS.Length - 1;

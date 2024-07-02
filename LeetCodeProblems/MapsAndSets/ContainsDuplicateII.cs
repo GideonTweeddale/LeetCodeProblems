@@ -26,7 +26,10 @@ public class ContainsDuplicateII
 
         for (int right = 0; right < nums.Length; right++)
         {
-            if (map.Contains(nums[right])) return true;
+            if (map.Contains(nums[right]))
+            {
+                return true;
+            }
 
             map.Add(nums[right]);
 

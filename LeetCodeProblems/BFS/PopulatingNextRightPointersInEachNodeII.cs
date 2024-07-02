@@ -34,10 +34,6 @@ public class PopulatingNextRightPointersInEachNodeII
                 {
                     node.next = q.Peek();
                 }
-                else
-                {
-                    node.next = null; // this probably isn't necessary, but it doesn't cost much to be explicit here
-                }
 
                 if (node.left != null)
                 {

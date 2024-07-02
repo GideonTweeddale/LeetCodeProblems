@@ -55,7 +55,10 @@ public class BinaryTreeRightSideView
                 }
             }
 
-            output.Add(rightMost.val);
+            if (rightMost != null)
+            {
+                output.Add(rightMost.val);
+            }
         }
 
         return output;

@@ -18,7 +18,10 @@ public class ThreeSumClosest16
             int numA = nums[i];
 
             // skip duplicates
-            if (i > 0 && numA == nums[i-1]) continue;
+            if (i > 0 && numA == nums[i-1])
+            {
+                continue;
+            }
 
             int left = i + 1;
             int right = nums.Length - 1;

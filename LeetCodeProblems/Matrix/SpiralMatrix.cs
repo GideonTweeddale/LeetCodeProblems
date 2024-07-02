@@ -79,7 +79,10 @@ public class SpiralMatrix
             colStart++;
 
             // Column traversal
-            if (colStart > colEnd) break;
+            if (colStart > colEnd)
+            {
+                break;
+            }
 
             for (int j = colStart; j <= colEnd; j++)
             {
@@ -88,7 +91,10 @@ public class SpiralMatrix
             rowEnd--;
 
             // Reverse row traversal
-            if (rowStart > rowEnd) break;
+            if (rowStart > rowEnd)
+            {
+                break;
+            }
 
             for (int k = rowEnd; k >= rowStart; k--)
             {
@@ -97,7 +103,10 @@ public class SpiralMatrix
             colEnd--;
 
             // Reverse column traversal
-            if (colStart > colEnd) break;
+            if (colStart > colEnd)
+            {
+                break;
+            }
 
             for (int m = colEnd; m >= colStart; m--)
             {
@@ -105,7 +114,10 @@ public class SpiralMatrix
             }
             rowStart++;
 
-            if (rowStart > rowEnd) break;
+            if (rowStart > rowEnd)
+            {
+                break;
+            }
         }
 
         return records;

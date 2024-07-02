@@ -17,14 +17,20 @@ public class ValidateBinarySearchTree
 
     public bool IsValidBSTA(TreeNode root)
     {
-        if (root == null) return true;
+        if (root == null)
+        {
+            return true;
+        }
 
         return DFS(root, double.MinValue, double.MaxValue);
 
         // DFS helper function
         bool DFS(TreeNode node, double left, double right)
         {
-            if (node == null) return true;
+            if (node == null)
+            {
+                return true;
+            }
 
             if (!(left < node.val && node.val < right))
             {
@@ -40,13 +46,19 @@ public class ValidateBinarySearchTree
 
     public bool IsValidBST(TreeNode root)
     {
-        if (root == null) return true;
+        if (root == null)
+        {
+            return true;
+        }
 
         return DFS(root, null, null);
 
         bool DFS(TreeNode node, int? left, int? right)
         {
-            if (node == null) return true;
+            if (node == null)
+            {
+                return true;
+            }
 
             // Validate current node's value
             if ((left != null && node.val <= left) || (right != null && node.val >= right))

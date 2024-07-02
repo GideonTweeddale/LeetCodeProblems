@@ -21,7 +21,10 @@ public class RotateList
     public ListNode RotateRight(ListNode head, int k)
     {
         // edge case - head is null or head.next is null || k is zero
-        if (head == null || head.next == null || k == 0) return head;
+        if (head == null || head.next == null || k == 0)
+        {
+            return head;
+        }
 
         ListNode dummy = new ListNode(0, head);
 
@@ -35,10 +38,16 @@ public class RotateList
         }
 
         // deal with k being greater than the length of the list by dividing by the length of the list and taking the remainder as k
-        if (k > length) k = k % length;
+        if (k > length)
+        {
+            k = k % length;
+        }
 
         // edge case - k == the length of the list or is a multiple of the length of the list
-        if (k == 0) return head;
+        if (k == 0)
+        {
+            return head;
+        }
 
         ListNode nodeK = dummy;
         current = dummy;
@@ -46,7 +55,10 @@ public class RotateList
         // find the kth node - and find the final node in the list
         for (int i = 0; i < length; i++) 
         {
-            if (i == length - k) nodeK = current;
+            if (i == length - k)
+            {
+                nodeK = current;
+            }
 
             current = current.next;
         } 
