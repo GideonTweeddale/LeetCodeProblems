@@ -33,7 +33,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
     public static TreeNode BuildTreeHashMap(int[] preorder, int[] inorder)
     {
         int preorderIndex = 0; // Initialize the starting index for preorder traversal
-        Dictionary<int, int>  inorderIndexMap = new ();
+        Dictionary<int, int>  inorderIndexMap = [];
         
         // Build a map of each value to its index in the inorder array
         for (int i = 0; i < inorder.Length; i++)

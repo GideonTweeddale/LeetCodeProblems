@@ -25,7 +25,7 @@ public class TaskScheduler
     public static int LeastInterval(char[] tasks, int n)
     {
         // count the occruences of each task
-        Dictionary<char, int> taskOccurences = new Dictionary<char, int>();
+        Dictionary<char, int> taskOccurences = [];
 
         foreach (char task in tasks)
         {

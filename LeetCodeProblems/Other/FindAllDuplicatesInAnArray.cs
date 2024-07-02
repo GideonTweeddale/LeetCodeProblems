@@ -10,7 +10,7 @@ public class FindAllDuplicatesInAnArray
         // the question specifies that we see each number once or twice, so we shouldn't add any item more than once
         // this should run in O(N) time and, excluding the return list, O(1) space
 
-        List<int> result = new List<int>();
+        List<int> result = [];
 
         for (int i = 0; i < nums.Length; i++)
         {

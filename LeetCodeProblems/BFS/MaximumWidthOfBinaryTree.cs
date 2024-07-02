@@ -115,7 +115,7 @@ public class MaximumWidthOfBinaryTree
     // that didn't work either
     public static int WidthOfBinaryTreeAlsoWrong(TreeNode root)
     {
-        Dictionary<int, (int, int)> levels = new();
+        Dictionary<int, (int, int)> levels = [];
 
         DFS(root.left, 1, -1);
         DFS(root.right, 1, 1);
@@ -217,7 +217,7 @@ public class MaximumWidthOfBinaryTree
     // let's apply the counting steps idea to our DFS from above
     public static int WidthOfBinaryTree(TreeNode root)
     {
-        Dictionary<int, int> levels = new();
+        Dictionary<int, int> levels = [];
 
         int maxWidth = 0;
 

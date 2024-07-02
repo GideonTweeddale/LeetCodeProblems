@@ -15,7 +15,7 @@ public class MinimumAbsoluteDifferenceInBST
     // becuase we will recurse to the depth of the tree before returning if don't find the min value earlier
     // and that will use h stack frames
 
-    public int GetMinimumDifference(TreeNode root)
+    public static int GetMinimumDifference(TreeNode root)
     {
         return GetSubtreeMinimumDifference(root, int.MaxValue, int.MaxValue).min;
     }

@@ -40,7 +40,7 @@ public class KClosestPointsToOrigin
             }
         }
 
-        List<int[]> result = new();
+        List<int[]> result = [];
 
         for (int i = 0; i < k; i++)
         {

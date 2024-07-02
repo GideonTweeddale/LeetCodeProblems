@@ -47,7 +47,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
 
     public static TreeNode BuildTree(int[] inorder, int[] postorder) {
         int fromEnd = 1;
-        Dictionary<int, int> map = new(); // <value, index>
+        Dictionary<int, int> map = []; // <value, index>
 
         for (int i = 0; i < inorder.Length; i++)
         {

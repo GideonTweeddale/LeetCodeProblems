@@ -13,7 +13,7 @@ public class MinimumHeightTrees
     // we can use a dictionary to store the graph and a queue to store the leaf nodes
     public static IList<int> FindMinHeightTrees(int n, int[][] edges)
     {
-        Dictionary<int, List<int>> graph = new();
+        Dictionary<int, List<int>> graph = [];
 
         foreach (int[] edge in edges)
         {
@@ -35,7 +35,7 @@ public class MinimumHeightTrees
         Queue<int> leaves = new();
 
         // store the number of untrimmed leaves for each node
-        Dictionary<int, int> edgeCounts = new();
+        Dictionary<int, int> edgeCounts = [];
 
         // init the queue and edgeCounts
         foreach (int node in graph.Keys)

@@ -22,7 +22,7 @@ public class ContainsDuplicateII
     {
         int left = 0;
 
-        HashSet<int> map = new();
+        HashSet<int> map = [];
 
         for (int right = 0; right < nums.Length; right++)
         {

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class Subsets78
 {
-    public IList<IList<int>> Subsets(int[] nums)
+    public static IList<IList<int>> Subsets(int[] nums)
     {
         IList<IList<int>> subsets = [[]];
 

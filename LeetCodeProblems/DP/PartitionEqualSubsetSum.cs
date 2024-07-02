@@ -58,7 +58,7 @@ public class PartitionEqualSubsetSum
             return false;
         }
 
-        HashSet<int> dp = new HashSet<int> { 0 };
+        HashSet<int> dp = [0];
 
         for (int i = nums.Length - 1; i >= 0; i--)
         {

@@ -50,7 +50,7 @@ public class HouseRobber
         // this would be really slow O(2^N)
         // we can use memoization to store the results of the subproblems, making this a DP problem
 
-        Dictionary<(int, int), int> dp = new();
+        Dictionary<(int, int), int> dp = [];
 
         int Backtrack(int sum, int index)
         {

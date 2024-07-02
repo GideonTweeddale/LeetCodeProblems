@@ -2,7 +2,7 @@
 public class RandomizedSet
 
 {
-    HashSet<int> hashSet = new();
+    HashSet<int> hashSet = [];
     Random random = new();
 
     public bool Insert(int val) => hashSet.Add(val);

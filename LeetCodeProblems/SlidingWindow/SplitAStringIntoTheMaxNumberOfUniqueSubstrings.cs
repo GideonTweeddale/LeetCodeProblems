@@ -27,7 +27,7 @@ public class SplitAStringIntoTheMaxNumberOfUniqueSubstrings
     // TODO return and work out why this solution doesn't work intuitvely... it is so close.
     public static int MaxUniqueSplitGreedy(string s)
     {
-        HashSet<string> uniqueSubstrings = new();
+        HashSet<string> uniqueSubstrings = [];
 
         int left = 0;
         int right = 1;
@@ -50,9 +50,9 @@ public class SplitAStringIntoTheMaxNumberOfUniqueSubstrings
         return uniqueSubstrings.Count;
     }
 
-    public int maxUniqueSplit(string S)
+    public static int maxUniqueSplit(string S)
     {
-        return maxUnique(S, new HashSet<string>());
+        return maxUnique(S, []);
     }
 
     // this is more of a brute force solution, although it takes advantage of the shrinking problem space

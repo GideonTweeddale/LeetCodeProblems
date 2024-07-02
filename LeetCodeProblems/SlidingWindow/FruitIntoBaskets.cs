@@ -13,8 +13,10 @@ public class FruitIntoBaskets
 
     public static int TotalFruitOops(int[] fruits)
     {
-        Dictionary<int, int> counts = new ();
-        counts[-1] = 0;
+        Dictionary<int, int> counts = new()
+        {
+            [-1] = 0
+        };
         
         // our baskets
         int a = -1, b = -1;
@@ -55,7 +57,7 @@ public class FruitIntoBaskets
 
     public static int TotalFruit(int[] fruits)
     {
-        Dictionary<int, int> counts = new (); // fruit type, count
+        Dictionary<int, int> counts = []; // fruit type, count
         int max = 0, total = 0, left = 0, right = 0;
 
         for (right = 0; right < fruits.Length; right++)

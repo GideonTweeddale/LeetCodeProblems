@@ -37,7 +37,7 @@ public class FindKPairsWithSmallestSums
         }
 
         PriorityQueue<(int, int), int> heap = new();
-        HashSet<(int, int)> visited = new();
+        HashSet<(int, int)> visited = [];
 
         heap.Enqueue((0, 0), nums1[0] + nums2[0]);
         visited.Add((0, 0));

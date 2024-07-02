@@ -32,7 +32,7 @@ public class CombinationSumIV
         // this means that we can return early if the current number is greater than the remainder
         Array.Sort(nums);
 
-        Dictionary<int, int> memo = new Dictionary<int, int>();
+        Dictionary<int, int> memo = [];
 
         int helper(int t)
         {

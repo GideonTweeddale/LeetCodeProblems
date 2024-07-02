@@ -18,7 +18,7 @@ public class RansomNote
 
     public static bool CanConstruct(string ransomNote, string magazine)
     {
-        Dictionary<char, int> map = new();
+        Dictionary<char, int> map = [];
         
         // add the chars to the map
         // this operation could be done once and then many ransom notes checked against it

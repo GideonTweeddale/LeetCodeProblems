@@ -13,7 +13,7 @@ public class NumberOfIslands
         int cols = grid[0].Length;
         int islands = 0;
 
-        HashSet<(int,int)> visited = new();
+        HashSet<(int,int)> visited = [];
 
         for (int row = 0; row < rows; row++)
         {

@@ -36,14 +36,14 @@ public class PalindromePartitioning
             Backtrack(index + 1, current);
         }
 
-        Backtrack(0, new List<string>());
+        Backtrack(0, []);
 
         return output;
     }
 
     public static IList<IList<string>> PartitionB(string s)
     {
-        List<IList<string>> output = new();
+        List<IList<string>> output = [];
 
         void FindPartition(string str, List<string> partition)
         {
@@ -69,7 +69,7 @@ public class PalindromePartitioning
             }
         }
 
-        FindPartition(s, new List<string>());
+        FindPartition(s, []);
         
         return output;
     }    

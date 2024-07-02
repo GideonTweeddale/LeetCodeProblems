@@ -60,6 +60,6 @@ public class WordDictionary {
     }
 
     class Trie {
-        public Dictionary<char, Trie> children = new();
+        public Dictionary<char, Trie> children = [];
     }
 }

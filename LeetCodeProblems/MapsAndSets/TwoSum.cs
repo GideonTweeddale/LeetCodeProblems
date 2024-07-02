@@ -12,7 +12,7 @@ public class TwoSum1
     // and O(n) space becuase, in the case where our complement includes the last num in nums, we would add n-1 or n items to our hashmap
     public static int[]? TwoSum(int[] nums, int target)
     {
-        Dictionary<int, int> dict = new();
+        Dictionary<int, int> dict = [];
 
         for (int i = 0; i < nums.Length; i++)
         {

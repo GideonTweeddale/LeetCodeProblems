@@ -15,8 +15,8 @@ public class TextJustification
 
     public static IList<string> FullJustify(string[] words, int maxWidth)
     {
-        List<string> paragraph = new();
-        List<string> line = new();
+        List<string> paragraph = [];
+        List<string> line = [];
         int lineLength = 0;
 
         foreach (string word in words)

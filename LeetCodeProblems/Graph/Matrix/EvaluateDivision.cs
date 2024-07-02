@@ -27,7 +27,7 @@ public static class EvaluateDivision
 
     // the version using the dictionary seems a lot quicker than the version using the tuple
     public static double[] CalcEquationA(IList<IList<string>> equations, double[] values, IList<IList<string>> queries) {
-        Dictionary<string, List<(string, double)>> adjacency = new();
+        Dictionary<string, List<(string, double)>> adjacency = [];
 
         for (int i = 0; i < equations.Count; i++)
         {
@@ -98,7 +98,7 @@ public static class EvaluateDivision
     }
 
     public static double[] CalcEquation(IList<IList<string>> equations, double[] values, IList<IList<string>> queries) {
-        Dictionary<string, Dictionary<string, double>> map = new();
+        Dictionary<string, Dictionary<string, double>> map = [];
 
         for (int i = 0; i < equations.Count; i++)
         {

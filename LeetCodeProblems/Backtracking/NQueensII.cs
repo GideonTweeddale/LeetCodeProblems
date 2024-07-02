@@ -83,9 +83,9 @@ public class NQueensII
             return 2;
         }
 
-        HashSet<int> columns = new();
-        HashSet<int> positiveDiagonal = new();
-        HashSet<int> negativeDiagonal = new();
+        HashSet<int> columns = [];
+        HashSet<int> positiveDiagonal = [];
+        HashSet<int> negativeDiagonal = [];
 
         int result = 0;
 

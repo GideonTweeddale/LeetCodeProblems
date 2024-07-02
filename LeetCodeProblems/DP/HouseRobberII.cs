@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class HouseRobberII
 {
-    public int Rob(int[] nums)
+    public static int Rob(int[] nums)
     {
         // intuition
         // the solution can only include one of the first and last index 

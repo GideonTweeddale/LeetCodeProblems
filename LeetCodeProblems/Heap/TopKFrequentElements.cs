@@ -33,7 +33,7 @@ public class TopKFrequentElements
             }
         }
 
-        List<int> result = new();
+        List<int> result = [];
 
         for (int i = 0; i < k; i++)
         {            
@@ -50,7 +50,7 @@ public class TopKFrequentElements
     public static int[] TopKFrequentHashtable(int[] nums, int k)
     {
         // add the occurences of each element to a hashtable
-        Dictionary<int, int> frequencies = new();
+        Dictionary<int, int> frequencies = [];
 
         foreach (int num in nums)
         {
@@ -76,7 +76,7 @@ public class TopKFrequentElements
         }
 
         // return the k most frequent elements
-        List<int> result = new();
+        List<int> result = [];
 
         for (int i = 0; i < k; i++)
         {
@@ -100,7 +100,7 @@ public class TopKFrequentElements
     // the margins are fine though and that improvement takes it to the 49th percentile for speed and 64th percentile for memory from a previous best of 27th and 5th respectively. Good enough for now.
     public static int[] TopKFrequentBuckets(int[] nums, int k)
     {
-        Dictionary<int, int> frequencies = new();
+        Dictionary<int, int> frequencies = [];
 
         foreach (int num in nums)
         {
@@ -126,7 +126,7 @@ public class TopKFrequentElements
         }
 
         // add the elements to the result
-        List<int> result = new();
+        List<int> result = [];
 
         for (int i = buckets.Length - 1; i >= 0; i--)
         {

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class SubtreeOfAnotherTree
 {
-    public bool IsSubtree(TreeNode? root, TreeNode? subRoot)
+    public static bool IsSubtree(TreeNode? root, TreeNode? subRoot)
     {
         // O(N+S) time and O(N) space in the worst case, where N is the number of nodes in the root tree and S is the number of nodes in the subtree
         // because items in binary trees are unique there should only be one match for the root of the subtree in the main tree

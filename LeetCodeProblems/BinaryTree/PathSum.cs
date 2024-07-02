@@ -2,7 +2,7 @@
 public class PathSum
 {
 
-    public bool HasPathSum(TreeNode? root, int targetSum)
+    public static bool HasPathSum(TreeNode? root, int targetSum)
     {
         // dfs recursive solution is required here - should be O(N) time complexity and O(N) space complexity in the worst case
         // we should recursively evaluate each path, passing down the sum until the end of the path is reached

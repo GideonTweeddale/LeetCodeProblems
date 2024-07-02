@@ -2,7 +2,7 @@
 public class BinaryTreePaths257
 {
     
-    public IList<string> BinaryTreePaths(TreeNode root)
+    public static IList<string> BinaryTreePaths(TreeNode root)
     {
         // DFS the tree. Pass the current string path down, along with the paths list
         // When we reach a leaf, add the complete path and return
@@ -11,7 +11,7 @@ public class BinaryTreePaths257
         // Also, I don't love passing so much state. It doesn't make for the clearest code
         // There must be a more elegant way, perhaps with some kind of backtracking
 
-        List<string> paths = new();
+        List<string> paths = [];
 
         if (root == null)
         {
@@ -65,13 +65,13 @@ public class BinaryTreePaths257
         return true;
     }
 
-    public IList<string> BinaryTreePathsB(TreeNode? root)
+    public static IList<string> BinaryTreePathsB(TreeNode? root)
     {
         // We can at least clean this up a little - for example the child node null checks are redundant
         // Woah. With the cleanup, this solution beats more than 86% of others.
         // I'd still like to rewrite it to use less variable passing for clarity though.
 
-        List<string> paths = new();
+        List<string> paths = [];
         if (root == null)
         {
             return paths;

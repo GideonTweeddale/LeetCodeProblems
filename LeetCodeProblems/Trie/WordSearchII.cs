@@ -7,7 +7,7 @@ public class WordSearchII
 
     // then we iterate over the board and for each row and column and search the trie for them
 
-    public IList<string> FindWords(char[][] board, string[] words) {
+    public static IList<string> FindWords(char[][] board, string[] words) {
         Trie root = new();
 
         foreach (string word in words)
@@ -18,7 +18,7 @@ public class WordSearchII
         int rows = board.Length;
         int columns = board[0].Length;
         
-        HashSet<string> wordsFound = new();
+        HashSet<string> wordsFound = [];
 
         for (int row = 0; row < rows; row++)
         {
@@ -90,6 +90,6 @@ public class WordSearchII
     }
 
     class Trie {
-        public Dictionary<char, Trie> children = new();
+        public Dictionary<char, Trie> children = [];
     }
 }

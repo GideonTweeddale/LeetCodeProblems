@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class WordSearch
 {
-    public bool Exist(char[][] board, string word)
+    public static bool Exist(char[][] board, string word)
     {
         // if we find the first character of our word, check each non-diagonally adjacent character for the next character of the word,
         // do the same recursively if we find the next character or backtrack if we don't, until we reach the end of the search space

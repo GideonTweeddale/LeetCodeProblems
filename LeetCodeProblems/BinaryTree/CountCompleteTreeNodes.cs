@@ -10,7 +10,7 @@ public class CountCompleteTreeNodes
 
     // the time complexity of this will be O(log n^2)
 
-    public int CountNodes(TreeNode root) {
+    public static int CountNodes(TreeNode root) {
         if (root == null)
         {
             return 0;

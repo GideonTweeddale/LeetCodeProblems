@@ -8,7 +8,7 @@ public class BestTimeToBuyAndSellStocksWithCooldown
     public static int MaxProfit(int[] prices)
     {
         // key=day and bought or sold, value=profit
-        Dictionary<(int, bool), int> cache = new();
+        Dictionary<(int, bool), int> cache = [];
 
         return dfs(0, true);
 

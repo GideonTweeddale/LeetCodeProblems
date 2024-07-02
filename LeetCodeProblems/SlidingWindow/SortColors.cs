@@ -49,7 +49,7 @@ public class SortColors75
     // we could record these in variables or use a hashmap that will never exceed three keys
     public static void SortColorsBucketSort(int[] nums)
     {
-        Dictionary<int, int> colourCounts = new();
+        Dictionary<int, int> colourCounts = [];
 
         // count the colours
         foreach (int i in nums)

@@ -11,7 +11,7 @@ public class FlattenBinaryTreeToLinkedList
     // the trick is to recurse right first and find the final node
     // and the build the linkedlist up in reverse
 
-    public void Flatten(TreeNode root) 
+    public static void Flatten(TreeNode root) 
     {
         if (root == null)
         {
@@ -41,7 +41,7 @@ public class FlattenBinaryTreeToLinkedList
 
     // to do this more intuitively - at least for me
     // we can go left to right
-    public void FlattenB(TreeNode root) => DFS(root);
+    public static void FlattenB(TreeNode root) => DFS(root);
     private static TreeNode DFS(TreeNode node)
     {        
         if (node == null)

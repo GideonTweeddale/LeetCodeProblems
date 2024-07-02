@@ -17,7 +17,7 @@ public class LongestRepeatingCharacterReplacement
 
     public static int CharacterReplacement(string s, int k)
     {
-        Dictionary<char, int> counts = new(); // character, count
+        Dictionary<char, int> counts = []; // character, count
 
         int max = 0, maxCount = 0, left = 0, right = 0;
 

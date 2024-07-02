@@ -9,7 +9,7 @@ public class ReorderList143
     // reverse the second half of the list
     // merge the two lists like a zipper
 
-    public void ReorderList(ListNode head)
+    public static void ReorderList(ListNode head)
     {
         ListNode mid = FindMidle(head);
         ListNode right = Reverse(mid.next);

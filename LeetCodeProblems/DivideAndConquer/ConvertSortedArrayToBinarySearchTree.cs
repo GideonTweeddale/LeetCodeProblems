@@ -11,7 +11,7 @@ public class ConvertSortedArrayToBinarySearchTree
 
     // this should complete in O(n) time
 
-    public TreeNode SortedArrayToBSTA(int[] nums)
+    public static TreeNode SortedArrayToBSTA(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {

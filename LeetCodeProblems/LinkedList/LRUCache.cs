@@ -42,7 +42,7 @@ public class LRUCache
 
     private Node oldest;
     private Node newest;
-    private Dictionary<int, Node> map = new();
+    private Dictionary<int, Node> map = [];
     private int _capacity;
 
     // our LRUCache implementation uses O(2n) space

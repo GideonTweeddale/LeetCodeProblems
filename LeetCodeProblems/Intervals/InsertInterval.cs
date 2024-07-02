@@ -28,7 +28,7 @@ public class InsertInterval
             return intervals;
         }
 
-        List<int[]> output = new();
+        List<int[]> output = [];
 
         foreach (int[] interval in intervals)
         {
@@ -65,7 +65,7 @@ public class InsertInterval
             return intervals;
         }
 
-        List<int[]> output = new();
+        List<int[]> output = [];
 
         for (int i = 0; i < intervals.Length; i++)
         {

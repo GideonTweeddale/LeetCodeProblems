@@ -9,7 +9,7 @@ public class CourseSchedule
     public static bool CanFinish(int numCourses, int[][] prerequisites)
     {
         // create the graph and add the prerequisites
-        Dictionary<int, List<int>> graph = new ();
+        Dictionary<int, List<int>> graph = [];
 
         foreach (int[] prereq in prerequisites)
         {
@@ -22,7 +22,7 @@ public class CourseSchedule
         }
 
         // keep track of the nodes we've visited
-        HashSet<int> visited = new ();
+        HashSet<int> visited = [];
 
         // visit all the nodes
         for (int node = 0; node < numCourses; node++)

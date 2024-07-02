@@ -12,8 +12,8 @@ public class PacificAtlanticWaterFlow
         int rows = heights.Length;
         int cols = heights[0].Length;
 
-        HashSet<(int, int)> pacific = new();
-        HashSet<(int, int)> atlantic = new();
+        HashSet<(int, int)> pacific = [];
+        HashSet<(int, int)> atlantic = [];
 
         // fill the coasts
         for (int col = 0; col < cols; col++)

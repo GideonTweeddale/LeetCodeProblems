@@ -31,7 +31,7 @@ public class Permutations
             }
         }
 
-        DFS(new List<int>());
+        DFS([]);
         return permuts;
     }
     public static IList<IList<int>> PermuteB(int[] nums)
@@ -39,7 +39,7 @@ public class Permutations
         // this is obiously a brute force backtracking solution
         // the time complexity is O(2^n) and the space complexity is O(2^n)
 
-        List<IList<int>>? result = new();
+        List<IList<int>>? result = [];
         Backtrack(0);
         return result;
 

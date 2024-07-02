@@ -14,7 +14,7 @@ public class NumberOfLongestIncreasingSubsequence
         int maxLength = 0;
         int maxCount = 0;
 
-        Dictionary<int, int[]> dp = new();
+        Dictionary<int, int[]> dp = [];
 
         for (int i = nums.Length - 1; i >= 0; i--)
         {

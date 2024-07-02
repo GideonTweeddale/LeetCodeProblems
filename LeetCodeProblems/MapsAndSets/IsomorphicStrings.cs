@@ -26,8 +26,8 @@ public class IsomorphicStrings
 
     public static bool IsIsomorphic(string s, string t)
     {
-        Dictionary<char, char> mapS = new();
-        Dictionary<char, char> mapT = new();
+        Dictionary<char, char> mapS = [];
+        Dictionary<char, char> mapT = [];
 
         for (int i = 0; i < s.Length; i++)
         {
@@ -71,7 +71,7 @@ public class IsomorphicStrings
     // because we iterate through both n and m to add the char counts to the maps 
     // and then iterate over those maps, to make sure that they are equivalent
 
-    public bool IsIsomorphicIncorrect(string s, string t)
+    public static bool IsIsomorphicIncorrect(string s, string t)
     {
         if (s.Length != t.Length)
         {
@@ -83,7 +83,7 @@ public class IsomorphicStrings
         Dictionary<char, int> mapT = MapCharCounts(t);
 
         // get the number of occurences of chars with a given number of occurences
-        Dictionary<int, int> mapCounts = new();
+        Dictionary<int, int> mapCounts = [];
 
         foreach (KeyValuePair<char, int> kvp in mapS)
         {
@@ -112,7 +112,7 @@ public class IsomorphicStrings
 
     private static Dictionary<char, int> MapCharCounts(string s)
     {
-        Dictionary<char, int> mapS = new();
+        Dictionary<char, int> mapS = [];
 
         foreach(char c in s)
         {

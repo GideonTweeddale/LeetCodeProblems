@@ -17,8 +17,8 @@ public class PermutationInAString
     public static bool CheckInclusion(string s1, string s2)
     {
         // create the hash tables
-        Dictionary<char, int> s1Counts = new();
-        Dictionary<char, int> s2Counts = new();
+        Dictionary<char, int> s1Counts = [];
+        Dictionary<char, int> s2Counts = [];
 
         // initailize the hash table for s1 - this will never have more than 26 items and doesn't need to be updated once it has been created
         foreach (char c in s1)

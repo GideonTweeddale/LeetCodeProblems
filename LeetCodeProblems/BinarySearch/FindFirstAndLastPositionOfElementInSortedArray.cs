@@ -23,7 +23,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray
     // even after we've found a value
     // and only update the return index if we find another index further in the direction we are looking
 
-    public int[] SearchRange(int[] nums, int target) {
+    public static int[] SearchRange(int[] nums, int target) {
         int leftIndex = BinarySearch(nums, target, true);
         int rightIndex = BinarySearch(nums, target, false);
         return [leftIndex, rightIndex];

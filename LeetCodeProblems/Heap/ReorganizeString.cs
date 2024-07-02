@@ -14,7 +14,7 @@ public class ReorganizeString
     public static string ReorganizeStringHeap(string s)
     {
         // count the frequencies of each character
-        Dictionary<char, int> counts = new();
+        Dictionary<char, int> counts = [];
 
         foreach (char c in s)
         {
@@ -92,7 +92,7 @@ public class ReorganizeString
     public static string ReorganizeStringBucketSort(string s)
     {
         // count the frequencies of each character
-        Dictionary<char, int> counts = new();
+        Dictionary<char, int> counts = [];
 
         foreach (char c in s)
         {

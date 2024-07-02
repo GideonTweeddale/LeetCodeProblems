@@ -32,7 +32,7 @@ public class SubstringWithConcatenationOfAllWords
             return [];
         }
 
-        Dictionary<string, int> wordCounts = new();
+        Dictionary<string, int> wordCounts = [];
 
         foreach (string word in words)
         {
@@ -48,7 +48,7 @@ public class SubstringWithConcatenationOfAllWords
 
         for (int i = 0; i < wordLength; i++)
         {
-            Dictionary<string, int> currentWordCounts = new();
+            Dictionary<string, int> currentWordCounts = [];
             int wordsFound = 0;
             int left = i;
 

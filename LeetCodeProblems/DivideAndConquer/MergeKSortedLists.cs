@@ -31,7 +31,7 @@ public class MergeKSortedLists
     
     // lists = temp;
 
-    public ListNode MergeKLists(ListNode[] lists) {
+    public static ListNode MergeKLists(ListNode[] lists) {
         if (lists == null || lists.Length == 0)
         {
             return null;

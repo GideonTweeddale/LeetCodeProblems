@@ -6,7 +6,7 @@ public class TrieMap
     
     public TrieMap()
     {
-        trieMap = new Dictionary<char, TrieMap>();
+        trieMap = [];
     }
 
     public void Insert(string word) 

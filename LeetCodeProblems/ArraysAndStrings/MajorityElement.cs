@@ -3,7 +3,7 @@ public class MajorityElement5
 {
     public static int MajorityElement(int[] nums)
     {
-        Dictionary<int, int> map = new Dictionary<int, int>();
+        Dictionary<int, int> map = [];
         int largest = nums[0];
 
         foreach (int i in nums)

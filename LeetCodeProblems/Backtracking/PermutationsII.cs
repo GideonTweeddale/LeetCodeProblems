@@ -6,7 +6,7 @@ public class PermutationsII
         Array.Sort(nums);
         List<int> input = nums.ToList();
         IList<IList<int>> result = new List<IList<int>>();
-        BackTrack(input, new List<int>());
+        BackTrack(input, []);
         return result;
 
         void BackTrack(List<int> input, List<int> tempResult)

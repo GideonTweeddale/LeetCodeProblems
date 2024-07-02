@@ -3,7 +3,7 @@
 namespace LeetCodeProblems.Backtracking;
 public class LetterCasePermutation784
 {
-    public IList<string> LetterCasePermutation(string s)
+    public static IList<string> LetterCasePermutation(string s)
     {
         // this is roughly O(N^2) time and space
         // I wonder what the performance difference would be from using StringBuilder

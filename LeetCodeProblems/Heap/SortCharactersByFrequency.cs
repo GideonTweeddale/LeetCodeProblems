@@ -18,7 +18,7 @@ public class SortCharactersByFrequency
     public static string FrequencySort(string s)
     {
         // add the frequencies of each character to a hashtable
-        Dictionary<char, int> frequencies = new();
+        Dictionary<char, int> frequencies = [];
 
         foreach (char c in s)
         {

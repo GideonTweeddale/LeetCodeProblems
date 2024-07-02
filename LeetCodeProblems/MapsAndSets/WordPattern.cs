@@ -19,8 +19,8 @@ public class WordPattern290
             return false;
         }
 
-        Dictionary<char, string> patternToWord = new();
-        Dictionary<string, char> wordToPattern = new();
+        Dictionary<char, string> patternToWord = [];
+        Dictionary<string, char> wordToPattern = [];
 
         for (int i = 0; i < pattern.Length; i++)
         {

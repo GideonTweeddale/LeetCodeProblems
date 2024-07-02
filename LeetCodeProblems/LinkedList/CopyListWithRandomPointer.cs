@@ -38,7 +38,7 @@ public class CopyListWithRandomPointer
             return null;
         }
 
-        Dictionary<Node, Node> nodeToCopy = new();
+        Dictionary<Node, Node> nodeToCopy = [];
 
         Node current = head;
 

@@ -19,7 +19,7 @@ public class GroupAnagrams49
 
     public static IList<IList<string>> GroupAnagrams(string[] strs)
     {
-        Dictionary<string, IList<string>> map = new();
+        Dictionary<string, IList<string>> map = [];
 
         foreach (string s in strs)
         {

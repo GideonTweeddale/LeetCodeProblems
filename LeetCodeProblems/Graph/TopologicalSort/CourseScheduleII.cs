@@ -19,7 +19,7 @@ public class CourseScheduleII
     public static int[] FindOrder(int numCourses, int[][] prerequisites)
     {
         // create the graph and add the prerequisites
-        Dictionary<int, List<int>> graph = new ();
+        Dictionary<int, List<int>> graph = [];
 
         foreach (int[] prereq in prerequisites)
         {
@@ -32,13 +32,13 @@ public class CourseScheduleII
         }
 
         // keep track of the nodes we've visited in our current DFS
-        HashSet<int> visited = new();
+        HashSet<int> visited = [];
 
         // keep track of the nodes we've already added to the schedule
-        HashSet<int> scheduled = new();
+        HashSet<int> scheduled = [];
 
         // the schedule of courses
-        List<int> schedule = new();
+        List<int> schedule = [];
 
         // loop over all the nodes
         for (int i = 0; i < numCourses; i++)

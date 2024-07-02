@@ -31,7 +31,7 @@ public class MinimumWindowSubstring
             return string.Empty;
         }
 
-        Dictionary<char, int> map = new();
+        Dictionary<char, int> map = [];
 
         foreach (char c in t)
         {
@@ -89,8 +89,8 @@ public class MinimumWindowSubstring
             return string.Empty;
         }
 
-        Dictionary<char, int> charCounts = new();
-        Dictionary<char, int> currentCharCounts = new();
+        Dictionary<char, int> charCounts = [];
+        Dictionary<char, int> currentCharCounts = [];
 
         foreach (char c in t)
         {

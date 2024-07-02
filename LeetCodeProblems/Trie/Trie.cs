@@ -106,6 +106,6 @@ public class TrieNode
 
     public TrieNode()
     {
-        children = new Dictionary<char, TrieNode>();
+        children = [];
     }
 }

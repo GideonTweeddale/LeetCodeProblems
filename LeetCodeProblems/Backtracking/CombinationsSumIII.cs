@@ -33,7 +33,7 @@ public class CombinationsSumIII
             Backtrack(combinations, index + 1);
         }
 
-        Backtrack(new List<int>(), 0);
+        Backtrack([], 0);
 
         return output;
     }

@@ -13,7 +13,7 @@ public class FindAllNumbersDissapearedInAnArray
             }
         }
 
-        List<int> result = new List<int>();
+        List<int> result = [];
         for (int i = 0; i < nums.Length; i++)
         {
             if (nums[i] > 0)

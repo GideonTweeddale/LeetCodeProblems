@@ -24,13 +24,13 @@ public class NQueens
     // because we are always incrementing one index and decrementing the other by 1
     
     public static IList<IList<string>> SolveNQueens(int n) {
-        HashSet<int> columns = new();
-        HashSet<int> sumDiagonal = new();
-        HashSet<int> differenceDiagonal = new();
+        HashSet<int> columns = [];
+        HashSet<int> sumDiagonal = [];
+        HashSet<int> differenceDiagonal = [];
 
         IList<IList<string>> output = [];
 
-        List<StringBuilder> board = new();
+        List<StringBuilder> board = [];
 
         for (int i = 0; i < n; i++)
         {

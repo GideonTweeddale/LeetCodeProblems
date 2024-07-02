@@ -24,7 +24,7 @@ public class MergeTwoBinaryTrees
 
         return root1;
     }
-    public TreeNode MergeTreesB(TreeNode root1, TreeNode root2)
+    public static TreeNode MergeTreesB(TreeNode root1, TreeNode root2)
     {
         // this solution should be really similar, but creates new nodes/a new tree instead of overwriting root1
         // this behaved exactly as I expected and ran in roughly the same time, while using slightly more memory

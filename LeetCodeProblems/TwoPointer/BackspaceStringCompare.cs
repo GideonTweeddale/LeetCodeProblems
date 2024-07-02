@@ -6,7 +6,7 @@ public class BackspaceStringCompare
     // this was a difficult one that I need to revisit
     // I didn't read the question properly and ended up running down some dead ends
 
-  public bool BackspaceCompare(string S, string T) {
+  public static bool BackspaceCompare(string S, string T) {
         char[] sChars = S.ToCharArray();
         char[] tChars = T.ToCharArray();
         
@@ -78,7 +78,7 @@ public class BackspaceStringCompare
         return leftSub == rightSub;
     }
 
-    public bool BackspaceCompareC(string s, string t)
+    public static bool BackspaceCompareC(string s, string t)
     {
         return ReadString(s) == ReadString(t);
     }

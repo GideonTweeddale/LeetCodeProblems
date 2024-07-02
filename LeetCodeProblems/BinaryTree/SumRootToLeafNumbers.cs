@@ -7,7 +7,7 @@ public class  SumRootToLeafNumbers
 
     // this could be faster if we weren't adding strings together
     
-    public int SumNumbers(TreeNode root) => SumPath(root, 0);
+    public static int SumNumbers(TreeNode root) => SumPath(root, 0);
 
     private static int SumPath(TreeNode? node, int pathSum)
     {

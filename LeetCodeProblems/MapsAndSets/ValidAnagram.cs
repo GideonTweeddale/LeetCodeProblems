@@ -68,7 +68,7 @@ public class ValidAnagram
             return false;
         }
 
-        Dictionary<char, int> cCounts = new();
+        Dictionary<char, int> cCounts = [];
 
         // count the chars in s
         foreach (char c in s)

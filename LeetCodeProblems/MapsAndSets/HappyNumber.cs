@@ -12,9 +12,9 @@ public class HappyNumber
     // the space and time complexity of this solutiion are really hard to calculate
     // in theory this squaring process could carry on for a long time before it reaches an infinite loop
     // but the question does assure us that it will reach an infinite loop at some point and not continue to grow infinitely
-    public bool IsHappy(int n)
+    public static bool IsHappy(int n)
     {
-        HashSet<int> visited = new();
+        HashSet<int> visited = [];
 
         while (!visited.Contains(n))
         {

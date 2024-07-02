@@ -28,9 +28,9 @@ public class ValidSudoku
     // if at any point we find an inconsistent value, we return early
     // this solution requires more iterations but much less memory than the first solution
     public static bool IsValidSudoku(char[][] board) {
-        HashSet<(int, int)> rows = new(); // row, val
-        HashSet<(int, int)> columns = new(); // col, val
-        HashSet<(int, int, int)> grids = new(); // row / 3, col / 3, val
+        HashSet<(int, int)> rows = []; // row, val
+        HashSet<(int, int)> columns = []; // col, val
+        HashSet<(int, int, int)> grids = []; // row / 3, col / 3, val
         
         for (int r = 0; r < 9; r++)
         {

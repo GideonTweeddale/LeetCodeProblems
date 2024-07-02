@@ -9,7 +9,7 @@ public class SymetricTree
     // this will run in O(n) worst case time where n is the number of nodes in the smaller of the two subtrees
     // this will use O(k) extra memory, including stack frames, where k is the height of the shorter subtree
 
-    public bool IsSymmetric(TreeNode root) {
+    public static bool IsSymmetric(TreeNode root) {
         return MatchingTrees(root.left, root.right);    
     }
 

@@ -36,7 +36,7 @@ public class TargetSum
     {
         // this shoud be O(N * target) where n is number of elements in nums
 
-        Dictionary<(int, int), int> dp = new();
+        Dictionary<(int, int), int> dp = [];
 
         int Backtrack(int i, int current)
         {
