@@ -29,7 +29,7 @@ public class BinaryTreeLevelOrderTraversalI
         return BFS(root, 0);
 
         // helper BFS function
-        List<IList<int>> BFS(TreeNode node, int depth)
+        List<IList<int>> BFS(TreeNode? node, int depth)
         {
             if (node == null)
             {

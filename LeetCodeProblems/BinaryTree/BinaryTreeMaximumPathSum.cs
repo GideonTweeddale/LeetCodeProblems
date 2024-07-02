@@ -53,7 +53,7 @@ public class BinaryTreeMaximumPathSum
         return pathSum;
 
         // dfs helper
-        int DFS(TreeNode node)
+        int DFS(TreeNode? node)
         {
             if (node == null)
             {

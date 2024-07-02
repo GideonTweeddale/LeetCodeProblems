@@ -15,7 +15,7 @@ public class LowestCommonAncestorOfABinarySearchTree
     // this node must be the closest parent of both nodes
     // with binary search this would be O(log n) time and O(1) constant space
 
-    public static TreeNode? LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
+    public static TreeNode? LowestCommonAncestor(TreeNode? root, TreeNode p, TreeNode q)
     {
         while (root != null)
         {

@@ -10,7 +10,7 @@ public class CountCompleteTreeNodes
 
     // the time complexity of this will be O(log n^2)
 
-    public static int CountNodes(TreeNode root) {
+    public static int CountNodes(TreeNode? root) {
         if (root == null)
         {
             return 0;
@@ -27,7 +27,7 @@ public class CountCompleteTreeNodes
         return 1 + CountNodes(root.left) + CountNodes(root.right); 
     }
 
-    private static int LeftHeight(TreeNode node)
+    private static int LeftHeight(TreeNode? node)
     {
         int height = 0;
         while (node != null)
@@ -38,7 +38,7 @@ public class CountCompleteTreeNodes
         return height;
     }
 
-    private static int RightHeight(TreeNode node)
+    private static int RightHeight(TreeNode? node)
     {
         int height = 0;
         while (node != null)

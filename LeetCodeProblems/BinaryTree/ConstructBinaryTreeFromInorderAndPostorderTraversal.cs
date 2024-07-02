@@ -45,7 +45,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
     // neetcode solution
     // O(n) time and space  
 
-    public static TreeNode BuildTree(int[] inorder, int[] postorder) {
+    public static TreeNode? BuildTree(int[] inorder, int[] postorder) {
         int fromEnd = 1;
         Dictionary<int, int> map = []; // <value, index>
 
@@ -56,7 +56,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversal
 
         return Helper(0, inorder.Length - 1);
 
-        TreeNode Helper(int left, int right)
+        TreeNode? Helper(int left, int right)
         {
             if (left > right)
             {

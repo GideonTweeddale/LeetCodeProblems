@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class MergeTwoBinaryTrees
 {
-    public static TreeNode MergeTrees(TreeNode root1, TreeNode root2)
+    public static TreeNode? MergeTrees(TreeNode? root1, TreeNode? root2)
     {
         // traverse down the trees simultanuesly 
         // if either tree is has no further nodes, attach the next node (and so all subsequent nodes) of the other tree
@@ -24,7 +24,7 @@ public class MergeTwoBinaryTrees
 
         return root1;
     }
-    public static TreeNode MergeTreesB(TreeNode root1, TreeNode root2)
+    public static TreeNode? MergeTreesB(TreeNode? root1, TreeNode? root2)
     {
         // this solution should be really similar, but creates new nodes/a new tree instead of overwriting root1
         // this behaved exactly as I expected and ran in roughly the same time, while using slightly more memory
@@ -39,7 +39,7 @@ public class MergeTwoBinaryTrees
             return root1;
         }
 
-        TreeNode? result = new(root1.val + root2.val, MergeTrees(root1.left, root2.left), MergeTrees(root1.right, root2.right));
+        TreeNode? result = new(root1.val + root2.val, MergeTreesB(root1.left, root2.left), MergeTreesB(root1.right, root2.right));
 
         return result;
     }

@@ -113,12 +113,12 @@ public class MaximumWidthOfBinaryTree
 
     // DFS solution - this could also easily be BFS but I already did a BFS (incorrectly) above so let's practice DFS
     // that didn't work either
-    public static int WidthOfBinaryTreeAlsoWrong(TreeNode root)
+    public static int WidthOfBinaryTreeAlsoWrong(TreeNode? root)
     {
         Dictionary<int, (int, int)> levels = [];
 
-        DFS(root.left, 1, -1);
-        DFS(root.right, 1, 1);
+        DFS(root?.left, 1, -1);
+        DFS(root?.right, 1, 1);
 
         int maxWidth = 1;
 
@@ -131,7 +131,7 @@ public class MaximumWidthOfBinaryTree
         return maxWidth;
 
         // dfs helper function
-        void DFS(TreeNode node, int level, int count)
+        void DFS(TreeNode? node, int level, int count)
         {
             if (node == null)
             {
@@ -200,18 +200,11 @@ public class MaximumWidthOfBinaryTree
         return maxWidth;
     }
 
-    private struct QueueVal
+    private struct QueueVal(TreeNode _node, int _num, int _level)
     {
-        public QueueVal(TreeNode _node, int _num, int _level)
-        {
-            node = _node;
-            num = _num;
-            level = _level;
-        }
-
-        public TreeNode node;
-        public int num;
-        public int level;
+        public TreeNode node = _node;
+        public int num = _num;
+        public int level = _level;
     }
 
     // let's apply the counting steps idea to our DFS from above
@@ -226,7 +219,7 @@ public class MaximumWidthOfBinaryTree
         return maxWidth;
 
         // dfs helper function
-        void DFS(TreeNode node, int level, int count)
+        void DFS(TreeNode? node, int level, int count)
         {
             if (node == null)
             {

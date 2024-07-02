@@ -82,7 +82,7 @@ public class BinaryTreeZigZagOrderTraversalII
         return BFS(root, 0, true);
 
         // helper BFS function
-        List<IList<int>> BFS(TreeNode node, int depth, bool zag)
+        List<IList<int>> BFS(TreeNode? node, int depth, bool zag)
         {
             if (node == null)
             {
