@@ -16,7 +16,7 @@ public class NonOverlappingIntervals
 
     // time complexity is O(n log n) becuase we sort the intervals first
 
-    public int EraseOverlapIntervals(int[][] intervals)
+    public static int EraseOverlapIntervals(int[][] intervals)
     {
         int count = 0;
 

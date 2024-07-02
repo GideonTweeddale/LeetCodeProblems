@@ -12,7 +12,7 @@ public class ZigzagConversion
 
     // this will take O(n) time and worst case O(n) space when the number of rows equals the length of the string
 
-    public string Convert(string s, int numRows)
+    public static string Convert(string s, int numRows)
     {
         if (numRows >= s.Length || numRows == 1)
         {

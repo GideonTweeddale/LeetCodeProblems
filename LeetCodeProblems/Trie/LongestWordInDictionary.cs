@@ -9,7 +9,7 @@ public  class LongestWordInDictionary
 
     // so the hashset solution is a lot quicker. I wonder why.
 
-    public string LongestWord(string[] words)
+    public static string LongestWord(string[] words)
     {
         HashSet<string> hs = [.. words];
         string result = string.Empty;
@@ -55,7 +55,7 @@ public  class LongestWordInDictionary
 
     // based on example 2, if we have more than one possible answer of the same length, we need to return the one the is lexicographically the smallest
 
-    public string LongestWordTrie(string[] words)
+    public static string LongestWordTrie(string[] words)
     {
         Trie trie = new();
 

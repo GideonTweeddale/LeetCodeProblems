@@ -10,7 +10,7 @@ public class SearchA2DMatrix
     // and we can do that by making our row the number of times we can divide our midpoint by the number of columns in our matrix
     // and our column the remainder of the number of times we can divide our midpoint by the number of columns
 
-    public bool SearchMatrix(int[][] matrix, int target)
+    public static bool SearchMatrix(int[][] matrix, int target)
     {
         int left = 0;
         int cols = matrix[0].Length;

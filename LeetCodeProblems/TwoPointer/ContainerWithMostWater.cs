@@ -20,7 +20,7 @@ public class ContainerWithMostWater
     // this will run in O(n) time because we will iterate a maximum of n times before the two pointers meet
     // and it will use constant extra space because we won't be using any additional data structures
 
-    public int MaxArea(int[] height)
+    public static int MaxArea(int[] height)
     {
         int maxArea = 0;
 

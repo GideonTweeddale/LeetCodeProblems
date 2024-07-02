@@ -12,7 +12,7 @@ public class SummaryRanges228
 
     // this will run in O(n) time and space where n is the length of nums
 
-    public IList<string> SummaryRanges(int[] nums)
+    public static IList<string> SummaryRanges(int[] nums)
     {
         if (nums.Length == 0)
         {
@@ -54,7 +54,7 @@ public class SummaryRanges228
         return ranges;
     }
 
-    public IList<string> SummaryRangesB(int[] nums)
+    public static IList<string> SummaryRangesB(int[] nums)
     {
         if (nums.Length == 0)
         {

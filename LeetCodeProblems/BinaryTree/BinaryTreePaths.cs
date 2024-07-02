@@ -36,7 +36,7 @@ public class BinaryTreePaths257
         return paths;
     }
 
-    private bool BinaryTreePath(TreeNode node, string path, List<string> paths)
+    private static bool BinaryTreePath(TreeNode node, string path, List<string> paths)
     {
         if (node == null)
         {
@@ -90,7 +90,7 @@ public class BinaryTreePaths257
         return paths;
     }
 
-    private void BinaryTreePathB(TreeNode? node, string path, List<string> paths)
+    private static void BinaryTreePathB(TreeNode? node, string path, List<string> paths)
     {
         if (node == null)
         {

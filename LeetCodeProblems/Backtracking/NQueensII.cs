@@ -67,7 +67,7 @@ public class NQueensII
     // and the space complexity will be O(n)
 
     // let's try the backtracking solution
-    public int TotalNQueens(int n) {
+    public static int TotalNQueens(int n) {
         if (n == 1)
         {
             return 1;
@@ -122,7 +122,7 @@ public class NQueensII
     
     // 1=1, 2,3=0, 4=2, 5=10, 6=4, 7=40, 8=92,9=352
     // hardcoded solution    
-    public int TotalNQueensHardCoded(int n) 
+    public static int TotalNQueensHardCoded(int n) 
     {
         switch(n)
         {
@@ -138,7 +138,7 @@ public class NQueensII
     }
     
     static int[] arr = [0, 1, 0, 0, 2, 10, 4, 40, 92, 352,];
-    public int TotalNQueensHardCodedTwo(int n)
+    public static int TotalNQueensHardCodedTwo(int n)
     {
         return arr[n];
     }

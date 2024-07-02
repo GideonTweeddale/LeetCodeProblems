@@ -18,7 +18,7 @@ public class RotateList
     // if k is greater than the length of the list, we can just take the remainder of k / length of the list
     // because if we rotate the list by the length of the list, we will get the same list
 
-    public ListNode RotateRight(ListNode head, int k)
+    public static ListNode RotateRight(ListNode head, int k)
     {
         // edge case - head is null or head.next is null || k is zero
         if (head == null || head.next == null || k == 0)

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Other;
 public class FindAllDuplicatesInAnArray
 {
-    public IList<int> FindDuplicates(int[] nums)
+    public static IList<int> FindDuplicates(int[] nums)
     {
         // because all number in the array have values from 1 to N we can treat them as indices in the array
         // we can iterate over the array and check in the index that matches each value

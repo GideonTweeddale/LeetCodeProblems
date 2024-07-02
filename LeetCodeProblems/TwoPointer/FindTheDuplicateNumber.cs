@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.TwoPointer;
 public class FindTheDuplicateNumber
 {
-    public int FindDuplicate(int[] nums)
+    public static int FindDuplicate(int[] nums)
     {
         // intuitively the easiest way to solve this would be with a hashset where we return if a number is already in the set
         // we can't use this approach because of the constant space requirement

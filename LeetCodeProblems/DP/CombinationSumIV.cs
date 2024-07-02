@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class CombinationSumIV
 {
-    public int CombinationSum4(int[] nums, int target)
+    public static int CombinationSum4(int[] nums, int target)
     {
         // intuition
         // we can bottom up fill a dp array with the number of combinations that add up to the current number
@@ -23,7 +23,7 @@ public class CombinationSumIV
         return dp[target];
     }
 
-    public int CombinationSum4B(int[] nums, int target)
+    public static int CombinationSum4B(int[] nums, int target)
     {
         // intuition
         // we can use memoization to reduce the actual number of computations we need to do

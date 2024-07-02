@@ -24,7 +24,7 @@ public class IsomorphicStrings
 
     // note, I am assuming that we don't need to check if the lengths match because the question assures us that they always will
 
-    public bool IsIsomorphic(string s, string t)
+    public static bool IsIsomorphic(string s, string t)
     {
         Dictionary<char, char> mapS = new();
         Dictionary<char, char> mapT = new();
@@ -110,7 +110,7 @@ public class IsomorphicStrings
         return true;
     }
 
-    private Dictionary<char, int> MapCharCounts(string s)
+    private static Dictionary<char, int> MapCharCounts(string s)
     {
         Dictionary<char, int> mapS = new();
 

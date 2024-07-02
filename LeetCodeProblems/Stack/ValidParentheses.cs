@@ -16,7 +16,7 @@ public class ValidParentheses
 
     private static Dictionary<char, char> pairs = new() { { '(', ')' }, { '[', ']' }, { '{', '}' } };
 
-    public bool IsValid(string s)
+    public static bool IsValid(string s)
     {
         Stack<char> parentheses = new();
 
@@ -39,7 +39,7 @@ public class ValidParentheses
     }
 
     // I saw this solution and I think it's clever
-    public bool IsValidB(string s)
+    public static bool IsValidB(string s)
     {
         Stack<char> stack = new();
 

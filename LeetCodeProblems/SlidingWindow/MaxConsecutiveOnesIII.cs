@@ -9,7 +9,7 @@ public class MaxConsecutiveOnesIII
 
     // this should run in O(n) time, because we will see each value in our array a maximum of twice: once for each pointer
     // this should run in O(1) space because we will only create a few variables and no datastructures 
-    public int LongestOnes(int[] nums, int k)
+    public static int LongestOnes(int[] nums, int k)
     {
         int left = 0, right = 0, max = 0;
 

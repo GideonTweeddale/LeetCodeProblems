@@ -14,7 +14,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
     // this is an O(n) operation inside of an O(n) operation or O(n^2)
     // the only additional space complexity is the stack frames from the recursive function, which is O(n)
     // because the array slices are implemented as views in C# taking only constant extra space
-    public TreeNode BuildTree(int[]? preorder, int[]? inorder)
+    public static TreeNode BuildTree(int[]? preorder, int[]? inorder)
     {
         if (preorder == null || !preorder.Any() || inorder == null || !inorder.Any())
         {
@@ -30,7 +30,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversal
 
     // we could solve this in O(n) time if we used a hashmap to store the indexes of the values in the inorder array
     // (if the values in the binary tree are unique - I am going to assume that they are)
-    public TreeNode BuildTreeHashMap(int[] preorder, int[] inorder)
+    public static TreeNode BuildTreeHashMap(int[] preorder, int[] inorder)
     {
         int preorderIndex = 0; // Initialize the starting index for preorder traversal
         Dictionary<int, int>  inorderIndexMap = new ();

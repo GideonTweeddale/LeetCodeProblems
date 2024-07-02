@@ -16,7 +16,7 @@ public class RansomNote
 
     // this is a general solution that would work for any char input set 
 
-    public bool CanConstruct(string ransomNote, string magazine)
+    public static bool CanConstruct(string ransomNote, string magazine)
     {
         Dictionary<char, int> map = new();
         
@@ -57,7 +57,7 @@ public class RansomNote
     // I think that this is smellier than normal code
     // but it is so much faster that, if we can be sure of the size of the input, maybe it is worth it
 
-    public bool CanConstructB(string ransomNote, string magazine)
+    public static bool CanConstructB(string ransomNote, string magazine)
     {
         int[] counts = new int[26];
 

@@ -13,7 +13,7 @@ public class TrappingRainWater
     // this will run in O(3n) time and O(n) space because it will iterate over the original array twice 
     // and will create a extra array the length of the original array and iterate over it once
 
-    public int TrapA(int[] height)
+    public static int TrapA(int[] height)
     {
         int[] unitsOfWater = new int[height.Length];
         int max = height[0];
@@ -68,7 +68,7 @@ public class TrappingRainWater
     // then it iterates through the array from the left and right separatly until that point tracking the outer max
     // and adding outer max - the current height to the total for each index
 
-    public int Trap(int[] height)
+    public static int Trap(int[] height)
     {
         int maxI = 0;
 

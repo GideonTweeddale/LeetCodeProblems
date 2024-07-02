@@ -7,7 +7,7 @@ public class PacificAtlanticWaterFlow
     // any of the neighbouring cells are lower than it and can also flow into the ocean or it borders the ocean itself
     // so for each cell, we do a depth first seach of all it's neighbours - saving the answer when we find it
 
-    public IList<IList<int>> PacificAtlantic(int[][] heights)
+    public static IList<IList<int>> PacificAtlantic(int[][] heights)
     {
         int rows = heights.Length;
         int cols = heights[0].Length;

@@ -15,14 +15,14 @@ public class LetterCasePermutation784
         return permuts;
     }
 
-    private void PermuteLetterCases(char[] s, IList<string> permuts, int i)
+    private static void PermuteLetterCases(char[] s, IList<string> permuts, int i)
     {
         // check for the base case
         if (i == s.Length) 
         {
             permuts.Add(new string(s));
             return;
-        } 
+        }
 
         PermuteLetterCases(s, permuts, i + 1);
 

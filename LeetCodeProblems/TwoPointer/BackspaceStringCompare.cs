@@ -28,7 +28,7 @@ public class BackspaceStringCompare
         return true;
     }
 
-    private int ProcessString(char[] chars) {
+    private static int ProcessString(char[] chars) {
         int pointer = 0;
 
         foreach (char c in chars) {
@@ -44,7 +44,7 @@ public class BackspaceStringCompare
         return pointer;
     }
     
-    public bool BackspaceCompareB(string s, string t)
+    public static bool BackspaceCompareB(string s, string t)
     {
         string leftSub = string.Empty, rightSub = string.Empty;
 
@@ -83,7 +83,7 @@ public class BackspaceStringCompare
         return ReadString(s) == ReadString(t);
     }
 
-    private string ReadString(string s)
+    private static string ReadString(string s)
     {
         StringBuilder sb = new();
         int len = 0;

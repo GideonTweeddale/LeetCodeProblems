@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class SubsetsII
 {        
-    public IList<IList<int>> SubsetsWithDup(int[] nums)
+    public static IList<IList<int>> SubsetsWithDup(int[] nums)
     {
         // this is obiously a brute force backtracking solution
         // the time complexity is O(2^n) and the space complexity is O(2^n)

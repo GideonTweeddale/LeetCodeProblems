@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.LinkedList;
 public class RemoveLiknedListElements
 {
-    public ListNode? RemoveElements(ListNode head, int val)
+    public static ListNode? RemoveElements(ListNode head, int val)
     {
         // iterate through the nodes
         // if a node val equals the val set the next val of the previous node to the next node

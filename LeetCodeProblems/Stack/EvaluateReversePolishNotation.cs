@@ -16,7 +16,7 @@ public class EvaluateReversePolishNotation
     // because we will iterate though the tokens once and perform a fixed number of operations on them
     // and we will store a maximum of three items in our stack making it constant spaces
 
-    public int EvalRPN(string[] tokens)
+    public static int EvalRPN(string[] tokens)
     {
         Stack<int> stack = new();
 

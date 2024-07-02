@@ -10,7 +10,7 @@ public class MaximumSumCircularSubarray
     // this means that we can find the solution in a single pass using no extra memory
     // in other words, in O(n) time and O(1) space
 
-    public int MaxSubarraySumCircular(int[] nums) {
+    public static int MaxSubarraySumCircular(int[] nums) {
         int max = nums[0], min = nums[0];
         int localMax = 0, localMin = 0, total = 0;
 

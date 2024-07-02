@@ -15,7 +15,7 @@ public class OddEvenLinkedList
     // questions
     // does it matter whether odd or even indices are at the end or the beginning of the new list so long as they are grouped?
 
-    public ListNode OddEvenListA(ListNode head)
+    public static ListNode OddEvenListA(ListNode head)
     {
         if (head == null || head.next == null)
         {
@@ -62,7 +62,7 @@ public class OddEvenLinkedList
     }
 
     // this is a more concise version of the same solution
-    public ListNode OddEvenList(ListNode head)
+    public static ListNode OddEvenList(ListNode head)
     {
         if (head == null || head.next == null)
         {

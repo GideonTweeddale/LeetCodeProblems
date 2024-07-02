@@ -27,7 +27,7 @@ public class Candy135
     // that neighbour must get two extra candies
     // shit. That totally invalidates my solution
 
-    public int CandyWrong(int[] ratings)
+    public static int CandyWrong(int[] ratings)
     {
         int candiesRequired = ratings.Length;
 
@@ -54,7 +54,7 @@ public class Candy135
 
     // this means that this solution will be O(3n) or O(n) time and O(n) extra space 
     
-    public int CandyTwoPass(int[] ratings)
+    public static int CandyTwoPass(int[] ratings)
     {
         if (ratings.Length == 0)
         {

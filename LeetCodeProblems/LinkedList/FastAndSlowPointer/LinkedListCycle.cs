@@ -4,7 +4,7 @@ using LeetCodeProblems.Nodes;
 
 public class LinkedListCycle
 {
-    public bool HasCycle(ListNode head)
+    public static bool HasCycle(ListNode head)
     {
         // with hashset - each time we visit a node we add it to the hashset
         // if a node is every already in the hashset we've visited it already
@@ -24,7 +24,7 @@ public class LinkedListCycle
         }
         return false;
     }
-    public bool HasCycleB(ListNode head)
+    public static bool HasCycleB(ListNode head)
     {
         // with fast and slow pointer - I wouldn't have thought of this on my own
         // this approach uses less memory O(1) space (it is also O(n) time)

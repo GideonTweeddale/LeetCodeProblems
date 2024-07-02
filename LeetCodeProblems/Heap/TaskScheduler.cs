@@ -22,7 +22,7 @@ public class TaskScheduler
 
     // but I think it is worth using the actual algorithm here, because if we had to do any actual work with the tasks, it would be more useful
 
-    public int LeastInterval(char[] tasks, int n)
+    public static int LeastInterval(char[] tasks, int n)
     {
         // count the occruences of each task
         Dictionary<char, int> taskOccurences = new Dictionary<char, int>();

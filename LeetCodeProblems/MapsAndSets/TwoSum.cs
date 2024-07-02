@@ -10,7 +10,7 @@ public class TwoSum1
     // this implementation is O(n) time and space where n is the length of nums
     // O(n) time because we iterate through nums only once
     // and O(n) space becuase, in the case where our complement includes the last num in nums, we would add n-1 or n items to our hashmap
-    public int[]? TwoSum(int[] nums, int target)
+    public static int[]? TwoSum(int[] nums, int target)
     {
         Dictionary<int, int> dict = new();
 

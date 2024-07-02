@@ -21,7 +21,7 @@ public class IntervalListIntersections
 
     // time complexity is O(n log n) where n is the combined firstList.length + secondList.Length becuase we sort the intervals first
 
-    public int[][] IntervalIntersection(int[][] firstList, int[][] secondList)
+    public static int[][] IntervalIntersection(int[][] firstList, int[][] secondList)
     {
         List<int[]> results = [];
 
@@ -59,7 +59,7 @@ public class IntervalListIntersections
 
     // the time complexity of this is O(n) because we are iterating over the two lists once without sorting them
 
-    public int[][] IntervalIntersectionB(int[][] firstList, int[][] secondList)
+    public static int[][] IntervalIntersectionB(int[][] firstList, int[][] secondList)
     {
         List<int[]> results = [];
 

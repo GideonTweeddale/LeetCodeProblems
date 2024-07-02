@@ -7,7 +7,7 @@ public class TopKFrequentElements
     // and insert the elements into a heap once we counted the occurences of that element
     // this would be O(n log n) for the sort + O(n log k) for the adding to the heap, so simplfied it is O(n log n)
 
-    public int[] TopKFrequent(int[] nums, int k)
+    public static int[] TopKFrequent(int[] nums, int k)
     {
         int count = 0;
         PriorityQueue<int, int> heap = new();
@@ -47,7 +47,7 @@ public class TopKFrequentElements
     // the sorting version is kinda slow
     // this should be O(n) for the adding to the hashtable + O(n log k) for adding to the heap, so O(n log k) overall
     // so this might be slightly quicker - it is actually slightly slower in practice
-    public int[] TopKFrequentHashtable(int[] nums, int k)
+    public static int[] TopKFrequentHashtable(int[] nums, int k)
     {
         // add the occurences of each element to a hashtable
         Dictionary<int, int> frequencies = new();
@@ -98,7 +98,7 @@ public class TopKFrequentElements
 
     // that helped a little. It is 6ms faster than the previous version and uses 5 mb less memory. 
     // the margins are fine though and that improvement takes it to the 49th percentile for speed and 64th percentile for memory from a previous best of 27th and 5th respectively. Good enough for now.
-    public int[] TopKFrequentBuckets(int[] nums, int k)
+    public static int[] TopKFrequentBuckets(int[] nums, int k)
     {
         Dictionary<int, int> frequencies = new();
 

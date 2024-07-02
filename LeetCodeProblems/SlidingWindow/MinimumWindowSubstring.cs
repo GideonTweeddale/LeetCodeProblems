@@ -25,7 +25,7 @@ public class MinimumWindowSubstring
     // this solution will take O(m) time where m is the length of s
     // and O(n) space where n is the length of t - this would actually be O(2n) where n is the number of unique chars in t
 
-    public string MinWindow(string s, string t) {
+    public static string MinWindow(string s, string t) {
         if (s.Length <= 0 || t.Length <= 0 || t.Length > s.Length) 
         {
             return string.Empty;
@@ -78,7 +78,7 @@ public class MinimumWindowSubstring
         return string.Empty;
     }    
 
-    public string MinWindowA(string s, string t) {
+    public static string MinWindowA(string s, string t) {
         if (s.Length <= 0 && t.Length <= 0)
         {
             return string.Empty;

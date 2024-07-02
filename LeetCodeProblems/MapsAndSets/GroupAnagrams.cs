@@ -17,7 +17,7 @@ public class GroupAnagrams49
     // sorting that char array to remove order as a variable
     // then combining the char array back into a string and using it as the key in our map
 
-    public IList<IList<string>> GroupAnagrams(string[] strs)
+    public static IList<IList<string>> GroupAnagrams(string[] strs)
     {
         Dictionary<string, IList<string>> map = new();
 

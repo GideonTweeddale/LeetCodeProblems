@@ -6,7 +6,7 @@ public class CourseSchedule
     // would could find the cycle with dfs and a hashset of prerequisites
     // the dfs would be O(n) and the hashset would O(p), giving us O(n + p)
     // for space the hashset would take O(p) and we'd have to keep track of the nodes we've visited which would be O(n) giving us the same memory complexity of O(n + p)
-    public bool CanFinish(int numCourses, int[][] prerequisites)
+    public static bool CanFinish(int numCourses, int[][] prerequisites)
     {
         // create the graph and add the prerequisites
         Dictionary<int, List<int>> graph = new ();

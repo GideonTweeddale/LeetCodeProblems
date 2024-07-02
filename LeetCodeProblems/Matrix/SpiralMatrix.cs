@@ -3,7 +3,7 @@ public class SpiralMatrix
 {
     // TODO: retry this problem
 
-    public IList<int> SpiralOrder(int[][] matrix)
+    public static IList<int> SpiralOrder(int[][] matrix)
     {
         // we need to traverse the length, then the depth, then the length in reverse,then the height minus one, 
         // and then the above again minus one
@@ -52,7 +52,7 @@ public class SpiralMatrix
         return result;
     }
 
-    public IList<int> SpiralOrderB(int[][] matrix)
+    public static IList<int> SpiralOrderB(int[][] matrix)
     {
         // this was a hard one - I'll need to come back and try it again sometime
         // this is the functional solution

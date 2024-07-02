@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.TwoPointer;
 public class MoveZeroes283
 {
-    public void MoveZeroes(int[] nums)
+    public static void MoveZeroes(int[] nums)
     {
         // the brute force solution would be to iterate through the list until we find a zero
         // and then to swap it forward one by one until the end

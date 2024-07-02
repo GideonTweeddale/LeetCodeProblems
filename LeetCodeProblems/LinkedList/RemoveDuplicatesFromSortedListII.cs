@@ -13,7 +13,7 @@ public class RemoveDuplicatesFromSortedListII
     // this will run in O(n) time because we visit each node once
     // and O(1) constant space because we use no additional data structures
 
-    public ListNode DeleteDuplicates(ListNode head)
+    public static ListNode DeleteDuplicates(ListNode head)
     {
         ListNode dummy = new(0, head);
         ListNode current = dummy;

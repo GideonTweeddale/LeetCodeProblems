@@ -8,7 +8,7 @@ public class SortList148
     // we can solve this with merge sort
     // which would be O(n * logn) time complexity
             
-    public ListNode SortList(ListNode head)
+    public static ListNode SortList(ListNode head)
     {
         if (head == null || head.next == null)
         {

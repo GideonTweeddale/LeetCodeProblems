@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class MaximimumDepthOfBinaryTree
 {
-    public int MaxDepth(TreeNode? root)
+    public static int MaxDepth(TreeNode? root)
     {
         // intuitevly dfs recursive solution makes sense to me here because we want to run down to the end of the tree
         // should be O(N) time complexity and O(N) space complexity in the worst case

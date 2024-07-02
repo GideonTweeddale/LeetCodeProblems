@@ -10,7 +10,7 @@ public class PartitionEqualSubsetSum
     // this is a problem we can optimally solve with dynamic programming
     // we need to iterate through the array and for each element add it to all values in the dp set and if it creates a new value add it to the set
 
-    public bool CanPartition(int[] nums)
+    public static bool CanPartition(int[] nums)
     {
         int sum = 0;
 
@@ -48,7 +48,7 @@ public class PartitionEqualSubsetSum
         return target == 0;
     }
 
-    public bool CanPartitionDP(int[] nums)
+    public static bool CanPartitionDP(int[] nums)
     {
         int sum = nums.Sum();
         int target = sum / 2;

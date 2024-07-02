@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class CombinationsSumII
 {
-    public IList<IList<int>> CombinationSum2(int[] candidates, int target)
+    public static IList<IList<int>> CombinationSum2(int[] candidates, int target)
     {
         Array.Sort(candidates);
 

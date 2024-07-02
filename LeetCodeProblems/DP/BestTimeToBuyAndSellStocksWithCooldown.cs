@@ -5,7 +5,7 @@ public class BestTimeToBuyAndSellStocksWithCooldown
     // 2. for each day there are really only two possible choices (cooldown is just skipping): to buy or sell
     // 3. if we buy, we subtract the price from the total profit, and if we sell, we add the price to the total profit
     // this would be O(n^2) time complexity, but if we cache the result for each day, we can reduce it to O(n)
-    public int MaxProfit(int[] prices)
+    public static int MaxProfit(int[] prices)
     {
         // key=day and bought or sold, value=profit
         Dictionary<(int, bool), int> cache = new();

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class LongestPalindromicSubstring
 {
-    public string LongestPalindrome(string s)
+    public static string LongestPalindrome(string s)
     {
         // intuition
         // we can start from the middle of the string and expand outwards - what happens when our string is no longer a palindrome?

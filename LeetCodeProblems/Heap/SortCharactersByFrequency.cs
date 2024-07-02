@@ -15,7 +15,7 @@ public class SortCharactersByFrequency
     // the hashtable will be worst case O(n) memory where every character only appears once in the string and the bucket array will be O(n) memory
     // giving us O(2n) or just O(n) memory
 
-    public string FrequencySort(string s)
+    public static string FrequencySort(string s)
     {
         // add the frequencies of each character to a hashtable
         Dictionary<char, int> frequencies = new();

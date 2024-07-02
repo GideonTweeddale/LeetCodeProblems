@@ -7,7 +7,7 @@ public class NumberOfIslands
     // if we record which cells we've visited and skip the depth first search for those cells, it should be relatively efficient
     // we will also skip dfs on any cells that are water
 
-    public int NumIslands(char[][] grid)
+    public static int NumIslands(char[][] grid)
     {
         int rows = grid.Length;
         int cols = grid[0].Length;

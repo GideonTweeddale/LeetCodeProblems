@@ -18,7 +18,7 @@ public class ValidPalindrome
 
     // another note, the IsLetterOrDigit and ToLower calls could be replaced with lookups to predefined HashTables\
 
-    public bool IsPalindrome(string s)
+    public static bool IsPalindrome(string s)
     {
         int left = 0;
         int right = s.Length - 1;
@@ -54,7 +54,7 @@ public class ValidPalindrome
     // and is maybe easier to read
 
     // it does string concatenation however, so it will be really slow, I think
-    public bool IsPalindromeB(string s)
+    public static bool IsPalindromeB(string s)
     {
         string validS = string.Empty;
 

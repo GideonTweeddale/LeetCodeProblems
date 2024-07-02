@@ -4,7 +4,7 @@ using LeetCodeProblems.Nodes;
 
 public class MiddleOfTheLinkedList
 {
-    public ListNode MiddleNode(ListNode head)
+    public static ListNode MiddleNode(ListNode head)
     {
         // this solution will be O(2n) time complexity in the worst case because we interate over the linked list twice
         // it is O(1) space complexity because we only store the current node and the nodeCount as additional memory
@@ -27,7 +27,7 @@ public class MiddleOfTheLinkedList
         return currentNode;
     }
 
-    public ListNode MiddleNodeB(ListNode head)
+    public static ListNode MiddleNodeB(ListNode head)
     {
         // looking at the solutions, this can also be solved with a fast and a slow point (duh)
         // this approach uses less memory O(1) space and O(n) time

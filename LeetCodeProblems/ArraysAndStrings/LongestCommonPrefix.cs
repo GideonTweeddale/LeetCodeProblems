@@ -12,7 +12,7 @@ public class LongestCommonPrefix14
     // TODO practice implementing a trie
 
     // naive solution
-    public string LongestCommonPrefix(string[] strs)
+    public static string LongestCommonPrefix(string[] strs)
     {
         if (strs is null || strs[0] is null || strs[0].Length < 1)
         {

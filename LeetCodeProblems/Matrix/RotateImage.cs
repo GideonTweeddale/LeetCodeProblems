@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Matrix;
 public class RotateImage
 {
-    public void Rotate(int[][] matrix)
+    public static void Rotate(int[][] matrix)
     {
         // for each row we iterate through the columns
         // starting at the column that matches the number of rows we've already iterated through
@@ -44,7 +44,7 @@ public class RotateImage
     }
 
 
-    public void RotateB(int[][] matrix)
+    public static void RotateB(int[][] matrix)
     {
         int width = matrix.Length;
         int last = matrix.Length - 1;

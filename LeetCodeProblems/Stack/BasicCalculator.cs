@@ -7,7 +7,7 @@ public class BasicCalculator
     // because we will iterate through the input once
     // and we will store worst case O(n) simplified items in the stack
 
-    public int Calculate(string s)
+    public static int Calculate(string s)
     {
         Stack<int> stack = new Stack<int>();
         int result = 0;

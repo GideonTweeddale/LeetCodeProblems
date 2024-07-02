@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class MaximumSubarray
 {
-    public int MaxSubArray(int[] nums)
+    public static int MaxSubArray(int[] nums)
     {
         // intuition
         // we need to keep track of the largest sum so far

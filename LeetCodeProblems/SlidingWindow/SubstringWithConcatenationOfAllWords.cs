@@ -16,7 +16,7 @@ public class SubstringWithConcatenationOfAllWords
     // we then check if our sustring is in the map and hasn't been used yet
     // if it isn't 
 
-    public IList<int> FindSubstring(string s, string[] words)
+    public static IList<int> FindSubstring(string s, string[] words)
     {
         if (s.Length == 0 || words.Length == 0)
         {

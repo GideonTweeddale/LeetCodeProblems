@@ -15,7 +15,7 @@ public class ValidateBinarySearchTree
     // there is no point searching the tree further once we know it is invalid
     // this will be O(n) time and space because we will iterate through our entire tree in the worst case
 
-    public bool IsValidBSTA(TreeNode root)
+    public static bool IsValidBSTA(TreeNode root)
     {
         if (root == null)
         {
@@ -44,7 +44,7 @@ public class ValidateBinarySearchTree
     // DFS using nullable int for bounds
     // this might be slightly quicker by avoiding doubles and the casting back and forth between them
 
-    public bool IsValidBST(TreeNode root)
+    public static bool IsValidBST(TreeNode root)
     {
         if (root == null)
         {

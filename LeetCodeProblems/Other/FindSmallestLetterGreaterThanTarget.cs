@@ -2,7 +2,7 @@
 public class FindSmallestLetterGreaterThanTarget
 {
 
-    public char NextGreatestLetter(char[] letters, char target)
+    public static char NextGreatestLetter(char[] letters, char target)
     {
         // iterating through the array should be O(n) time and O(1) space
 
@@ -17,7 +17,7 @@ public class FindSmallestLetterGreaterThanTarget
         return letters[0];
     }
 
-    public char NextGreatestLetterBinary(char[] letters, char target)
+    public static char NextGreatestLetterBinary(char[] letters, char target)
     {
         // using binary search should be O(log N) time complexity
         // in practice this is actually slower in the leetcode tests - it should be faster on larger datasets though 

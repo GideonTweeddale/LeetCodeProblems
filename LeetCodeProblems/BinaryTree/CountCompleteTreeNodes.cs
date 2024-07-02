@@ -27,7 +27,7 @@ public class CountCompleteTreeNodes
         return 1 + CountNodes(root.left) + CountNodes(root.right); 
     }
 
-    private int LeftHeight(TreeNode node)
+    private static int LeftHeight(TreeNode node)
     {
         int height = 0;
         while (node != null)
@@ -38,7 +38,7 @@ public class CountCompleteTreeNodes
         return height;
     }
 
-    private int RightHeight(TreeNode node)
+    private static int RightHeight(TreeNode node)
     {
         int height = 0;
         while (node != null)

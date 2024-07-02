@@ -16,7 +16,7 @@ public class FindMissingPositive41
     // it doesn't say that we need to preserve the array. So as we loop through it, we mark the indexes that are negative to be the max int value
 
     // will there always be a positive integer that isn't present in nums?
-    public int FirstMissingPositive(int[] nums)
+    public static int FirstMissingPositive(int[] nums)
     {
         // remove our negatives so that we can use the negative to mark the found values
         for (int i = 0; i < nums.Length; i++)

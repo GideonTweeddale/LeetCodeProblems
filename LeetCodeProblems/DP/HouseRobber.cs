@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class HouseRobber
 {
-    public int Rob(int[] nums)
+    public static int Rob(int[] nums)
     {
         // this naive solution is incorrect, because it does not account for situations where it is better to skip two or more indexes in a row
 
@@ -44,7 +44,7 @@ public class HouseRobber
         // now we can aproach this as a DP problem
     }
     
-    public int RobB(int[] nums)
+    public static int RobB(int[] nums)
     {
         // we need to add all possible sums
         // this would be really slow O(2^N)
@@ -75,7 +75,7 @@ public class HouseRobber
         return Backtrack(0, 0);
     }
 
-    public int RobC(int[] nums)
+    public static int RobC(int[] nums)
     {
         // this is O(N) time and O(1) space
         // for each index, chooses the larger of the previous largest sum or the current index
@@ -92,7 +92,7 @@ public class HouseRobber
     }
 
     // rewrite again for better understanding
-    public int RobD(int[] nums)
+    public static int RobD(int[] nums)
     {
         // this is O(N) time and O(1) space
         // for each index, chooses the larger of the previous largest sum plus the next num or the current num

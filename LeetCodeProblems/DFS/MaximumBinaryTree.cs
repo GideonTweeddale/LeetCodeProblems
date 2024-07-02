@@ -15,7 +15,7 @@ public class MaximumBinaryTree
 
     // this doesn't work - I still think it can. Come back and fix it.
 
-    public TreeNode ConstructMaximumBinaryTree(int[] nums)
+    public static TreeNode ConstructMaximumBinaryTree(int[] nums)
     {
         if (nums == null)
         {
@@ -65,7 +65,7 @@ public class MaximumBinaryTree
     }
 
     // recursive O(n^2) solution
-    public TreeNode ConstructMaximumBinaryTreeRecursive(int[] nums)
+    public static TreeNode ConstructMaximumBinaryTreeRecursive(int[] nums)
     {
         return Dfs(0, nums.Length - 1);
 

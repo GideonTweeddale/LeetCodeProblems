@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.TwoPointer;
 public class SquaresOfASortedArray
 {
-    public int[] SortedSquares(int[] nums)
+    public static int[] SortedSquares(int[] nums)
     {
         // intuitively this problem can be solved in two steps
         // the first to square the numbers
@@ -28,7 +28,7 @@ public class SquaresOfASortedArray
         return result;
     }
 
-    public int[] SortedSquaresB(int[] nums)
+    public static int[] SortedSquaresB(int[] nums)
     {
         // this same approach should be possible with a for loop
         // I've also used an if instead of ternary to remove a weirdly scoped variable and because I think it is clearer
@@ -52,7 +52,7 @@ public class SquaresOfASortedArray
         return result;
     }
 
-    public int[] SortedSquaresC(int[] nums)
+    public static int[] SortedSquaresC(int[] nums)
     {
         // is it also possible to fill the new array from the start instead of the end?
         // no - the ends work because we know that the largest absolute numbers will be at the ends of the array and so get compared first

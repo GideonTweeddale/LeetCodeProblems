@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class WordBreak139
 {
-    public bool WordBreak(string s, IList<string> wordDict)
+    public static bool WordBreak(string s, IList<string> wordDict)
     {
         // intuition
         // for each index in the string, we iterate over all previous indexes

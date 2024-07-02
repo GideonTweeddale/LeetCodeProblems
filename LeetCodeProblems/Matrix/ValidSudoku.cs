@@ -27,7 +27,7 @@ public class ValidSudoku
     // and then again grid by grid
     // if at any point we find an inconsistent value, we return early
     // this solution requires more iterations but much less memory than the first solution
-    public bool IsValidSudoku(char[][] board) {
+    public static bool IsValidSudoku(char[][] board) {
         HashSet<(int, int)> rows = new(); // row, val
         HashSet<(int, int)> columns = new(); // col, val
         HashSet<(int, int, int)> grids = new(); // row / 3, col / 3, val

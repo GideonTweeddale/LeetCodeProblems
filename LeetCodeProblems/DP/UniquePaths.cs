@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class UniquePaths62
 {
-    public int UniquePaths(int m, int n)
+    public static int UniquePaths(int m, int n)
     {
         // intuition
         // we can only reach a cell from the cell above or to the left
@@ -34,7 +34,7 @@ public class UniquePaths62
         // this has a time complexity of O(m * n) and space complexity of O(m * n)
     }
 
-    public int UniquePathsB(int m, int n)
+    public static int UniquePathsB(int m, int n)
     {
         // intuition
         // we only need to know the values of the previous row and the current row to calculate the number of ways to reach a cell
@@ -62,7 +62,7 @@ public class UniquePaths62
         // has a time complexity of O(m * n) and space complexity of O(n)
     }
 
-    public int UniquePathsC(int m, int n)
+    public static int UniquePathsC(int m, int n)
     {
         // intuition
         // this is a mathematical problem - we must make m - 1 moves down and n - 1 moves right

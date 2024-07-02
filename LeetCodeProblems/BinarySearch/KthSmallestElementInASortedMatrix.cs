@@ -7,7 +7,7 @@ public class KthSmallestElementInASortedMatrix
     // and the smallest element will be the first element in the matrix
     // because all the rows and columns are sorted    
 
-    public int KthSmallest(int[][] matrix, int k)
+    public static int KthSmallest(int[][] matrix, int k)
     {
         int n = matrix.Length;
 

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Matrix;
 public class RotateArray
 {
-    public void Rotate(int[] nums, int k)
+    public static void Rotate(int[] nums, int k)
     {
         if (nums.Length == 1)
         {
@@ -31,7 +31,7 @@ public class RotateArray
         }
     }
 
-    public void Rotate2(int[] nums, int k)
+    public static void Rotate2(int[] nums, int k)
     {
         if (nums.Length == 1)
         {

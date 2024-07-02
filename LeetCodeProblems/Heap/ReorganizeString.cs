@@ -11,7 +11,7 @@ public class ReorganizeString
     
     // time complexity is O(n log n) because we are adding the values to a heap 
     // space complexity is O(26) or constant because the hashtable and heap will both be maximum 26 elements, one for each lowercase letter of the alphabet
-    public string ReorganizeStringHeap(string s)
+    public static string ReorganizeStringHeap(string s)
     {
         // count the frequencies of each character
         Dictionary<char, int> counts = new();
@@ -89,7 +89,7 @@ public class ReorganizeString
     }
 
     // I think this is possible, it is just a little more complicated and I don't want to spend the time to implement it right now. 
-    public string ReorganizeStringBucketSort(string s)
+    public static string ReorganizeStringBucketSort(string s)
     {
         // count the frequencies of each character
         Dictionary<char, int> counts = new();

@@ -24,7 +24,7 @@ public class FindKClosestElements
 
     // if x is outside the bounds of the array, we can just return the first k elements or the last k elements
 
-    public IList<int> FindClosestElements(int[] arr, int k, int x)
+    public static IList<int> FindClosestElements(int[] arr, int k, int x)
     {
         if (x > arr[arr.Length - 1])
         {

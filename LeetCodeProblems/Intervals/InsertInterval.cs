@@ -16,7 +16,7 @@ public class InsertInterval
     // edge case - handle new interval being the smallest interval
     // edge case - handle new interval with the only interval in intervals
 
-    public int[][] Insert(int[][] intervals, int[] newInterval)
+    public static int[][] Insert(int[][] intervals, int[] newInterval)
     {
         if (intervals.Length == 0)
         {
@@ -53,7 +53,7 @@ public class InsertInterval
         return output.ToArray();
     }
 
-    public int[][] InsertB(int[][] intervals, int[] newInterval)
+    public static int[][] InsertB(int[][] intervals, int[] newInterval)
     {
         if (intervals.Length == 0)
         {

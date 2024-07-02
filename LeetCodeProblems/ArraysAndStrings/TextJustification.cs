@@ -13,7 +13,7 @@ public class TextJustification
     // this solution will be O(2n) or O(n) time because we will visit each word twice
     // and O(n) space in the worst case where our output array is madeup of words that only fit one per line
 
-    public IList<string> FullJustify(string[] words, int maxWidth)
+    public static IList<string> FullJustify(string[] words, int maxWidth)
     {
         List<string> paragraph = new();
         List<string> line = new();

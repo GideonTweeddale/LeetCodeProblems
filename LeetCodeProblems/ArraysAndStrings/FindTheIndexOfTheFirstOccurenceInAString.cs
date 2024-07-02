@@ -10,7 +10,7 @@ public class FindTheIndexOfTheFirstOccurenceInAString
     // and the first character of needle is unlikely to appear that often in haystack
 
     // naive solution - which is > 90% in both speed and memory on leetcode
-    public int StrStr(string haystack, string needle)
+    public static int StrStr(string haystack, string needle)
     {
         for (int i = 0; i < haystack.Length + 1 - needle.Length; i++)
         {

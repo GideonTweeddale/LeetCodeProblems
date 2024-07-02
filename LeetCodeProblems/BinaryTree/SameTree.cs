@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class SameTree
 {
-    public bool IsSameTree(TreeNode p, TreeNode q)
+    public static bool IsSameTree(TreeNode p, TreeNode q)
     {
         // bfs (or level order traversal) iterate through booth trees at the same time, comparing the nodes
         // if we find any that don't match - exit with false
@@ -63,7 +63,7 @@ public class SameTree
         return true;
     }
 
-    public bool IsSameTreeDFS(TreeNode p, TreeNode q)
+    public static bool IsSameTreeDFS(TreeNode p, TreeNode q)
     {
         // dfs recursive solution - should be O(N) time complexity and O(N) space complexity in the worst case
         // the code is much more concise - but should be a little slower

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Other;
 public class LongestConsecutiveSequence
 {
-    public int LongestConsecutive(int[] nums)
+    public static int LongestConsecutive(int[] nums)
     {
         // very naive solution that uses sort to order the elements first
         // this will run in something like O(log N) time and therefore doesn't satisfy the requirements
@@ -37,7 +37,7 @@ public class LongestConsecutiveSequence
 
         return consecutive;
     }
-    public int LongestConsecutiveB(int[] nums)
+    public static int LongestConsecutiveB(int[] nums)
     {
         // I'm not sure that this is truly O(N) 
         // but if creating the hashset is O(N)

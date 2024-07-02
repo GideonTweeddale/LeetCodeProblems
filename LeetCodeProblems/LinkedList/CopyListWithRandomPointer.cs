@@ -31,7 +31,7 @@ public class CopyListWithRandomPointer
 
     // handle empty linked list, edgecase
 
-    public Node CopyRandomList(Node head)
+    public static Node CopyRandomList(Node head)
     {
         if (head == null)
         {

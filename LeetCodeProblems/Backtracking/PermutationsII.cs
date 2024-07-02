@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class PermutationsII
 {
-    public IList<IList<int>> PermuteUnique(int[] nums)
+    public static IList<IList<int>> PermuteUnique(int[] nums)
     {
         Array.Sort(nums);
         List<int> input = nums.ToList();

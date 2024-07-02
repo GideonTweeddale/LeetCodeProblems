@@ -15,7 +15,7 @@ public class LongestRepeatingCharacterReplacement
     // this should be O(n) time complexity because we see each char in the string a maximum of twice O(2n) which simplyfies to O(n)
     // this should be O(1) or constant space complexity because our hashtable will never have more than three values
 
-    public int CharacterReplacement(string s, int k)
+    public static int CharacterReplacement(string s, int k)
     {
         Dictionary<char, int> counts = new(); // character, count
 
@@ -58,7 +58,7 @@ public class LongestRepeatingCharacterReplacement
 
     // try it with an array
     // the array version is quicker
-    public int CharacterReplacementB(string s, int k)
+    public static int CharacterReplacementB(string s, int k)
     {
         int[] counts = new int[26]; // character, count // 26 because we are only using uppercase characters
 

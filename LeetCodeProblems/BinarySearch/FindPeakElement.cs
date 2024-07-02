@@ -12,7 +12,7 @@ public class FindPeakElement162
     // the same is true for the right element
     // so we can always go in the direction of any larger element and be guaranteed to find a local maximum
 
-    public int FindPeakElement(int[] nums)
+    public static int FindPeakElement(int[] nums)
     {
         int peak = 0;
         int leftIndex = 0;

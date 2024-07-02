@@ -24,7 +24,7 @@ public class SubarrayProductLessThanK
     // because we iterate through the array max 2n times (once for each value with the left and right pointers)
     // this will use O(1) space including the output because we don't create any additional structures and only track a handful of variables
 
-    public int NumSubarrayProductLessThanK(int[] nums, int k)
+    public static int NumSubarrayProductLessThanK(int[] nums, int k)
     {
         int count = 0;
         int product = 1;

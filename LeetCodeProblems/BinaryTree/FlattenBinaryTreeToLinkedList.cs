@@ -21,7 +21,7 @@ public class FlattenBinaryTreeToLinkedList
         Flattener(root, null);
     } 
 
-    private void Flattener(TreeNode node, TreeNode tail)
+    private static void Flattener(TreeNode node, TreeNode tail)
     {
         if (node.left == null && node.right == null) {
             node.right = tail;
@@ -42,7 +42,7 @@ public class FlattenBinaryTreeToLinkedList
     // to do this more intuitively - at least for me
     // we can go left to right
     public void FlattenB(TreeNode root) => DFS(root);
-    private TreeNode DFS(TreeNode node)
+    private static TreeNode DFS(TreeNode node)
     {        
         if (node == null)
         {

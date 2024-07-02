@@ -9,7 +9,7 @@ public class  SumRootToLeafNumbers
     
     public int SumNumbers(TreeNode root) => SumPath(root, 0);
 
-    private int SumPath(TreeNode? node, int pathSum)
+    private static int SumPath(TreeNode? node, int pathSum)
     {
         if (node == null)
         {

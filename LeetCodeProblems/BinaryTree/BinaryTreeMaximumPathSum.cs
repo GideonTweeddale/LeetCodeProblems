@@ -7,7 +7,7 @@ public class BinaryTreeMaximumPathSum
     // and return whichever is larger of the left and right sub path
     // do this recursively
 
-    public int MaxPathSumA(TreeNode root) {
+    public static int MaxPathSumA(TreeNode root) {
         if (root == null)
         {
             return 0;
@@ -41,7 +41,7 @@ public class BinaryTreeMaximumPathSum
         }
     }
 
-    public int MaxPathSum(TreeNode root) {
+    public static int MaxPathSum(TreeNode root) {
         if (root == null)
         {
             return 0;

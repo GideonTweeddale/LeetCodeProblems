@@ -20,7 +20,7 @@ public class HouseRobberII
         return Math.Max(rob(nums, 0, nums.Length - 2), rob(nums, 1, nums.Length - 1));
     }
 
-    private int rob(int[] nums, int lo, int hi)
+    private static int rob(int[] nums, int lo, int hi)
     {
         // this is O(N) time and O(1) space
         // for each index, chooses the larger of the previous largest sum plus the next num or the current num

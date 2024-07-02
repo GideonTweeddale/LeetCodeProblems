@@ -11,7 +11,7 @@ public class PartitionToKEqualSumSubsets
     // we can iterate backwards through the array and for each number add it to all the previous possible sums
     // if the value is already a key in the dictionary, increment its count by 1
     // 6. if any one value is greater than the target the array can't be partitioned into k subsets - return false early
-    public bool CanPartitionKSubsets(int[] nums, int k)
+    public static bool CanPartitionKSubsets(int[] nums, int k)
     {
         // this doesn't work becuase it counts the same sum multiple times
         int sum = nums.Sum();
@@ -49,7 +49,7 @@ public class PartitionToKEqualSumSubsets
 
     // 7. it is apparently possible to solve this problem using dp and a bitmask or using backtracking
     // here is the backtracking solution
-    public bool CanPartitionKSubsetsB(int[] nums, int k)
+    public static bool CanPartitionKSubsetsB(int[] nums, int k)
     {
         int sum = nums.Sum();
         int target = sum / k;

@@ -74,7 +74,7 @@ public class WordSearchII
         }
     }
 
-    private void AddWord(Trie node, string word)
+    private static void AddWord(Trie node, string word)
     {
         foreach (char c in word)
         {

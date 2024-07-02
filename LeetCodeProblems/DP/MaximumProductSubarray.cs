@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class MaximumProductSubarray
 {
-    public int MaxProduct(int[] nums)
+    public static int MaxProduct(int[] nums)
     {
         // intuition
         // we need to keep track of the largest product so far

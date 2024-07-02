@@ -18,7 +18,7 @@ public class ReorderList143
         head = Merge(head, right);
     }
 
-    private ListNode FindMidle(ListNode head)
+    private static ListNode FindMidle(ListNode head)
     {
         ListNode slow = head;
         ListNode fast = head.next;
@@ -32,7 +32,7 @@ public class ReorderList143
         return slow;
     }
 
-    private ListNode Reverse(ListNode head)
+    private static ListNode Reverse(ListNode head)
     {
         ListNode prev = null;
         ListNode current = head;
@@ -48,7 +48,7 @@ public class ReorderList143
         return prev;
     }
 
-    private ListNode Merge(ListNode left, ListNode right)
+    private static ListNode Merge(ListNode left, ListNode right)
     {
         ListNode dummy = new ListNode(0);
         ListNode current = dummy;

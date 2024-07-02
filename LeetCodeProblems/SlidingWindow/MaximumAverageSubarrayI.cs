@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.SlidingWindow;
 public class MaximumAverageSubarrayI
 {
-    public double FindMaxAverage(int[] nums, int k)
+    public static double FindMaxAverage(int[] nums, int k)
     {
         // add the first k items of the list together and save the average
         // remove the value of the each element from the back of the array
@@ -42,7 +42,7 @@ public class MaximumAverageSubarrayI
         return maxAverage;
     }
 
-    public double FindMaxAverageB(int[] nums, int k)
+    public static double FindMaxAverageB(int[] nums, int k)
     {
         // add the first k items of the list together and save the average
         // remove the value of the each element from the back of the array

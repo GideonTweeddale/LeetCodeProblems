@@ -9,7 +9,7 @@ public class PathSumIII
     // when we reach a leaf node, we return
     // we call the DFS for left and right with a fresh sum  and call the DFS for left and right with the sum of the previous
 
-    public int PathSumA(TreeNode root, int targetSum)
+    public static int PathSumA(TreeNode root, int targetSum)
     {
         if (root == null)
         {
@@ -52,7 +52,7 @@ public class PathSumIII
     // for example, for the right child of a root 10 with value 5, we add one to the value at key 15 in our dictionary
     // TODO come back to this problem. The solution doesn't really make sense to me.
 
-    public int PathSum(TreeNode root, int targetSum)
+    public static int PathSum(TreeNode root, int targetSum)
     {
         // the working number paths we can take to a given sum
         Dictionary<int, int> prefixSumCount = [];

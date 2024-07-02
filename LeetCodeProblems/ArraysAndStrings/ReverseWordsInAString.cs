@@ -12,7 +12,7 @@ public class ReverseWordsInAString
     // this should be O(n) time because we will visit each char in the string once
     // and O(n) space including the new string 
 
-    public string ReverseWords(string s)
+    public static string ReverseWords(string s)
     {
         int end = int.MaxValue;
         string output = string.Empty;
@@ -50,7 +50,7 @@ public class ReverseWordsInAString
 
     // however, in practice is uses both far less memory and far less time than the first solution
 
-    public string ReverseWordsSplit(string s)
+    public static string ReverseWordsSplit(string s)
     {
         string output = string.Empty;
 

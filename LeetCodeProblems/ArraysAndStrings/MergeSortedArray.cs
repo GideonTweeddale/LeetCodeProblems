@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class MergeSortedArray
 {
-    public void Merge(int[] nums1, int m, int[] nums2, int n)
+    public static void Merge(int[] nums1, int m, int[] nums2, int n)
     {
         int pos1 = m - 1;
         int pos2 = n - 1;

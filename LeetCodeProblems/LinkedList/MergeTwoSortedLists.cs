@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.LinkedList;
 public class MergeTwoSortedLists
 {
-    public ListNode? MergeTwoLists(ListNode list1, ListNode list2)
+    public static ListNode? MergeTwoLists(ListNode list1, ListNode list2)
     {
         // Traverse through the lists adding the smaller item to the merged list each time
         // This should be O(n + n) time and O(1) space

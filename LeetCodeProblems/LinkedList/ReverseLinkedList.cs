@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.LinkedList;
 public class ReverseLinkedList
 {
-    public ListNode? ReverseList(ListNode head)
+    public static ListNode? ReverseList(ListNode head)
     {
         // My first thought is to traverse the list to the end changing the pointers around as we go
         // That solution would be O(n) time and O(1) space

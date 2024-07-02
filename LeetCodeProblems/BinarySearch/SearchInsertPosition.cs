@@ -8,7 +8,7 @@ public class SearchInsertPosition
 
     // this solution is O(log n) time with O(1) extra memory
     // because we use binary search and we use no extra memory    
-    public int SearchInsert(int[] nums, int target) {
+    public static int SearchInsert(int[] nums, int target) {
         int left = 0;
         int right = nums.Length - 1;
 

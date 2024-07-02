@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Other;
 public class CountingBits
 {
-    public int[] CountBits(int n)
+    public static int[] CountBits(int n)
     {
         // if we shift the number one place to the right we drop the right-most bit
         // we can lookup this new number (half of the original) in our array of already calculated answers to get the number of 1s in it
@@ -15,7 +15,7 @@ public class CountingBits
 
         return oneCounts;
     }
-    public int[] CountBitsB(int n)
+    public static int[] CountBitsB(int n)
     {
         // the number of 1s in a given integer is equal the number of ones in the closest power of two plus one
         // we can find this by keeping track of where we stored each power of two we find as we iterate through the number using an offset

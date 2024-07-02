@@ -6,7 +6,7 @@ public class ThreeSumClosest16
     // first we sort the input array to allow us to avoid duplicates by skipping any num that is the same as the previous num
     // then we iterate over the nums in nums. For each num:
     //      we run a two pointer outwards to inwards search of the sorted nums looking for the lowest distance 
-    public int ThreeSumClosest(int[] nums, int target)
+    public static int ThreeSumClosest(int[] nums, int target)
     {
         int distance = int.MaxValue;
         int sum = 0;

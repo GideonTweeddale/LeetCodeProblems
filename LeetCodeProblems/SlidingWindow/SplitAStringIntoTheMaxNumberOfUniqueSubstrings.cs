@@ -25,7 +25,7 @@ public class SplitAStringIntoTheMaxNumberOfUniqueSubstrings
 
     // this didn't work in just one instance and I'm not really sure why.
     // TODO return and work out why this solution doesn't work intuitvely... it is so close.
-    public int MaxUniqueSplitGreedy(string s)
+    public static int MaxUniqueSplitGreedy(string s)
     {
         HashSet<string> uniqueSubstrings = new();
 
@@ -60,7 +60,7 @@ public class SplitAStringIntoTheMaxNumberOfUniqueSubstrings
     // and then length two, and so on for the entire length of the string
     // Utility function to find maximum count of
     // unique substrings by splitting the string
-    public int maxUnique(string S, HashSet<string> set)
+    public static int maxUnique(string S, HashSet<string> set)
     {
         // Stores maximum count of unique substring
         // by splitting the string into substrings

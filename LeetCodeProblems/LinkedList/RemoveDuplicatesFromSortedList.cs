@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.LinkedList;
 public class RemoveDuplicatesFromSortedList
 {
-    public ListNode? ReverseList(ListNode head)
+    public static ListNode? ReverseList(ListNode head)
     {
         // traverse the list remove the next element if it matches the current element
         // this should be O(n) time and O(1) space complexity

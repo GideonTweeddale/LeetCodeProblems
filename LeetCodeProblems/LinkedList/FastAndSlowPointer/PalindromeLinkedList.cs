@@ -4,7 +4,7 @@ using LeetCodeProblems.Nodes;
 
 public class PalindromeLinkedList
 {
-    public bool IsPalindrome(ListNode head)
+    public static bool IsPalindrome(ListNode head)
     {
         // we find the midpoint of the list and reverse the second half
         // and then iterate through the two halves seeing if they match as we go

@@ -12,7 +12,7 @@ public class LinkedListCycleII
     // and then moving both pointers at the same speed until they meet again - which will be the start of the cycle\
     // the advantage of this approach is that we use only O(1) extra space
 
-    public ListNode? DetectCycle(ListNode head)
+    public static ListNode? DetectCycle(ListNode head)
     {
         // with hashset - each time we visit a node we add it to the hashset
         // if a node is every already in the hashset we've visited it already
@@ -34,7 +34,7 @@ public class LinkedListCycleII
         return null;
     }
 
-    public ListNode? DetectCycleB(ListNode head)
+    public static ListNode? DetectCycleB(ListNode head)
     {
         // with fast and slow pointer - I wouldn't have thought of this on my own
         // this approach uses less memory O(1) space (it is also O(n) time)

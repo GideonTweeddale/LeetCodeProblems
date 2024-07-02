@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class MergeTwoBinaryTrees
 {
-    public TreeNode MergeTrees(TreeNode root1, TreeNode root2)
+    public static TreeNode MergeTrees(TreeNode root1, TreeNode root2)
     {
         // traverse down the trees simultanuesly 
         // if either tree is has no further nodes, attach the next node (and so all subsequent nodes) of the other tree

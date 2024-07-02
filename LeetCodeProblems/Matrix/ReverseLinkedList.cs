@@ -34,7 +34,7 @@ public class ReverseLinkedList
     // the problem with this approach is that we won't have access to the node before the node we are swapping for
     // so we need to add all nodes before index right to the array as we go, including outer nodes before index left
 
-    public ListNode ReverseBetweenA(ListNode head, int left, int right)
+    public static ListNode ReverseBetweenA(ListNode head, int left, int right)
     {
         if (right == left)
         {
@@ -99,7 +99,7 @@ public class ReverseLinkedList
     // the easier approach is to just treat this a reverse linked list problem of the sub linked list
     // and then at the end just fix the first and last pointers
 
-    public ListNode ReverseBetween(ListNode head, int left, int right)
+    public static ListNode ReverseBetween(ListNode head, int left, int right)
     {
         if (right == left)
         {

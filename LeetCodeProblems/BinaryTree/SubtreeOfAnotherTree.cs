@@ -23,7 +23,7 @@ public class SubtreeOfAnotherTree
         return IsSubtree(root.left, subRoot) || IsSubtree(root.right, subRoot);
     }
 
-    private bool DFS(TreeNode? root, TreeNode? subRoot)
+    private static bool DFS(TreeNode? root, TreeNode? subRoot)
     {
         if (root == null && subRoot == null)
         {

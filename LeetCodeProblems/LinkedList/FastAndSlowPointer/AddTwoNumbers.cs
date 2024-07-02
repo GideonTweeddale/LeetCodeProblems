@@ -14,7 +14,7 @@ public class AddTwoNumbers2
 
     // we could also iterate over the two lists, adding the values to an integer - while applying the correct multiple of ten -  and then split those values into a new linked list
 
-    public ListNode? AddTwoNumbers(ListNode l1, ListNode l2)
+    public static ListNode? AddTwoNumbers(ListNode l1, ListNode l2)
     {
         bool carry = false;
         int value = 0; // we could move this inside the loop for better safety and readability or leave it here for marginally better performance

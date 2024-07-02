@@ -16,7 +16,7 @@ public class CourseScheduleII
     // if we encounter a cycle, we will immediately return an empty list because there is no point wasting resources continuing to search
     // once we've run DFS on all our nodes, we will return the schedule
 
-    public int[] FindOrder(int numCourses, int[][] prerequisites)
+    public static int[] FindOrder(int numCourses, int[][] prerequisites)
     {
         // create the graph and add the prerequisites
         Dictionary<int, List<int>> graph = new ();

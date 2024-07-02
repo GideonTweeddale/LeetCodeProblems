@@ -21,7 +21,7 @@ public class AllNodesDistanceKInBinaryTree
     // and the BFS to traverse the graph will visit every node at most once taking O(n) time giving us combined O(2n) or just O(n) time complexity
     // the graph will take O(n) space, the Queue, Visited HashSet, and output list will take max O(n) space, giving a worst case of O(4n) or just O(n) space complexity
 
-    public IList<int> DistanceK(TreeNode root, TreeNode target, int k)
+    public static IList<int> DistanceK(TreeNode root, TreeNode target, int k)
     {
         if (root == null || target == null)
         {

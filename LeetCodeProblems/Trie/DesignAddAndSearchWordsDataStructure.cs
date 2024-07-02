@@ -31,7 +31,7 @@ public class WordDictionary {
         return Search(word, trie);
     }
 
-    private bool Search(string chars, Trie node)
+    private static bool Search(string chars, Trie node)
     {
         for (int i = 0; i < chars.Length; i++)
         {

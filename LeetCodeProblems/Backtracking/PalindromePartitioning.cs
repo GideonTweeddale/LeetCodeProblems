@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class PalindromePartitioning
 {
-    public IList<IList<string>> Partition(string s)
+    public static IList<IList<string>> Partition(string s)
     {
         // like most of the backtracking solutions, this would be O(N^2) time and space roughly
         
@@ -41,7 +41,7 @@ public class PalindromePartitioning
         return output;
     }
 
-    public IList<IList<string>> PartitionB(string s)
+    public static IList<IList<string>> PartitionB(string s)
     {
         List<IList<string>> output = new();
 

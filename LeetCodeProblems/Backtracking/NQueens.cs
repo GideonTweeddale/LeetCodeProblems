@@ -23,7 +23,7 @@ public class NQueens
     // and the diagonals that go down and to the left will always sum to the same value
     // because we are always incrementing one index and decrementing the other by 1
     
-    public IList<IList<string>> SolveNQueens(int n) {
+    public static IList<IList<string>> SolveNQueens(int n) {
         HashSet<int> columns = new();
         HashSet<int> sumDiagonal = new();
         HashSet<int> differenceDiagonal = new();

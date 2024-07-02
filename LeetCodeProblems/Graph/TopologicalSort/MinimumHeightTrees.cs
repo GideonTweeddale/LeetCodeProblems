@@ -11,7 +11,7 @@ public class MinimumHeightTrees
     // the time complexity of this approach is O(n) because we will visit each node once and the space complexity is O(n) because we will need to store the graph
 
     // we can use a dictionary to store the graph and a queue to store the leaf nodes
-    public IList<int> FindMinHeightTrees(int n, int[][] edges)
+    public static IList<int> FindMinHeightTrees(int n, int[][] edges)
     {
         Dictionary<int, List<int>> graph = new();
 

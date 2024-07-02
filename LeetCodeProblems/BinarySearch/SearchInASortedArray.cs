@@ -10,7 +10,7 @@ public class SearchInAsortedArray
     // we return the index if our midpoint value equals our target
     // if we reach leftIndex == rightIndex, the value isn't in the array, so return -1
 
-    public int Search(int[] nums, int target)
+    public static int Search(int[] nums, int target)
     {
         int left = 0;
         int right = nums.Length - 1;

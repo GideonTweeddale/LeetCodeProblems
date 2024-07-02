@@ -41,7 +41,7 @@ public class MaximumWidthOfBinaryTree
 
     // BFS solution - O(n) time O(1) space
     // this does not work - because we should be including inner null children of inner null children
-    public int WidthOfBinaryTreeWrong(TreeNode root)
+    public static int WidthOfBinaryTreeWrong(TreeNode root)
     {
         if (root == null)
         {
@@ -113,7 +113,7 @@ public class MaximumWidthOfBinaryTree
 
     // DFS solution - this could also easily be BFS but I already did a BFS (incorrectly) above so let's practice DFS
     // that didn't work either
-    public int WidthOfBinaryTreeAlsoWrong(TreeNode root)
+    public static int WidthOfBinaryTreeAlsoWrong(TreeNode root)
     {
         Dictionary<int, (int, int)> levels = new();
 
@@ -165,7 +165,7 @@ public class MaximumWidthOfBinaryTree
     // we can do this by doubling the previous value for a left node and doubling the previous value plus one for a right node
     // then at the end, we simply subtract the lowest node from the highest node to get the difference (plus 1)
     // let's do this BFS style
-    public int WidthOfBinaryTreeBFSCountingSteps(TreeNode root)
+    public static int WidthOfBinaryTreeBFSCountingSteps(TreeNode root)
     {
         int maxWidth = 0;
 
@@ -215,7 +215,7 @@ public class MaximumWidthOfBinaryTree
     }
 
     // let's apply the counting steps idea to our DFS from above
-    public int WidthOfBinaryTree(TreeNode root)
+    public static int WidthOfBinaryTree(TreeNode root)
     {
         Dictionary<int, int> levels = new();
 

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class InvertBinaryTree
 {
-    public TreeNode InvertTree(TreeNode? root)
+    public static TreeNode InvertTree(TreeNode? root)
     {
         // dfs recursive solution - should be O(N) time complexity and O(N) space complexity in the worst case
         // iterate down the tree swapping the left and right children
@@ -19,7 +19,7 @@ public class InvertBinaryTree
         return root;
     }
 
-    public TreeNode InvertTreeB(TreeNode root)
+    public static TreeNode InvertTreeB(TreeNode root)
     {
         // this should use less memory by not storing the inverted subtrees in intermediate variables
         // but in the leetcode test it actually uses more memoery and is slower

@@ -10,7 +10,7 @@ public class PeakIndexInAMountainArray
 
     // the time complexity of this solution is O(log n) because we are using binary search
 
-    public int PeakIndexInMountainArray(int[] arr)
+    public static int PeakIndexInMountainArray(int[] arr)
     {
         int firstIndex = 0;
         int lastIndex = arr.Length - 1;

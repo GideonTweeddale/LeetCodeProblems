@@ -28,7 +28,7 @@ public class WordSearch
         return false;
     }
 
-    private bool MatchWord(char[][] board, string word, int row, int col, int wordIndex)
+    private static bool MatchWord(char[][] board, string word, int row, int col, int wordIndex)
     {
         if (wordIndex == word.Length) // we've found the whole word
         {

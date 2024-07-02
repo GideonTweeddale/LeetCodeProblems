@@ -32,7 +32,7 @@ public class ConvertSortedArrayToBinarySearchTree
     // without array slicing for more speed, maybe
     // it doesn't seem any different
 
-    public TreeNode SortedArrayToBSTB(int[] nums)
+    public static TreeNode SortedArrayToBSTB(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
@@ -60,7 +60,7 @@ public class ConvertSortedArrayToBinarySearchTree
     }    
 
     // more concise version
-    public TreeNode SortedArrayToBST(int[] nums)
+    public static TreeNode SortedArrayToBST(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {

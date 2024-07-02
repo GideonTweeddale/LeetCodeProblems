@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Matrix;
 public class SetMatrixZeroes
 {
-    public void SetZeroes(int[][] matrix)
+    public static void SetZeroes(int[][] matrix)
     {
         // iterate over the matrix by row and column
         // if we find a zero, we set the first item in the row and column to 0.

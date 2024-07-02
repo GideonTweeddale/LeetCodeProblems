@@ -14,7 +14,7 @@ public class FindMinimumInSortedArray
     // left becomes mid + 1, and mid becomes right - left / 2 or 1
     // mid is less than mid + 1, so return mid
 
-    public int FindMin(int[] nums)
+    public static int FindMin(int[] nums)
     {
         int min = nums[0];
         int leftIndex = 0;

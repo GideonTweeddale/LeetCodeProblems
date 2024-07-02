@@ -23,7 +23,7 @@ public class BinaryTreeZigZagOrderTraversalII
     // we should only see each node once during BFS and once during reversal
     // so this will complete in O(n) time and we will have a function call in the stack for each node so our memory will be O(n) as well
     
-    public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
+    public static IList<IList<int>> ZigzagLevelOrder(TreeNode root)
     {
         if (root == null)
         {
@@ -70,7 +70,7 @@ public class BinaryTreeZigZagOrderTraversalII
 
     // huh. I just realised that this recursion (obviusly) isn't truly BFS it is actually DFS
     // because we care about the order of the elements at this level, it isn't (as far as I can see) simple to use DFS to solve this problem
-    public IList<IList<int>> ZigzagLevelOrderDFS(TreeNode root)
+    public static IList<IList<int>> ZigzagLevelOrderDFS(TreeNode root)
     {
         if (root == null)
         {

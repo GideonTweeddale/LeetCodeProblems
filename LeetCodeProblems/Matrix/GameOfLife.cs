@@ -31,7 +31,7 @@ public class GameOfLife289
     //     dying = 3,
     // }
 
-    public void GameOfLife(int[][] board) {
+    public static void GameOfLife(int[][] board) {
         if (board == null || board.Length < 1 || board[0].Length < 1)
         {
             return;

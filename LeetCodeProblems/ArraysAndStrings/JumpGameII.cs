@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class JumpGameII
 {
-    public int CanJump(int[] nums)
+    public static int CanJump(int[] nums)
     {
         int jumps = 0, jumpPos = 0, jumpDistance = 0;
 

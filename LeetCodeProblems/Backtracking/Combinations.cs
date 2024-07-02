@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class Combinations
 {
-    public IList<IList<int>> Combine(int n, int k)
+    public static IList<IList<int>> Combine(int n, int k)
     {
         // initialise the result list
         IList<IList<int>> result = new List<IList<int>>();

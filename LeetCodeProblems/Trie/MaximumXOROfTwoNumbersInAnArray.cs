@@ -14,7 +14,7 @@ public  class MaximumXOROfTwoNumbersInAnArray
     // we loop over the array of nums twice, once to insert the nums into the trie and once to find the max xor
     // within each loop, we loop over the possible bit values of an int, of which there are 32
     // the trie will take up max O(n * 32) space also where n is the length of nums and 32 is the number of bits in a an int
-    public int FindMaximumXOR(int[] nums)
+    public static int FindMaximumXOR(int[] nums)
     {
         TrieNode root = new();
 

@@ -24,7 +24,7 @@ public class MinimumNumberOfArrowsToBurstBalloons
 
     // time complexity is O(n log n) because we sort the intervals first
 
-    public int FindMinArrowShots(int[][] points)
+    public static int FindMinArrowShots(int[][] points)
     {
         if (points.Length == 0)
         {

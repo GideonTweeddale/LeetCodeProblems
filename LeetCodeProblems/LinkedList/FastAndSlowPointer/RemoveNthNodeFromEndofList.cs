@@ -21,7 +21,7 @@ public class RemoveNthNodeFromEndofList
     // 3. 2 != 1, current != null and 2 != 3
     // 3. 3 != 1, current != null and 3 == 3 (set prev.next to current)
 
-    public ListNode RemoveNthFromEndA(ListNode head, int n)
+    public static ListNode RemoveNthFromEndA(ListNode head, int n)
     {
         ListNode? current = head;
         ListNode? prev = null;
@@ -48,7 +48,7 @@ public class RemoveNthNodeFromEndofList
     // we could make this even fast by setting prev.next to prev.next.next immediately after setting prev
     // we could even get rid of the prev variable and just set current.next to current.next.next when we reach n-1
 
-    public ListNode RemoveNthFromEndB(ListNode head, int n)
+    public static ListNode RemoveNthFromEndB(ListNode head, int n)
     {
         if (head == null || head.next == null)
         {
@@ -76,7 +76,7 @@ public class RemoveNthNodeFromEndofList
     // the fast pointer goes to the end of the list, while the slow pointer follows behind it by n places
     // which means that when the fast pointer reaches the end of the list, the slow pointer will have the node before the nth node
 
-    public ListNode? RemoveNthFromEnd(ListNode head, int n)
+    public static ListNode? RemoveNthFromEnd(ListNode head, int n)
     {
         if (head == null || head.next == null)
         {

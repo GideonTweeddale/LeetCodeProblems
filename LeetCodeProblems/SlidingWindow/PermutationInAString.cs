@@ -14,7 +14,7 @@ public class PermutationInAString
     // and only check if we have a match when both the counts of in the hash tables match and the total number of characters match
     // we don't even actually need a total variable because the difference between left and right is the total
 
-    public bool CheckInclusion(string s1, string s2)
+    public static bool CheckInclusion(string s1, string s2)
     {
         // create the hash tables
         Dictionary<char, int> s1Counts = new();

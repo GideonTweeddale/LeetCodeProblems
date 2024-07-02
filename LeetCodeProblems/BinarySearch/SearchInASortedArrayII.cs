@@ -17,7 +17,7 @@ public class SearchInAsortedArrayII
     //        if the target is also in the right sorted array, we search right otherwise we search left
 
 
-    public bool Search(int[] nums, int target)
+    public static bool Search(int[] nums, int target)
     {
         int left = 0;
         int right = nums.Length - 1;

@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Bitwise;
 public class SingleNumber136
 {
-    public int SingleNumber(int[] nums)
+    public static int SingleNumber(int[] nums)
     {
         // the easiest solution would be to sort the array and then iterate through it two indexes at a time until a number isn't followed by itself
         Array.Sort(nums);
@@ -16,7 +16,7 @@ public class SingleNumber136
 
         return -1; // if the description is correct, this should never be hit
     }
-    public int SingleNumberB(int[] nums)
+    public static int SingleNumberB(int[] nums)
     {
         // using the xor operator to select the bits that are set to 1 an odd number of times giving us the number that isn't set twice
         // in other words the set bits in each number that is set twice cancel eachother out

@@ -29,7 +29,7 @@ public class SearchA2DMatrixII
 
     // this solution beats 95.38% on time and 94.12% on memory
 
-    public bool SearchMatrix(int[][] matrix, int target)
+    public static bool SearchMatrix(int[][] matrix, int target)
     {
         int n = matrix.Length;
         int m = matrix[0].Length;
@@ -71,7 +71,7 @@ public class SearchA2DMatrixII
     // 5 < 7, so we decrement our column
     // 5 > 4, so we increment our row
     // 5 = 5, so we have found the target
-    public bool SearchMatrixB(int[][] matrix, int target)
+    public static bool SearchMatrixB(int[][] matrix, int target)
     {
         int n = matrix.Length;
         int m = matrix[0].Length;

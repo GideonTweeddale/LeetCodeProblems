@@ -10,7 +10,7 @@ public class WordPattern290
     // note, this also needs the mapping to go both ways, so we need two maps
 
     // implement the simple version with the pre split
-    public bool WordPattern(string pattern, string s)
+    public static bool WordPattern(string pattern, string s)
     {
         string[] words = s.Split(' ');
 

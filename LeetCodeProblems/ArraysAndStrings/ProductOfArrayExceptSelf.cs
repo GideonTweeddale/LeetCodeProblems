@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class ProductOfArrayExceptSelf
 {
-    public int[] ProductExceptSelf(int[] nums)
+    public static int[] ProductExceptSelf(int[] nums)
     {
         int[] answer = new int[nums.Length];
         int curr = 1;

@@ -10,7 +10,7 @@ public class CloneGraph133
     // to prevent us from visiting the same nodes multiple times, we can keep track of which nodes we have visited with a hashset
     // this means that we'll be able to clone the graph in O(n) time complexity and O(n) space complexity
 
-    public Node CloneGraph(Node node)
+    public static Node CloneGraph(Node node)
     {
         if (node == null)
         {
@@ -40,7 +40,7 @@ public class CloneGraph133
         }
     }
 
-    public Node CloneGraphA(Node node)
+    public static Node CloneGraphA(Node node)
     {
         if (node == null)
         {

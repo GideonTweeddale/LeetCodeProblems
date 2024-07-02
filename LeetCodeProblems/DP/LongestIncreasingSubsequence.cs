@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class LongestIncreasingSubsequence
 {
-    public int LengthOfLIS(int[] nums)
+    public static int LengthOfLIS(int[] nums)
     {
         // this doesn't work becuase in a strict subsequence we aren't allowed to reorder the elements
         // are we allowed to loop?
@@ -24,7 +24,7 @@ public class LongestIncreasingSubsequence
         return length;
     }
 
-    public int LengthOfLISB(int[] nums)
+    public static int LengthOfLISB(int[] nums)
     {
         if (nums.Length <= 1)
         {

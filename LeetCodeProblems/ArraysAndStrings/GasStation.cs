@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class GasStation
 {
-    public int CanCompleteCircuit(int[] gas, int[] cost)
+    public static int CanCompleteCircuit(int[] gas, int[] cost)
     {
         // The total sum of fuel most be greater than the total sum of fuel costs
 
@@ -40,7 +40,7 @@ public class GasStation
     }
 
 
-    public int CanCompleteCircuitB(int[] gas, int[] cost)
+    public static int CanCompleteCircuitB(int[] gas, int[] cost)
     {
         int sum = 0;
         int maxIndex = -1;

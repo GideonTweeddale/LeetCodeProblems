@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class JumpGame
 {
-    public bool CanJump(int[] nums)
+    public static bool CanJump(int[] nums)
     {
         int localGoal = nums.Length - 1;
 

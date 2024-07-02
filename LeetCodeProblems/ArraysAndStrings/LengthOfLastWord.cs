@@ -12,7 +12,7 @@ public class LengthOfLastWord58
     // This is O(n) time where n is the length of the string because we visit each index in the string once
     // This is O(1) or constant time because the only additional memory we use is the variable to store the current word length
 
-    public int LengthOfLastWord(string s)
+    public static int LengthOfLastWord(string s)
     {
         int length = 0;
 
@@ -34,7 +34,7 @@ public class LengthOfLastWord58
 
     // this solution works but we could do this way faster, if we start from the end and go only until the first space
 
-    public int LengthOfLastWordReverse(string s)
+    public static int LengthOfLastWordReverse(string s)
     {
         int length = 0;
         int n = s.Length - 1;

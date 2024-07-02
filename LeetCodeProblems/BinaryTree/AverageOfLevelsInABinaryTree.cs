@@ -2,7 +2,7 @@
 public class AverageOfLevelsInABinaryTree
 {
 
-    public IList<double> AverageOfLevels(TreeNode root)
+    public static IList<double> AverageOfLevels(TreeNode root)
     {
         // bfs is required here - which should be O(N) time complexity and space complexity of roughly O(N) 
 

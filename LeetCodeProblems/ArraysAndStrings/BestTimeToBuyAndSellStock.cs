@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.ArraysAndStrings;
 public class BestTimeToBuyAndSellStock
 {
-    public int MaxProfitB(int[] prices)
+    public static int MaxProfitB(int[] prices)
     {
         int maxProfit = 0;
         int cheapestPrice = prices[0];
@@ -25,7 +25,7 @@ public class BestTimeToBuyAndSellStock
         return maxProfit;
     }
 
-    public int MaxProfitC(int[] prices)
+    public static int MaxProfitC(int[] prices)
     {
         int maxProfit = 0;
         int cheapestPrice = prices[0];

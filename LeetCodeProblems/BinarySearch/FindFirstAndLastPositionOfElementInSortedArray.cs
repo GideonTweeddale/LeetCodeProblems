@@ -29,7 +29,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray
         return [leftIndex, rightIndex];
     }
 
-    private int BinarySearch(int[] nums, int target, bool findLeftmost)
+    private static int BinarySearch(int[] nums, int target, bool findLeftmost)
     {
         int left = 0;
         int right = nums.Length - 1;

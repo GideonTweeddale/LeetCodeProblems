@@ -18,7 +18,7 @@ public class IntegerToRoman
         {1, "I"},
     };
 
-    public string IntToRoman(int num)
+    public static string IntToRoman(int num)
     {
         // subtract the largest roman numeral possible until we get to zero
 

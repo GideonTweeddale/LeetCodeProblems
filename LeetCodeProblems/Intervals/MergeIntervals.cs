@@ -21,7 +21,7 @@ public class MergeIntervals
 
     // time complexity is O(n log n) becuase we sort the intervals first
 
-    public int[][] Merge(int[][] intervals)
+    public static int[][] Merge(int[][] intervals)
     {
         List<int[]> output = [];
         if (intervals.Length == 0)

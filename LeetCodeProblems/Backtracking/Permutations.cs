@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.Backtracking;
 public class Permutations
 {
-    public IList<IList<int>> Permute(int[] nums)
+    public static IList<IList<int>> Permute(int[] nums)
     {
         // this is obiously a brute force backtracking solution
         // the time complexity is O(2^n) and the space complexity is O(2^n)
@@ -34,7 +34,7 @@ public class Permutations
         DFS(new List<int>());
         return permuts;
     }
-    public IList<IList<int>> PermuteB(int[] nums)
+    public static IList<IList<int>> PermuteB(int[] nums)
     {
         // this is obiously a brute force backtracking solution
         // the time complexity is O(2^n) and the space complexity is O(2^n)

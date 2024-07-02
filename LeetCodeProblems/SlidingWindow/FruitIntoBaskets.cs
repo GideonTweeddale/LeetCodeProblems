@@ -11,7 +11,7 @@ public class FruitIntoBaskets
     // damn. I misunderstood the question. This is a sliding window problem, because once we start adding fruit we cannot skip a tree.
     // So we are looking for the longest subtree with only two types of fruit.
 
-    public int TotalFruitOops(int[] fruits)
+    public static int TotalFruitOops(int[] fruits)
     {
         Dictionary<int, int> counts = new ();
         counts[-1] = 0;
@@ -53,7 +53,7 @@ public class FruitIntoBaskets
     // finally we return max
     // this will be O(2n) or just O(n) time and I think it is actually O(1) space because the hash table will never have more than 3 keys
 
-    public int TotalFruit(int[] fruits)
+    public static int TotalFruit(int[] fruits)
     {
         Dictionary<int, int> counts = new (); // fruit type, count
         int max = 0, total = 0, left = 0, right = 0;

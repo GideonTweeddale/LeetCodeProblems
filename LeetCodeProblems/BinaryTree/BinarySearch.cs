@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class BinarySearch
 {
-    public int Search(int[] nums, int target)
+    public static int Search(int[] nums, int target)
     {
         int left = 0;
         int right = nums.Length - 1;

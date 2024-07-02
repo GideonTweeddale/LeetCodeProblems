@@ -5,7 +5,7 @@ public class PartitionList
     // iterate through the linked list creating two new linked lists, left and right
     // attach the two lists together and return
 
-    public ListNode Partition(ListNode head, int x)
+    public static ListNode Partition(ListNode head, int x)
     {
         ListNode left = new(0);
         ListNode right = new(0);
@@ -52,7 +52,7 @@ public class PartitionList
 
     // handle head being null
 
-    public ListNode PartitionB(ListNode head, int x)
+    public static ListNode PartitionB(ListNode head, int x)
     {
         if (head == null)
         {

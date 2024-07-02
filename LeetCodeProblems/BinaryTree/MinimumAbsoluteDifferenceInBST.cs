@@ -20,7 +20,7 @@ public class MinimumAbsoluteDifferenceInBST
         return GetSubtreeMinimumDifference(root, int.MaxValue, int.MaxValue).min;
     }
 
-    private (int min, int last) GetSubtreeMinimumDifference(TreeNode? node, int last, int min)
+    private static (int min, int last) GetSubtreeMinimumDifference(TreeNode? node, int last, int min)
     {
         if (node == null || min == 1)
         {

@@ -6,13 +6,13 @@ public class KthLargestElementInAnArray
     // using a heap is the obvious solution which would be O(n + k log n) time complexity
 
     // this is O(n log n) time complexity
-    public int FindKthLargestNaive(int[] nums, int k)
+    public static int FindKthLargestNaive(int[] nums, int k)
     {
         return nums.OrderByDescending(x => x).ElementAt(k - 1);
     }
 
     // using heap - this is O(n + k log n) time complexity, but somehow almost 50% slower than the naive solution
-    public int FindKthLargestHeap(int[] nums, int k)
+    public static int FindKthLargestHeap(int[] nums, int k)
     {
         PriorityQueue<int, int> heap = new();
 
@@ -32,7 +32,7 @@ public class KthLargestElementInAnArray
     // using quick select - this is O(n) time complexity in the average case but O(n^2) in the worst case
     // I'm not 100% I understand why this is O(n) time complexity in the average case not (log n) time complexity
     // leetcode has also added a test case that deliberatly causes the worst case time complexity to be triggered and therefore times this solution out
-    public int FindKthLargestQuickSelect(int[] nums, int k)
+    public static int FindKthLargestQuickSelect(int[] nums, int k)
     {
         return QuickSelect(0, nums.Length - 1);
 

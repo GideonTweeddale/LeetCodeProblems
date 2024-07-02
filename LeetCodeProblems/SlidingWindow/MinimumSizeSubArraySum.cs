@@ -11,7 +11,7 @@ public class MinimumSizeSubArraySum
     // this has a time complexity of O(n) because we iterate over each item a maximum of 2 times, once when the left index is incremented and once when the right index is incremented
     // it is O(1) space because we only use a few extra constant space variables
 
-    public int MinSubArrayLen(int target, int[] nums)
+    public static int MinSubArrayLen(int target, int[] nums)
     {
         int sum = 0, min = int.MaxValue, left = 0;
 

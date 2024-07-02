@@ -12,7 +12,7 @@ public class KClosestPointsToOrigin
     // the time complexity is O(n log k) because we are iterating over n elements and adding to the heap is O(log k)
     // the space complexity is O(k) because we are only storing k elements in the heap
 
-    public int[][] KClosest(int[][] points, int k)
+    public static int[][] KClosest(int[][] points, int k)
     {
         // sanity check
         if (points == null || points.Length == 0 || k == 0)

@@ -18,7 +18,7 @@ public class ContainsDuplicateII
     // this will solve the problem in O(n) time and O(k) space where n is the length of the nums array
     // because we will iterate through the nums array once and our map will contain at most k values
 
-    public bool ContainsNearbyDuplicate(int[] nums, int k)
+    public static bool ContainsNearbyDuplicate(int[] nums, int k)
     {
         int left = 0;
 

@@ -91,7 +91,7 @@ public class LRUCache
     }
 
     // helper functions
-    private void RemoveFromLinkedList(Node node)
+    private static void RemoveFromLinkedList(Node node)
     {
         node.previous.next = node.next;
         node.next.previous = node.previous;

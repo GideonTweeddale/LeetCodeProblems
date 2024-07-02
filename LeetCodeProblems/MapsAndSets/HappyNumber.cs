@@ -30,7 +30,7 @@ public class HappyNumber
         return false; // we found a loop
     }
 
-    private int SumOfSquares(int n)
+    private static int SumOfSquares(int n)
     {
         int sum = 0;
 

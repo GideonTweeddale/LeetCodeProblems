@@ -2,7 +2,7 @@
 public class TargetSum
 {
     // backtracking solution
-    public int FindTargetSumWaysBacktracking(int[] nums, int target)
+    public static int FindTargetSumWaysBacktracking(int[] nums, int target)
     {
         // like most of the backtracking solutions, this would be O(N^2) time and space roughly
 
@@ -32,7 +32,7 @@ public class TargetSum
         return count;
     }
 
-    public int FindTargetSumWaysB(int[] nums, int target)
+    public static int FindTargetSumWaysB(int[] nums, int target)
     {
         // this shoud be O(N * target) where n is number of elements in nums
 

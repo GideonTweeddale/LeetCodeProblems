@@ -14,7 +14,7 @@ public class LongestSubstringWithoutRepeatingCharacters
 
     // our memory complexity will be also be constant O(1), given that there are a fixed number of English letters, digits, symbols, and spaces
 
-    public int LengthOfLongestSubstring(string s)
+    public static int LengthOfLongestSubstring(string s)
     {
         HashSet<char> chars = new();
 

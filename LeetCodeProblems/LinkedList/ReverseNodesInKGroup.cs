@@ -49,7 +49,7 @@ public class ReverseNodesInKGroup
     // [dummy,3,2,1,4,5,6,7,8] previous node = 1, kth node = 6, next = 7
     // [dummy,3,2,1,6,5,4,7,8] previous node = 4, kth node = null
 
-    public ListNode ReverseKGroup(ListNode head, int k)
+    public static ListNode ReverseKGroup(ListNode head, int k)
     {
         ListNode dummy = new(0);
         dummy.next = head;

@@ -2,7 +2,7 @@
 public class Convert1DArrayInto2DArray
 
 {
-    public int[][] Construct2DArray(int[] original, int rows, int columns)
+    public static int[][] Construct2DArray(int[] original, int rows, int columns)
     {
         // if the orignal array length is equal to the rows * the columns we can convert it into a 2d array
         // by looping over the number of rows and assiging the next columns number of elements to a sub array at the row index 

@@ -3,7 +3,7 @@
 namespace LeetCodeProblems.Backtracking;
 public class GenerateParentheses22
 {
-    public IList<string> GenerateParenthesis(int n)
+    public static IList<string> GenerateParenthesis(int n)
     {
         IList<string> output = new List<string>();
 

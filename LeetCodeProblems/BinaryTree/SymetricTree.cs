@@ -14,7 +14,7 @@ public class SymetricTree
     }
 
     // helper
-    private bool MatchingTrees(TreeNode left, TreeNode right)
+    private static bool MatchingTrees(TreeNode left, TreeNode right)
     {
         if (left == null && right == null)
         {

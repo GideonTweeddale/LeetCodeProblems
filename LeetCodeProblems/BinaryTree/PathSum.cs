@@ -20,7 +20,7 @@ public class PathSum
         return HasPathSum(root.left, targetSum, root.val) || HasPathSum(root.right, targetSum, root.val);
     }
 
-    private bool HasPathSum(TreeNode? node, int targetSum, int currentSum)
+    private static bool HasPathSum(TreeNode? node, int targetSum, int currentSum)
     {
         if (node == null)
         {
@@ -38,7 +38,7 @@ public class PathSum
         return HasPathSum(node.left, targetSum, currentSum) || HasPathSum(node.right, targetSum, currentSum);
     }
 
-    public bool HasPathSumB(TreeNode? root, int targetSum)
+    public static bool HasPathSumB(TreeNode? root, int targetSum)
     {
         // dfs recursive solution is required here - should be O(N) time complexity and O(N) space complexity in the worst case
         // we should recursively evaluate each path, passing down the sum until the end of the path is reached

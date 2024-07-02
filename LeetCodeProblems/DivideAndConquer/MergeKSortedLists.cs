@@ -56,7 +56,7 @@ public class MergeKSortedLists
         return lists[0];
     }
 
-    private ListNode MergeLinkedLists(ListNode l1, ListNode? l2) 
+    private static ListNode MergeLinkedLists(ListNode l1, ListNode? l2) 
     {
         ListNode dummy = new(0);
         ListNode tail = dummy;

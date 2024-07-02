@@ -2,7 +2,7 @@
 public class FindAllNumbersDissapearedInAnArray
 {
     // this should run in O(n) time and O(1) space
-    public IList<int> FindDisappearedNumbers(int[] nums)
+    public static IList<int> FindDisappearedNumbers(int[] nums)
     {
         for (int i = 0; i < nums.Length; i++)
         {

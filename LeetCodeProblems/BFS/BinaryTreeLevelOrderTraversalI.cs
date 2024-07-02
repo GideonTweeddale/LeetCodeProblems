@@ -17,7 +17,7 @@ public class BinaryTreeLevelOrderTraversalI
 
     // huh. I just realised that this recursion (obviusly) isn't truly BFS it is actually DFS
     // Howver, we can actually use DFS to solve this problem because we don't care about the order of the nodes at each level
-    public IList<IList<int>> LevelOrder(TreeNode root)
+    public static IList<IList<int>> LevelOrder(TreeNode root)
     {
         if (root == null)
         {
@@ -50,7 +50,7 @@ public class BinaryTreeLevelOrderTraversalI
         }
     }
 
-    public IList<IList<int>> LevelOrderQueue(TreeNode root)
+    public static IList<IList<int>> LevelOrderQueue(TreeNode root)
     {
         if (root == null)
         {

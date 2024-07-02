@@ -13,7 +13,7 @@ public class SimplifyPath71
     // otherwise we pop from our stack one by one and append to the beginning of our path like so '/' + poppedString + path
     // when our stack is empty, we return the path
 
-    public string SimplifyPath(string path)
+    public static string SimplifyPath(string path)
     {
         Stack<string> stack = new();
 

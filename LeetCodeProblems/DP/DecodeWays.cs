@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class DecodeWays
 {
-    public int NumDecodings(string s)
+    public static int NumDecodings(string s)
     {
         // if the string starts with 0, it is not possible to decode
         if (s[0] == '0')

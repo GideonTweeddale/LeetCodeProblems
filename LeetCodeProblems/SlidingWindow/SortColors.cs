@@ -8,7 +8,7 @@ public class SortColors75
     // and then we iterate over the array
     //      if we find a two we swap it with the right pointer index and move the right pointer inwards
     //      if we find a zero we swap it with the left pointer index and move the left pointer inwards
-    public void SortColors(int[] nums)
+    public static void SortColors(int[] nums)
     {
         int left = 0;
         int right = nums.Length - 1;
@@ -47,7 +47,7 @@ public class SortColors75
     // and then once more over the array to overwrite the values
     // it will be constant space because we know that we only have three possible distinct values in our nums array
     // we could record these in variables or use a hashmap that will never exceed three keys
-    public void SortColorsBucketSort(int[] nums)
+    public static void SortColorsBucketSort(int[] nums)
     {
         Dictionary<int, int> colourCounts = new();
 

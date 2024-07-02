@@ -14,7 +14,7 @@ public class ThreeSum15
     // this runs in O(n^2) time becuase we iterate over every num in nums
     // and within that we iterate over ever num again (potentially twice) with the two pointer search
     // the sort should take O(n log n) time 
-    public IList<IList<int>> ThreeSum(int[] nums)
+    public static IList<IList<int>> ThreeSum(int[] nums)
     {
         List<IList<int>> output = [];
 

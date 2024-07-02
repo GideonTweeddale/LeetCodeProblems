@@ -10,7 +10,7 @@ public class Subsets78
         return subsets;
     }
 
-    private void DFSSubsets(IList<IList<int>> subsets, IList<int> subset, int[] nums, int index)
+    private static void DFSSubsets(IList<IList<int>> subsets, IList<int> subset, int[] nums, int index)
     {
         subsets.Add(new List<int>(subset));
 
@@ -22,7 +22,7 @@ public class Subsets78
         }
     }
         
-    public IList<IList<int>> SubsetsB(int[] nums)
+    public static IList<IList<int>> SubsetsB(int[] nums)
     {
         // this is obiously a brute force backtracking solution
         // therefore it is O(N^2)

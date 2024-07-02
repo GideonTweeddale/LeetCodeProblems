@@ -14,7 +14,7 @@ public class PathSumII
     // the working list will be max O(n) space assuming that the tree is basically a linked list and the output will be max O(n + log n * n) assuming that every leaf node matches the targetSum
     // giving us O(n) time and O(n*log n) space
 
-    public IList<IList<int>> PathSum(TreeNode root, int targetSum)
+    public static IList<IList<int>> PathSum(TreeNode root, int targetSum)
     {
         List<IList<int>> output = [];
 

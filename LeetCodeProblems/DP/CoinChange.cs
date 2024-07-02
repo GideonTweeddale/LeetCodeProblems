@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.DP;
 public class CoinChange322
 {
-    public int CoinChange(int[] coins, int amount)
+    public static int CoinChange(int[] coins, int amount)
     {
         // this intuition is wrong becuase
         // there are many cases where subtracting the larger coin
@@ -38,7 +38,7 @@ public class CoinChange322
     }
 
     // dp solution
-    public int CoinChangeB(int[] coins, int amount) 
+    public static int CoinChangeB(int[] coins, int amount) 
     {
         // from the bottom up compute the minimum number of coins needed to make the value until we reach the amount
         // at each value use the previously computed values

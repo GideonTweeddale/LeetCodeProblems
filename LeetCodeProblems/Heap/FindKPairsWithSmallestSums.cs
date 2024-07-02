@@ -26,7 +26,7 @@ public class FindKPairsWithSmallestSums
 
     // time complexity is O(klogk) because we are only iterating k times and adding to the heap is O(logk)
 
-    public IList<IList<int>> KSmallestPairs(int[] nums1, int[] nums2, int k)
+    public static IList<IList<int>> KSmallestPairs(int[] nums1, int[] nums2, int k)
     {
         IList<IList<int>> result = [];
 

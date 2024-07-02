@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.BinaryTree;
 public class MinimumDepthOfBinaryTree
 {
-    public int MinDepthBFS(TreeNode root)
+    public static int MinDepthBFS(TreeNode root)
     {
         // with a bfs implementation which should be O(n) time complexity and space complexity of roughly O(n) in the worst case
         // we can end early if we find a leaf node in the level we are currently searching
@@ -49,7 +49,7 @@ public class MinimumDepthOfBinaryTree
         return level;
     }
 
-    public int MinDepth(TreeNode root)
+    public static int MinDepth(TreeNode root)
     {
         // dfs solution - should be O(N) time complexity and O(1) space complexity
         // intuitively the bfs solution should be faster because the dfs solution only stops evaluating the local branch when it finds a leaf node

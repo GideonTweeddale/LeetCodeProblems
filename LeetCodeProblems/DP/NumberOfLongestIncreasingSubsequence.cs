@@ -9,7 +9,7 @@ public class NumberOfLongestIncreasingSubsequence
     // we need to work backwards from the end of the array and work out the maximum length of the subsequence for each index
     // then the maximum length of the subssequemce for the current index will be either 1 or the maximum length of the subsequence of the previous index + 1
 
-    public int FindNumberOfLIS(int[] nums)
+    public static int FindNumberOfLIS(int[] nums)
     {
         int maxLength = 0;
         int maxCount = 0;
