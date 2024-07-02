@@ -83,7 +83,7 @@ public class RemoveNthNodeFromEndofList
             return null;
         }
 
-        ListNode? dummy = new ListNode(0, head);
+        ListNode? dummy = new(0, head);
         ListNode? slow = dummy;
         ListNode? fast = head;
 

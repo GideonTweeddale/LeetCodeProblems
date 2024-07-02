@@ -23,7 +23,7 @@ public class ValidAnagram
     // this approach is O(m) space where m is the number of valid unicode chars
 
     // init the map of lowercase english letters
-    private Dictionary<char, int> counts = new Dictionary<char, int>
+    private Dictionary<char, int> counts = new()
     {
         { 'a', 0 }, { 'b', 0 }, { 'c', 0 }, { 'd', 0 }, { 'e', 0 },
         { 'f', 0 }, { 'g', 0 }, { 'h', 0 }, { 'i', 0 }, { 'j', 0 },

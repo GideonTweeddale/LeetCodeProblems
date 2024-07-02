@@ -18,7 +18,7 @@ public class RotateList
     // if k is greater than the length of the list, we can just take the remainder of k / length of the list
     // because if we rotate the list by the length of the list, we will get the same list
 
-    public static ListNode RotateRight(ListNode head, int k)
+    public static ListNode? RotateRight(ListNode head, int k)
     {
         // edge case - head is null or head.next is null || k is zero
         if (head == null || head.next == null || k == 0)
@@ -26,11 +26,11 @@ public class RotateList
             return head;
         }
 
-        ListNode dummy = new ListNode(0, head);
+        ListNode dummy = new(0, head);
 
         // we need to find the length of the list
         int length = 0;
-        ListNode current = head;
+        ListNode? current = head;
         while(current != null)
         {
             length++;
@@ -49,7 +49,7 @@ public class RotateList
             return head;
         }
 
-        ListNode nodeK = dummy;
+        ListNode? nodeK = dummy;
         current = dummy;
 
         // find the kth node - and find the final node in the list
@@ -60,7 +60,7 @@ public class RotateList
                 nodeK = current;
             }
 
-            current = current.next;
+            current = current?.next;
         } 
 
         // save a reference to the new head

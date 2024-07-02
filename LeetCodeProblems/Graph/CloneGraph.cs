@@ -28,7 +28,7 @@ public class CloneGraph133
                 return visited[node];
             }
 
-            Node clone = new Node(node.val);
+            Node clone = new(node.val);
             visited.Add(node, clone);
 
             foreach (Node neighbor in node.neighbors)
@@ -50,7 +50,7 @@ public class CloneGraph133
         Dictionary<Node, Node> visited = new([]);
         Queue<Node> queue = new([node]);
 
-        Node clone = new Node(node.val);
+        Node clone = new(node.val);
         visited.Add(node, clone);
 
         while (queue.Any())

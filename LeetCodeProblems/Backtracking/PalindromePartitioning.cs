@@ -56,7 +56,7 @@ public class PalindromePartitioning
             for (int i = 0; i < str.Length; i++)
             {
                 string? substring = str[..(i + 1)];
-                string? reversed = new string(substring.Reverse().ToArray());
+                string? reversed = new(substring.Reverse().ToArray());
 
                 if (substring == reversed)
                 {

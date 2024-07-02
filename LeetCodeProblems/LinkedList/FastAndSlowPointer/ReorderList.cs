@@ -50,7 +50,7 @@ public class ReorderList143
 
     private static ListNode Merge(ListNode left, ListNode right)
     {
-        ListNode dummy = new ListNode(0);
+        ListNode dummy = new(0);
         ListNode current = dummy;
 
         while (left != null && right != null)

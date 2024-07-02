@@ -22,7 +22,7 @@ public class PartitionToKEqualSumSubsets
             return false;
         }
 
-        Dictionary<int, int> dp = new Dictionary<int, int> { { 0, 1 } };
+        Dictionary<int, int> dp = new() { { 0, 1 } };
 
         for (int i = nums.Length - 1; i >=0; i--)
         {

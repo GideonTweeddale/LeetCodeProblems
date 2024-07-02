@@ -17,7 +17,7 @@ public class AverageOfLevelsInABinaryTree
             return new List<double>() { root.val };
         }
 
-        Queue<TreeNode> queue = new Queue<TreeNode>();
+        Queue<TreeNode> queue = new();
         queue.Enqueue(root);
 
         List<double> averages = [];

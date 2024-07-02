@@ -22,7 +22,7 @@ public class OddEvenLinkedList
             return head;
         }
 
-        ListNode dummy = new ListNode(0, head);
+        ListNode dummy = new(0, head);
 
         // create odd and even pointers
         ListNode odd = head;

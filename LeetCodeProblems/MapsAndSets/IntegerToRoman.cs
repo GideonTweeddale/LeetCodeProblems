@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.HashSet;
 public class IntegerToRoman
 {
-    Dictionary<int, string> romanNumerals = new Dictionary<int, string>()
+    Dictionary<int, string> romanNumerals = new()
     {
         {1000, "M"},
         {900, "CM"},

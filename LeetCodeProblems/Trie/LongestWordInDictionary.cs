@@ -89,7 +89,7 @@ public  class LongestWordInDictionary
 
     private class Trie
     {
-        public TrieNode root = new TrieNode();
+        public TrieNode root = new();
 
         public void Insert(string word)
         {

@@ -9,7 +9,7 @@ public class BasicCalculator
 
     public static int Calculate(string s)
     {
-        Stack<int> stack = new Stack<int>();
+        Stack<int> stack = new();
         int result = 0;
         int i = 0;
         int num = 0;
@@ -51,7 +51,7 @@ public class BasicCalculator
                 default:
                     if (char.IsDigit(s[i]))
                     {
-                        StringBuilder stringBuilder = new StringBuilder();
+                        StringBuilder stringBuilder = new();
                         stringBuilder.Append(s[i]);
 
                         while (i + 1 < s.Length && char.IsDigit(s[i + 1]))

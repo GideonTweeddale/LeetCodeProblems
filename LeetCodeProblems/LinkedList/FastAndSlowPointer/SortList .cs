@@ -41,7 +41,7 @@ public class SortList148
 
         ListNode Merge(ListNode left, ListNode right)
         {
-            ListNode dummy = new ListNode(0);
+            ListNode dummy = new(0);
             ListNode tail = dummy;
 
             while (left != null && right != null)

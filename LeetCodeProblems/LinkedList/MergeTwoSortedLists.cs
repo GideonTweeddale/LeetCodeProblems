@@ -17,7 +17,7 @@ public class MergeTwoSortedLists
         }
 
         // create a dummy head to make things easier to read
-        ListNode head = new ListNode(0);
+        ListNode head = new(0);
         ListNode current = head;
 
         while (list1 != null && list2 != null)

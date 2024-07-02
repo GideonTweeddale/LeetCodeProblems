@@ -78,7 +78,7 @@ public class LRUCache
             RemoveFromLinkedList(map[key]);
         }
 
-        Node node = new Node(key, value);
+        Node node = new(key, value);
 
         map[key] = node;
         AddToEndOfLinkedList(node);

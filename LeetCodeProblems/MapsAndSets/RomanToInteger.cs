@@ -1,7 +1,7 @@
 ﻿namespace LeetCodeProblems.HashSet;
 public class RomanToInteger
 {
-    Dictionary<char, int> romanNumerals = new Dictionary<char, int>()
+    Dictionary<char, int> romanNumerals = new()
     {
         {'I', 1},
         {'V', 5},
@@ -12,7 +12,7 @@ public class RomanToInteger
         {'M', 1000},
     };
 
-    Dictionary<string, int> romanNumeralsB = new Dictionary<string, int>()
+    Dictionary<string, int> romanNumeralsB = new()
     {
         {"I", 1},
         {"V", 5},

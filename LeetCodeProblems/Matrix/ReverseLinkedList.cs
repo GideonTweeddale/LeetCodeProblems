@@ -111,7 +111,7 @@ public class ReverseLinkedList
             return head;
         }
 
-        ListNode dummy = new ListNode(0, head);
+        ListNode dummy = new(0, head);
 
         ListNode first = dummy;
         ListNode current = head;

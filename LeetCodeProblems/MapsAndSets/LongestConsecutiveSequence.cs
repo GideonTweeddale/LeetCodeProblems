@@ -55,7 +55,7 @@ public class LongestConsecutiveSequence
             return 0;
         }
 
-        HashSet<int> set = new HashSet<int>(nums);
+        HashSet<int> set = new(nums);
 
         int consecutive = 1;
 

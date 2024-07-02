@@ -25,7 +25,7 @@ public class GroupAnagrams49
         {
             char[] charArray = s.ToCharArray();
             Array.Sort(charArray);
-            string sortedString = new string(charArray);
+            string sortedString = new(charArray);
 
             if (!map.ContainsKey(sortedString))
             {

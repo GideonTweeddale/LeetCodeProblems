@@ -64,7 +64,7 @@ public class AllNodesDistanceKInBinaryTree
         List<int> output = [];
         HashSet<TreeNode> visited = [target];
 
-        while(q.Any())
+        while(q.Count != 0)
         {
             int count = q.Count;
 
@@ -95,14 +95,14 @@ public class AllNodesDistanceKInBinaryTree
         return output;
 
         // helper functions
-        void BuildGraph(TreeNode node, TreeNode? parent)
+        void BuildGraph(TreeNode? node, TreeNode? parent)
         {
             if (node == null)
             {
                 return;
             }
 
-            if (!graph.ContainsKey(node)) 
+            if (!graph.ContainsKey(node))
             {
                 graph[node] = [];
             }
