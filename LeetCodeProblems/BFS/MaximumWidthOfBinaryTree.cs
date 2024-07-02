@@ -1,4 +1,6 @@
 ﻿namespace LeetCodeProblems.BFS;
+
+using LeetCodeProblems.Nodes;
 public class MaximumWidthOfBinaryTree
 {
     // note to the future - working this one out was a bit of a journey. If you want to skip that journey - hop to the last two solutions.

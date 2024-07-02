@@ -1,5 +1,7 @@
 ﻿namespace LeetCodeProblems.FastAndSlowPointer;
 
+using LeetCodeProblems.Nodes;
+
 public class RemoveNthNodeFromEndofList
 {
     // we need two things to make the update

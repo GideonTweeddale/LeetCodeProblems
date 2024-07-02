@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Gideon\OneDrive - Carters Tyre Services\Desktop\repos\LeetCodeProblems\LeetCodeProblems\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Gideon\OneDrive - Carters Tyre Services\Desktop\repos\LeetCodeProblems\LeetCodeProblems\.editorconfig" />
+  </ItemGroup>
+
 </Project>

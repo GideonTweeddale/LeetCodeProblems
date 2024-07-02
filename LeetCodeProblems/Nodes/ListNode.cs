@@ -1,4 +1,4 @@
-﻿namespace LeetCodeProblems.Trie;
+﻿namespace LeetCodeProblems.Nodes;
 
 public class ListNode
 {

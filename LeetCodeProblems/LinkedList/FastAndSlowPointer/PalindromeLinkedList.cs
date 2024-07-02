@@ -1,4 +1,7 @@
 ﻿namespace LeetCodeProblems.FastAndSlowPointer;
+
+using LeetCodeProblems.Nodes;
+
 public class PalindromeLinkedList
 {
     public bool IsPalindrome(ListNode head)

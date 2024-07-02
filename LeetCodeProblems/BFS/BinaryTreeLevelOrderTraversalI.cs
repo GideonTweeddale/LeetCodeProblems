@@ -1,4 +1,7 @@
 ﻿namespace LeetCodeProblems.BFS;
+
+using LeetCodeProblems.Nodes;
+
 public class BinaryTreeLevelOrderTraversalI
 {
     // intuition

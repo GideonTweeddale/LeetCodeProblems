@@ -1,5 +1,7 @@
 ﻿namespace LeetCodeProblems.FastAndSlowPointer;
 
+using LeetCodeProblems.Nodes;
+
 public class SortList148
 {
     // intuition

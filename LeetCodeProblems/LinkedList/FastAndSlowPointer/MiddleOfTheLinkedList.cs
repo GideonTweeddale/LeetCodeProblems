@@ -1,4 +1,7 @@
 ﻿namespace LeetCodeProblems.FastAndSlowPointer;
+
+using LeetCodeProblems.Nodes;
+
 public class MiddleOfTheLinkedList
 {
     public ListNode MiddleNode(ListNode head)

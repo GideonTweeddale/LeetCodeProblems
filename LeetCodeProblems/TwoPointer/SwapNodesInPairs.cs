@@ -1,4 +1,7 @@
 ﻿namespace LeetCodeProblems.TwoPointer;
+
+using LeetCodeProblems.Nodes;
+
 public class SwapNodesInPairs
 {
     // intuition

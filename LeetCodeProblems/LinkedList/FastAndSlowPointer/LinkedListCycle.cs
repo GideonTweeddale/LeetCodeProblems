@@ -1,4 +1,7 @@
 ﻿namespace LeetCodeProblems.FastAndSlowPointer;
+
+using LeetCodeProblems.Nodes;
+
 public class LinkedListCycle
 {
     public bool HasCycle(ListNode head)

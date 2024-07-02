@@ -1,5 +1,7 @@
 ﻿namespace LeetCodeProblems.Graph;
 
+using LeetCodeProblems.Nodes;
+
 public class CloneGraph133
 {
     // intuition
